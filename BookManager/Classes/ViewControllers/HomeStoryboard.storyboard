@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zfk-MK-ucc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="5U5-WX-kL3">
+            <objects>
+                <viewController id="Zfk-MK-ucc" userLabel="Menu View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AyN-M1-Xr1"/>
+                        <viewControllerLayoutGuide type="bottom" id="k2h-pK-HVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XsZ-fu-sey">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D3x-fu-hdq">
+                                <rect key="frame" x="164" y="120" width="272" height="360"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-iT-lJd" userLabel="Stack View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-Rp-a97">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="KEq-Sh-ty5"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="zDg-dE-2fw"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-H3-r8M">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="書籍情報を取得する"/>
+                                                <connections>
+                                                    <segue destination="D3Z-Va-Fge" kind="show" id="sxW-rm-xe0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="U7b-BT-i1g"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjj-au-2cb" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="60" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-F1-0KK">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="0TI-tz-CIP"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="sGR-4m-Zxf"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxx-SH-3Kd">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="書籍を検索する"/>
+                                                <connections>
+                                                    <segue destination="4Zb-ib-DcP" kind="show" id="QaO-G8-gw9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="z2o-ks-tPL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoe-Ha-3SX" userLabel="Stack View3">
+                                        <rect key="frame" x="0.0" y="120" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-9V-qKL">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="TXR-LK-9sD"/>
+                                                    <constraint firstAttribute="width" constant="32" id="ehZ-4R-cfn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-wN-r6y">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="蔵書を確認する"/>
+                                                <connections>
+                                                    <segue destination="ZlC-hL-vaE" kind="show" id="EVm-ID-VcJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="YSt-Wk-Gyi"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqY-Fr-fI9" userLabel="Stack View4">
+                                        <rect key="frame" x="0.0" y="180" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-8F-zrK">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="WDc-i1-RFX"/>
+                                                    <constraint firstAttribute="width" constant="32" id="kHz-7r-pYu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-9P-M3l">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="240" id="vbD-En-UKe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="欲しい物リストを見る"/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Ig5-0V-3VV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-Xk-9p5" userLabel="Stack View5">
+                                        <rect key="frame" x="0.0" y="240" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="udU-nC-fBe">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="OMB-bN-66z"/>
+                                                    <constraint firstAttribute="width" constant="32" id="RgB-TR-y1I"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="レビューの内容を見る"/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="kGs-BW-J9s"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUw-xm-a6a" userLabel="Stack View6">
+                                        <rect key="frame" x="0.0" y="300" width="272" height="60"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="woy-aR-1ue">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="PL1-Pr-9gR"/>
+                                                    <constraint firstAttribute="width" constant="32" id="bAo-90-1nA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or">
+                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <state key="normal" title="書籍を借りる"/>
+                                            </button>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="rgv-pN-9fT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D3x-fu-hdq" firstAttribute="centerY" secondItem="XsZ-fu-sey" secondAttribute="centerY" id="HAT-jH-lHK"/>
+                            <constraint firstItem="D3x-fu-hdq" firstAttribute="centerX" secondItem="XsZ-fu-sey" secondAttribute="centerX" id="y8W-FC-58E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="メニュー" id="FI0-Ag-QGV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KpD-3y-xgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="333"/>
+        </scene>
+        <!--BookInfoLoader View Controller-->
+        <scene sceneID="2qS-VM-QAL">
+            <objects>
+                <viewController id="D3Z-Va-Fge" userLabel="BookInfoLoader View Controller" customClass="BookInfoLoaderViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUu-1j-NvC"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6M-xu-5vi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jRA-5p-Jc5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7f-d2-7os" userLabel="ReadView">
+                                <rect key="frame" x="150" y="74" width="300" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBNを入力する(10 or 13桁)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-pl-olT">
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9784800710703" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2W-PU-468">
+                                        <rect key="frame" x="50" y="26" width="150" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="9EM-Bk-Ku5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カメラで読み込む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-yF-RWg">
+                                        <rect key="frame" x="0.0" y="66" width="136" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw">
+                                        <rect key="frame" x="240" y="66" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="読み込み"/>
+                                        <connections>
+                                            <action selector="didPushCameraSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="Saf-UW-auU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-Ed-Vl5">
+                                        <rect key="frame" x="240" y="26" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="取得する"/>
+                                        <connections>
+                                            <action selector="didPushIsbnSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="en5-7Q-cB3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="TPt-Ed-Vl5" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="top" id="3Cm-5q-alh"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPt-Ed-Vl5" secondAttribute="trailing" id="3gv-zc-gg4"/>
+                                    <constraint firstItem="Z2W-PU-468" firstAttribute="top" secondItem="SYW-pl-olT" secondAttribute="bottom" constant="5" id="3j3-qu-3xx"/>
+                                    <constraint firstItem="ESb-im-kaw" firstAttribute="top" secondItem="HCJ-yF-RWg" secondAttribute="top" id="3lt-Yn-Edl"/>
+                                    <constraint firstItem="SYW-pl-olT" firstAttribute="top" secondItem="f7f-d2-7os" secondAttribute="top" id="7RP-ho-13j"/>
+                                    <constraint firstAttribute="height" constant="100" id="Cit-3W-4vx"/>
+                                    <constraint firstAttribute="width" constant="300" id="D2c-gp-7ni"/>
+                                    <constraint firstItem="SYW-pl-olT" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="aYh-8x-RYO"/>
+                                    <constraint firstItem="Z2W-PU-468" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" constant="50" id="bYI-ih-WxK"/>
+                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="bottom" constant="10" id="cpD-eq-jfX"/>
+                                    <constraint firstItem="ESb-im-kaw" firstAttribute="leading" secondItem="TPt-Ed-Vl5" secondAttribute="leading" id="g5q-AO-Pyh"/>
+                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="sFm-r7-DIG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-Yd-dDA" userLabel="VerticalLine3">
+                                <rect key="frame" x="20" y="457" width="560" height="3"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="ouB-Ek-v3B"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxm-KE-p5x">
+                                <rect key="frame" x="20" y="187" width="560" height="260"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KrI-PZ-g54">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="200"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="1Zp-m2-a2z"/>
+                                            <constraint firstAttribute="width" constant="136" id="7Z5-ts-MI6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7se-R6-Gw3">
+                                        <rect key="frame" x="146" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pos-fv-PbM">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="DKB-D0-aah"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLH-EU-WU0" userLabel="VerticalLine2">
+                                                <rect key="frame" x="0.0" y="86" width="414" height="3"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="8UT-RX-p4u"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEm-nY-tAp">
+                                                <rect key="frame" x="0.0" y="89" width="414" height="21"/>
+                                                <subviews>
+                                                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="VvX-wy-mRB" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="bux-lR-uUb"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVO-pG-Szf">
+                                                        <rect key="frame" x="150" y="0.0" width="264" height="21"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X52-Q0-bkn">
+                                                <rect key="frame" x="0.0" y="110" width="414" height="30"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="LKN-pI-wwh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-kO-bpD">
+                                                <rect key="frame" x="0.0" y="140" width="414" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="価格：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-wx-gfO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="0Vl-41-JMK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0Y-8n-ZKn">
+                                                        <rect key="frame" x="80" y="0.0" width="334" height="30"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="gfo-i5-E9O"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXV-X0-4yU">
+                                                <rect key="frame" x="0.0" y="170" width="414" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="発売日：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfi-kn-4tJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                                        <animations/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="rdD-sX-2aq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skA-1e-jkQ">
+                                                        <rect key="frame" x="80" y="0.0" width="334" height="30"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="3Ma-sY-YgJ"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="uY7-vp-cmt"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kZk-cm-T9P">
+                                        <rect key="frame" x="0.0" y="210" width="560" height="200"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="nDC-fR-hfr"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="KrI-PZ-g54" firstAttribute="top" secondItem="xxm-KE-p5x" secondAttribute="top" id="1C0-46-VKM"/>
+                                    <constraint firstItem="kZk-cm-T9P" firstAttribute="leading" secondItem="KrI-PZ-g54" secondAttribute="leading" id="2P5-WQ-Z1j"/>
+                                    <constraint firstItem="7se-R6-Gw3" firstAttribute="trailing" secondItem="kZk-cm-T9P" secondAttribute="trailing" id="QXX-iD-siF"/>
+                                    <constraint firstAttribute="bottom" secondItem="kZk-cm-T9P" secondAttribute="bottom" id="YAx-0e-EPL"/>
+                                    <constraint firstItem="7se-R6-Gw3" firstAttribute="leading" secondItem="KrI-PZ-g54" secondAttribute="trailing" constant="10" id="aK0-t6-egb"/>
+                                    <constraint firstAttribute="trailing" secondItem="kZk-cm-T9P" secondAttribute="trailing" id="cFn-4Y-1Qi"/>
+                                    <constraint firstItem="7se-R6-Gw3" firstAttribute="top" secondItem="xxm-KE-p5x" secondAttribute="top" id="ibg-LW-g1K"/>
+                                    <constraint firstItem="KrI-PZ-g54" firstAttribute="leading" secondItem="xxm-KE-p5x" secondAttribute="leading" id="isA-i5-pNn"/>
+                                    <constraint firstItem="kZk-cm-T9P" firstAttribute="width" secondItem="xxm-KE-p5x" secondAttribute="width" id="qdz-7V-YKV"/>
+                                    <constraint firstItem="kZk-cm-T9P" firstAttribute="top" secondItem="KrI-PZ-g54" secondAttribute="bottom" constant="10" id="tfq-49-7zi"/>
+                                    <constraint firstAttribute="height" constant="260" id="zDJ-8K-GSL"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyK-o8-1kg" userLabel="VerticalLine1">
+                                <rect key="frame" x="20" y="176" width="560" height="3"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="R3J-dI-2pe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xxm-KE-p5x" firstAttribute="top" secondItem="CyK-o8-1kg" secondAttribute="bottom" constant="10" id="4td-M8-nFH"/>
+                            <constraint firstItem="CyK-o8-1kg" firstAttribute="leading" secondItem="jRA-5p-Jc5" secondAttribute="leading" constant="20" id="8nU-FL-9QU"/>
+                            <constraint firstAttribute="trailing" secondItem="xxm-KE-p5x" secondAttribute="trailing" constant="20" id="Axr-Tu-Wl6"/>
+                            <constraint firstAttribute="trailing" secondItem="iDN-Yd-dDA" secondAttribute="trailing" constant="20" id="GjX-Me-3Us"/>
+                            <constraint firstItem="f7f-d2-7os" firstAttribute="top" secondItem="sUu-1j-NvC" secondAttribute="bottom" constant="10" id="Ufw-Dm-iEc"/>
+                            <constraint firstItem="xxm-KE-p5x" firstAttribute="leading" secondItem="jRA-5p-Jc5" secondAttribute="leading" constant="20" id="Wgx-Kw-ayg"/>
+                            <constraint firstItem="f7f-d2-7os" firstAttribute="centerX" secondItem="jRA-5p-Jc5" secondAttribute="centerX" id="caA-uS-CiE"/>
+                            <constraint firstAttribute="trailing" secondItem="CyK-o8-1kg" secondAttribute="trailing" constant="20" id="gkU-3a-pji"/>
+                            <constraint firstItem="iDN-Yd-dDA" firstAttribute="leading" secondItem="jRA-5p-Jc5" secondAttribute="leading" constant="20" id="hRi-td-mIO"/>
+                            <constraint firstItem="CyK-o8-1kg" firstAttribute="top" secondItem="f7f-d2-7os" secondAttribute="bottom" id="ibS-AQ-S9F"/>
+                            <constraint firstItem="iDN-Yd-dDA" firstAttribute="top" secondItem="xxm-KE-p5x" secondAttribute="bottom" constant="10" id="s62-qB-4EQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="書籍情報を取得する" id="8Vw-rb-feJ"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="X52-Q0-bkn" id="CB0-dD-OCo"/>
+                        <outlet property="bookImageView" destination="KrI-PZ-g54" id="fkb-fK-P5I"/>
+                        <outlet property="cosmosView" destination="VvX-wy-mRB" id="2NA-77-qp3"/>
+                        <outlet property="dateLabel" destination="skA-1e-jkQ" id="Mwu-Nm-gNY"/>
+                        <outlet property="isbnTextField" destination="Z2W-PU-468" id="QzT-Dx-E6C"/>
+                        <outlet property="priceLabel" destination="R0Y-8n-ZKn" id="Fyp-1w-2IK"/>
+                        <outlet property="reviewLabel" destination="DVO-pG-Szf" id="a35-EH-FjF"/>
+                        <outlet property="textView" destination="kZk-cm-T9P" id="Xxd-IF-Mub"/>
+                        <outlet property="titleLabel" destination="Pos-fv-PbM" id="1MS-t6-yBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ol-3E-B64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="-791"/>
+        </scene>
+        <!--BookSearcher Table View Controller-->
+        <scene sceneID="xFG-U5-LAe">
+            <objects>
+                <tableViewController id="4Zb-ib-DcP" userLabel="BookSearcher Table View Controller" customClass="BookSearcherTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="79H-Ai-eHB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="wZy-Ji-C96">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="4Zb-ib-DcP" id="Tu1-xq-IL3"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookSearcherCell" id="3h4-Wv-wEQ" customClass="BookSearcherTableViewCell" customModule="BookManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3h4-Wv-wEQ" id="hy4-dp-jhl">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Zb-ib-DcP" id="COn-n7-M4y"/>
+                            <outlet property="delegate" destination="4Zb-ib-DcP" id="sbB-4X-Tr8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="書籍を検索する" id="5zM-hy-pKH"/>
+                    <connections>
+                        <outlet property="searchBar" destination="wZy-Ji-C96" id="2Yb-kP-ced"/>
+                        <outlet property="searchDisplayController" destination="SBY-wl-72g" id="2pD-VF-7Gb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAw-F6-U2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="SBY-wl-72g">
+                    <connections>
+                        <outlet property="delegate" destination="4Zb-ib-DcP" id="RsA-el-I10"/>
+                        <outlet property="searchBar" destination="wZy-Ji-C96" id="KZK-KJ-qbu"/>
+                        <outlet property="searchContentsController" destination="4Zb-ib-DcP" id="QCd-Yc-IjO"/>
+                        <outlet property="searchResultsDataSource" destination="4Zb-ib-DcP" id="trU-iT-xZV"/>
+                        <outlet property="searchResultsDelegate" destination="4Zb-ib-DcP" id="y7J-te-cSB"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2016" y="-63"/>
+        </scene>
+        <!--BookLibrary Table View Controller-->
+        <scene sceneID="QPv-of-kpS">
+            <objects>
+                <tableViewController id="ZlC-hL-vaE" userLabel="BookLibrary Table View Controller" customClass="BookLibraryTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aKu-Bw-ztz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g4c-jM-2YK">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4c-jM-2YK" id="7Fg-pD-ozr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZlC-hL-vaE" id="eyo-8H-9vZ"/>
+                            <outlet property="delegate" destination="ZlC-hL-vaE" id="5sz-M1-6tH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="蔵書を確認する" id="cib-Ga-cmY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-h6-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="608"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E0z-dU-saZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z0U-4I-fRL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zwo-hq-wZx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zfk-MK-ucc" kind="relationship" relationship="rootViewController" id="hsq-Hm-6KB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-Nd-j9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="333"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LibraryIcon" width="128" height="128"/>
+        <image name="LoadIcon" width="128" height="128"/>
+        <image name="RentalIcon" width="128" height="128"/>
+        <image name="ReviewIcon" width="128" height="128"/>
+        <image name="SearchIcon" width="128" height="128"/>
+        <image name="WishIcon" width="128" height="128"/>
+    </resources>
+</document>
