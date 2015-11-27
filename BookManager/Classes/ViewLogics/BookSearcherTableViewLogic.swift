@@ -23,17 +23,4 @@ class BookSearcherTableViewLogic {
 		}
 	}
 
-//	func loadImage(url: String, loaded: (UIImage) -> ()) {
-//		let cache = Shared.imageCache
-//		
-//		let iconFormat = Format<UIImage>(name: "icons", diskCapacity: 10 * 1024 * 1024) { image in
-//			return image
-//		}
-//		cache.addFormat(iconFormat)
-//		
-//		let URL = NSURL(string: url)!
-//		cache.fetch(URL: URL, formatName: "icons").onSuccess { image in
-//			loaded(image)
-//		}
-//	}
 }

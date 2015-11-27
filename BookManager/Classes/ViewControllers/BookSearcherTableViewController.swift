@@ -18,18 +18,12 @@ class BookSearcherTableViewController: UITableViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
 		// xibをテーブルビューのセルとして使う
 		let xib = UINib(nibName: "BookSearcherTableViewCell", bundle: nil)
 		tableView.registerNib(xib, forCellReuseIdentifier: "bookSearcherCell")
 		
 		searchBar.delegate = self
-		tableView.delegate = self
+		//tableView.delegate = self
 		tableView.estimatedRowHeight = 108
 		//tableView.rowHeight = UITableViewAutomaticDimension
 
@@ -107,17 +101,13 @@ extension BookSearcherTableViewController {
 		let url = NSURL(string: (book.largeImageUrl!))
 		cell.bookImageView.hnk_setImageFromURL(url!)
 
-//		let logic = BookSearcherTableViewLogic()
-//		logic.loadImage(book.largeImageUrl!) { image in
-//			cell.bookImageView.image = image
-//		}
-
 		return cell
 	}
 	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		print("didselect")
-	}
+//	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//		print("didselect")
+//	}
+
 	/*
 	// Override to support conditional editing of the table view.
 	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -166,9 +156,8 @@ extension BookSearcherTableViewController {
 }
 
 extension BookSearcherTableViewController: UISearchBarDelegate {
-	func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+	func searchBarSearchButtonClicked(searchBar: UISearchBar) {
 		loadBookData(searchBar.text!)
 		searchBar.resignFirstResponder()
-		searchBar.endEditing(true)
 	}
 }

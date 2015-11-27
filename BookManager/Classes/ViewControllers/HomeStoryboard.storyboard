@@ -63,7 +63,7 @@
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                 <state key="normal" title="書籍を検索する"/>
                                                 <connections>
-                                                    <segue destination="4Zb-ib-DcP" kind="show" id="QaO-G8-gw9"/>
+                                                    <segue destination="zS8-tI-V5J" kind="show" id="HDz-lO-5U2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -415,8 +415,8 @@
                                     <constraint firstAttribute="height" constant="260" id="zDJ-8K-GSL"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CyK-o8-1kg" userLabel="VerticalLine1">
-                                <rect key="frame" x="20" y="176" width="560" height="3"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyK-o8-1kg" userLabel="VerticalLine1">
+                                <rect key="frame" x="20" y="174" width="560" height="3"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -458,28 +458,29 @@
             <point key="canvasLocation" x="2016" y="-791"/>
         </scene>
         <!--BookSearcher Table View Controller-->
-        <scene sceneID="xFG-U5-LAe">
+        <scene sceneID="1xA-fF-yYr">
             <objects>
-                <tableViewController id="4Zb-ib-DcP" userLabel="BookSearcher Table View Controller" customClass="BookSearcherTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="79H-Ai-eHB">
+                <tableViewController id="zS8-tI-V5J" userLabel="BookSearcher Table View Controller" customClass="BookSearcherTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3qQ-fA-Duh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="wZy-Ji-C96">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="x5n-e8-j7R">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="4Zb-ib-DcP" id="Tu1-xq-IL3"/>
-                            </connections>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookSearcherCell" id="3h4-Wv-wEQ" customClass="BookSearcherTableViewCell" customModule="BookManager" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jns-i4-v4Y" customClass="BookSearcherTableViewCell" customModule="BookManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3h4-Wv-wEQ" id="hy4-dp-jhl">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jns-i4-v4Y" id="YNg-Uk-zII">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -488,28 +489,18 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="4Zb-ib-DcP" id="COn-n7-M4y"/>
-                            <outlet property="delegate" destination="4Zb-ib-DcP" id="sbB-4X-Tr8"/>
+                            <outlet property="dataSource" destination="zS8-tI-V5J" id="gjY-te-6sb"/>
+                            <outlet property="delegate" destination="zS8-tI-V5J" id="EnI-56-nb7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="書籍を検索する" id="5zM-hy-pKH"/>
+                    <navigationItem key="navigationItem" title="書籍を検索する" id="1Lt-86-ZSv"/>
                     <connections>
-                        <outlet property="searchBar" destination="wZy-Ji-C96" id="2Yb-kP-ced"/>
-                        <outlet property="searchDisplayController" destination="SBY-wl-72g" id="2pD-VF-7Gb"/>
+                        <outlet property="searchBar" destination="x5n-e8-j7R" id="8v3-As-ZIp"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yAw-F6-U2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="SBY-wl-72g">
-                    <connections>
-                        <outlet property="delegate" destination="4Zb-ib-DcP" id="RsA-el-I10"/>
-                        <outlet property="searchBar" destination="wZy-Ji-C96" id="KZK-KJ-qbu"/>
-                        <outlet property="searchContentsController" destination="4Zb-ib-DcP" id="QCd-Yc-IjO"/>
-                        <outlet property="searchResultsDataSource" destination="4Zb-ib-DcP" id="trU-iT-xZV"/>
-                        <outlet property="searchResultsDelegate" destination="4Zb-ib-DcP" id="y7J-te-cSB"/>
-                    </connections>
-                </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNb-4h-5Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-63"/>
+            <point key="canvasLocation" x="2016" y="-131"/>
         </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">
