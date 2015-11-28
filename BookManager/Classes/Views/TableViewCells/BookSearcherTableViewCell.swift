@@ -11,6 +11,7 @@ import Cosmos
 
 class BookSearcherTableViewCell: UITableViewCell {
 
+	// MARK: - @IBOutlet
 	@IBOutlet weak var bookImageView: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var authorLabel: UILabel!
@@ -19,11 +20,13 @@ class BookSearcherTableViewCell: UITableViewCell {
 	@IBOutlet weak var cosmosView: CosmosView!
 	@IBOutlet weak var reviewLabel: UILabel!
 
+	// MARK: - Lifecycle
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+	// MARK: - Action
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

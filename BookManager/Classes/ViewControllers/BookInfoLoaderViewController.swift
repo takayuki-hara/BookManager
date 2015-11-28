@@ -7,21 +7,13 @@
 //
 
 import UIKit
-import Cosmos
-import Haneke
 
 class BookInfoLoaderViewController: UIViewController {
 
+	// MARK: - @IBOutlet
 	@IBOutlet weak var isbnTextField: UITextField!
-	@IBOutlet weak var bookImageView: UIImageView!
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var authorLabel: UILabel!
-	@IBOutlet weak var cosmosView: CosmosView!
-	@IBOutlet weak var reviewLabel: UILabel!
-	@IBOutlet weak var priceLabel: UILabel!
-	@IBOutlet weak var dateLabel: UILabel!
-	@IBOutlet weak var textView: UITextView!
 
+	// MARK: - @IBAction
 	@IBAction func didPushIsbnSearchButton(sender: AnyObject) {
 		//TODO:入力チェック
 		self.loadBookData(isbnTextField.text!)
@@ -43,9 +35,11 @@ class BookInfoLoaderViewController: UIViewController {
 		}
 	}
 
+	// MARK: - Property
 	var book: BookDataModel?
 	var reader: IsbnReaderView?
 
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,37 +54,19 @@ class BookInfoLoaderViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == "toBookSearchDetailSegue" {
+			let next = segue.destinationViewController as! BookDetailViewController
+			if book != nil {
+				next.book = book
+			}
+		}
     }
-    */
 
 	// MARK: - Private Methods
 	func closeSoftKeyboard() {
 		self.view.endEditing(true)
-	}
-
-	private func displayBookInfo(book: BookDataModel) {
-		let url = NSURL(string: book.largeImageUrl!)
-		bookImageView.hnk_setImageFromURL(url!)
-
-		titleLabel.text = book.title
-		authorLabel.text = book.author
-
-		if let rating = book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
-		}
-		reviewLabel.text = String(book.reviewCount!) + " 件"
-
-		priceLabel.text = String(book.itemPrice!) + " 円"
-		dateLabel.text = book.salesDate
-		textView.text = book.itemCaption
 	}
 
 	private func loadBookData(isbn: String) {
@@ -98,7 +74,7 @@ class BookInfoLoaderViewController: UIViewController {
 		logic.loadBookDataWithIsbn(isbn) { result in
 			if let book = result {
 				self.book = book
-				self.displayBookInfo(book)
+				self.performSegueWithIdentifier("toBookSearchDetailSegue", sender: nil)
 			}
 		}
 	}

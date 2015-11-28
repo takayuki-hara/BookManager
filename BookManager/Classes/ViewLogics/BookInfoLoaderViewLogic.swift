@@ -10,6 +10,8 @@ import Alamofire
 import AlamofireObjectMapper
 
 class BookInfoLoaderViewLogic {
+
+	// MARK: - Public Functions
 	func loadBookDataWithIsbn(isbn: String, loaded: (BookDataModel?) -> ()) {
 		Alamofire.request(.GET, BookApiModel.searchApiWithIsbn(isbn))
 			.responseObject { (response: Response<BookSearchResultModel, NSError>) in
@@ -21,4 +23,5 @@ class BookInfoLoaderViewLogic {
 				loaded(data?.items?.first?.item)
 		}
 	}
+
 }

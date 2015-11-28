@@ -8,9 +8,10 @@
 
 import Alamofire
 import AlamofireObjectMapper
-import Haneke
 
 class BookSearcherTableViewLogic {
+
+	// MARK: - Public Functions
 	func loadBookDataWithWord(word: String, page: Int, loaded: (BookSearchResultModel?) -> ()) {
 		Alamofire.request(.GET, BookApiModel.searchApiWithKeyword(word, page: page))
 			.responseObject { (response: Response<BookSearchResultModel, NSError>) in

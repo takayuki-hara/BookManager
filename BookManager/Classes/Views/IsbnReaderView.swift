@@ -10,10 +10,13 @@ import UIKit
 import AVFoundation
 
 final class IsbnReaderView: UIView {
+
+	// MARK: - Property
 	var isInitialized = false
 	let session = AVCaptureSession()
 	var closure: ((String) -> Void)?
 	
+	// MARK: - Public Functions
 	func capture(captured: (isbn: String) -> Void) -> Bool {
 		// ２回目以降の実行
 		if isInitialized == true {

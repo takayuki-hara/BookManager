@@ -31,11 +31,6 @@ class BookSearcherTableViewController: UITableViewController {
 		searchBar.delegate = self
 		tableView.delegate = self
 		tableView.estimatedRowHeight = 108
-		//tableView.rowHeight = UITableViewAutomaticDimension
-
-		// キーボード外のタッチでキーボードを閉じるための設定
-		// MEMO:TableViewではUITapGestureRecognizerを使うとセルのタップが検知できない
-		//		そのためUIScrollViewのkeyboardDismissModeを設定する（Storyboardにて）
 	}
 
     override func didReceiveMemoryWarning() {
@@ -43,18 +38,20 @@ class BookSearcherTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+		if segue.identifier == "toBookSearchDetailSegue" {
+			let next = segue.destinationViewController as! BookDetailViewController
+			if let book = books![(tableView.indexPathForSelectedRow?.row)!].item {
+				next.book = book
+			}
+		}
+	}
 
 	// MARK: - Private Methods
 	private func loadBookData(word: String) {
+		// FIXME: 戻る際にも呼ばれる（ので落ちてしまう）
+
 		var page = 1
 
 		// 前回の結果がある場合の処理
@@ -103,7 +100,6 @@ extension BookSearcherTableViewController {
 		guard let book = books![indexPath.row].item else {
 			return cell
 		}
-		print(indexPath.row)
 
 		cell.titleLabel.text = book.title
 		cell.authorLabel.text = book.author
@@ -126,8 +122,6 @@ extension BookSearcherTableViewController {
 extension BookSearcherTableViewController {
 	// MARK: - UITableViewDelegate
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let cell = tableView.cellForRowAtIndexPath(indexPath) as! BookSearcherTableViewCell
-		print(cell.titleLabel.text)
 		performSegueWithIdentifier("toBookSearchDetailSegue", sender: nil)
 	}
 	
