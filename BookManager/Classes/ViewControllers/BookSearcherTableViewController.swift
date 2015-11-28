@@ -50,7 +50,9 @@ class BookSearcherTableViewController: UITableViewController {
 
 	// MARK: - Private Methods
 	private func loadBookData(word: String) {
-		// FIXME: 戻る際にも呼ばれる（ので落ちてしまう）
+		if word.characters.count == 0 {
+			return
+		}
 
 		var page = 1
 
@@ -96,7 +98,6 @@ extension BookSearcherTableViewController {
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("bookSearcherCell") as! BookSearcherTableViewCell
-
 		guard let book = books![indexPath.row].item else {
 			return cell
 		}
@@ -104,15 +105,13 @@ extension BookSearcherTableViewController {
 		cell.titleLabel.text = book.title
 		cell.authorLabel.text = book.author
 		cell.dateLabel.text = book.salesDate
-		cell.priceLabel.text = String(book.itemPrice!) + " 円"
+		cell.priceLabel.text = String(book.price!) + " 円"
 		cell.reviewLabel.text = String(book.reviewCount!) + " 件"
-
 		if let rating = book.reviewAverage {
 			cell.cosmosView.rating = Double(rating)!
 			cell.cosmosView.settings.updateOnTouch = false
 		}
-
-		let url = NSURL(string: (book.largeImageUrl!))
+		let url = NSURL(string: (book.imageUrl!))
 		cell.bookImageView.hnk_setImageFromURL(url!)
 
 		return cell
@@ -129,9 +128,8 @@ extension BookSearcherTableViewController {
 		if nowLoading == true {
 			return
 		}
-		
 		let scrollValue = scrollView.contentSize.height - scrollView.bounds.height
-		if scrollValue > scrollView.contentOffset.y {
+		if scrollValue < 44.0 || scrollValue > scrollView.contentOffset.y {
 			return
 		}
 		

@@ -117,6 +117,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="欲しい物リストを見る"/>
+                                                <connections>
+                                                    <segue destination="lr3-5s-hzD" kind="show" id="Sw2-u5-feC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -662,7 +665,39 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-h6-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="708"/>
+            <point key="canvasLocation" x="2272" y="554"/>
+        </scene>
+        <!--欲しいものリスト-->
+        <scene sceneID="N88-4d-Rj9">
+            <objects>
+                <tableViewController id="lr3-5s-hzD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ce-bT-Vby">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="I07-rj-y20">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I07-rj-y20" id="UnN-Co-wrV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lr3-5s-hzD" id="jfV-Zx-lnC"/>
+                            <outlet property="delegate" destination="lr3-5s-hzD" id="30r-6a-WN1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="欲しいものリスト" id="51c-ZE-jOg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8I-kR-fZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="1232"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0z-dU-saZ">

@@ -14,12 +14,15 @@ class BookObject: RLMObject {
 	dynamic var isbn = ""
 	dynamic var title = ""
 	dynamic var author = ""
-	dynamic var salesDate = ""
-	dynamic var imageUrl = ""
-
 	dynamic var publisher = ""
-	dynamic var genreId = ""
 	dynamic var price = 0
+	dynamic var salesDate = ""
+	dynamic var itemCaption = ""
+	dynamic var itemUrl = ""
+	dynamic var imageUrl = ""
+	dynamic var reviewCount = 0
+	dynamic var reviewAverage = ""
+	dynamic var genreId = ""
 
 	override class func primaryKey() -> String {
 		return "isbn"

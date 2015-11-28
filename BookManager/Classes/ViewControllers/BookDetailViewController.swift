@@ -27,13 +27,20 @@ class BookDetailViewController: UIViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var textView: UITextView!
 
+	// MARK: - @IBAction
 	@IBAction func didPushWishListButton(sender: AnyObject) {
+		WishListAccess.addWishList(book)
+		WishListAccess.consoleOutWishList()
 	}
 
 	@IBAction func didPushLibraryButton(sender: AnyObject) {
+		WishListAccess.deleteWishList(book)
+		WishListAccess.consoleOutWishList()
 	}
 
 	@IBAction func didPushReviewButton(sender: AnyObject) {
+		WishListAccess.allDeleteWishList()
+		WishListAccess.consoleOutWishList()
 	}
 	
 	// MARK: - Property
@@ -66,7 +73,7 @@ class BookDetailViewController: UIViewController {
 
 	// MARK: - Private Methods
 	private func displayBookInfo(book: BookDataModel) {
-		let url = NSURL(string: book.largeImageUrl!)
+		let url = NSURL(string: book.imageUrl!)
 		bookImageView.hnk_setImageFromURL(url!)
 		
 		titleLabel.text = book.title
@@ -78,7 +85,7 @@ class BookDetailViewController: UIViewController {
 		}
 		reviewLabel.text = String(book.reviewCount!) + " 件"
 		
-		priceLabel.text = String(book.itemPrice!) + " 円"
+		priceLabel.text = String(book.price!) + " 円"
 		dateLabel.text = book.salesDate
 		textView.text = book.itemCaption
 	}

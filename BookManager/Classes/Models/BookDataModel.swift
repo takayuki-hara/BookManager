@@ -14,15 +14,15 @@ class BookDataModel {
 	var isbn: String?
 	var title: String?
 	var author: String?
-	var publisherName: String?
-	var itemPrice: Int?
+	var publisher: String?
+	var price: Int?
 	var salesDate: String?
 	var itemCaption: String?
 	var itemUrl: String?
-	var largeImageUrl: String?
+	var imageUrl: String?
 	var reviewCount: Int?
 	var reviewAverage: String?
-	var booksGenreId: String?
+	var genreId: String?
 	
 	required init?(_ map: Map) {}
 }
@@ -32,15 +32,15 @@ extension BookDataModel: Mappable {
 		isbn <- map["isbn"]
 		title <- map["title"]
 		author <- map["author"]
-		publisherName <- map["publisherName"]
-		itemPrice <- map["itemPrice"]
+		publisher <- map["publisherName"]
+		price <- map["itemPrice"]
 		salesDate <- map["salesDate"]
 		itemCaption <- map["itemCaption"]
 		itemUrl <- map["itemUrl"]
-		largeImageUrl <- map["largeImageUrl"]
+		imageUrl <- map["largeImageUrl"]
 		reviewCount <- map["reviewCount"]
 		reviewAverage <- map["reviewAverage"]
-		booksGenreId <- map["booksGenreId"]
+		genreId <- map["booksGenreId"]
 	}
 }
 

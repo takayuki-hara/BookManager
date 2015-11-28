@@ -34,6 +34,9 @@
 		A1BC070F1C09A31700CED9AE /* ReviewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC070B1C09A31700CED9AE /* ReviewObject.swift */; };
 		A1BC07101C09A31700CED9AE /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC070C1C09A31700CED9AE /* UserObject.swift */; };
 		A1BC07111C09A31700CED9AE /* WishListObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC070D1C09A31700CED9AE /* WishListObject.swift */; };
+		A1BC07131C09C4F200CED9AE /* WishListAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07121C09C4F200CED9AE /* WishListAccess.swift */; };
+		A1BC07151C09CFC200CED9AE /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07141C09CFC200CED9AE /* DateFunctions.swift */; };
+		A1BC07171C09EC2800CED9AE /* BookAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07161C09EC2800CED9AE /* BookAccess.swift */; };
 		BBA6875127C94F993BE5A029 /* Pods_BookManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2AA7BA0342966B08623082 /* Pods_BookManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,9 @@
 		A1BC070B1C09A31700CED9AE /* ReviewObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewObject.swift; sourceTree = "<group>"; };
 		A1BC070C1C09A31700CED9AE /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		A1BC070D1C09A31700CED9AE /* WishListObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListObject.swift; sourceTree = "<group>"; };
+		A1BC07121C09C4F200CED9AE /* WishListAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListAccess.swift; sourceTree = "<group>"; };
+		A1BC07141C09CFC200CED9AE /* DateFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
+		A1BC07161C09EC2800CED9AE /* BookAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAccess.swift; sourceTree = "<group>"; };
 		C2CC2E6C7A36387C89A755E9 /* Pods-BookManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookManager/Pods-BookManager.debug.xcconfig"; sourceTree = "<group>"; };
 		F2C27330D751B1FEF6F0D0BB /* Pods-BookManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookManager/Pods-BookManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +224,7 @@
 		A12CF6751C02C08C009260A7 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				A1BC07141C09CFC200CED9AE /* DateFunctions.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -236,6 +243,8 @@
 		A12CF6771C02C08C009260A7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				A1BC07121C09C4F200CED9AE /* WishListAccess.swift */,
+				A1BC07161C09EC2800CED9AE /* BookAccess.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BC07171C09EC2800CED9AE /* BookAccess.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
 				A12CF67F1C02C08D009260A7 /* AppDelegate.swift in Sources */,
@@ -507,10 +517,12 @@
 				A12CF6A11C02C4C3009260A7 /* BookDataModel.swift in Sources */,
 				A12CF6B01C032A89009260A7 /* BookLibraryTableViewController.swift in Sources */,
 				A1BC07101C09A31700CED9AE /* UserObject.swift in Sources */,
+				A1BC07151C09CFC200CED9AE /* DateFunctions.swift in Sources */,
 				A12CF6A21C02C4C3009260A7 /* BookSearchResultModel.swift in Sources */,
 				A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */,
 				A12CF6A41C02C4D2009260A7 /* IsbnReaderView.swift in Sources */,
 				A12CF6B41C033CCD009260A7 /* BookInfoLoaderViewLogic.swift in Sources */,
+				A1BC07131C09C4F200CED9AE /* WishListAccess.swift in Sources */,
 				A12CF6A01C02C4C3009260A7 /* BookApiModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

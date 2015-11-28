@@ -10,9 +10,11 @@ import Foundation
 import Realm
 import RealmSwift
 
-class WishListObject: RLMObject {
+class WishListObject: Object {
 	dynamic var isbn = ""
 	dynamic var addDate = ""
+
+	dynamic var book: BookObject?
 
 	override class func primaryKey() -> String {
 		return "isbn"
