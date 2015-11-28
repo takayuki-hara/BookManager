@@ -461,7 +461,7 @@
         <scene sceneID="1xA-fF-yYr">
             <objects>
                 <tableViewController id="zS8-tI-V5J" userLabel="BookSearcher Table View Controller" customClass="BookSearcherTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3qQ-fA-Duh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3qQ-fA-Duh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -486,6 +486,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="Bmj-5i-v9W" kind="show" identifier="toBookSearchDetailSegue" id="KuK-pc-gCd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -501,6 +504,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNb-4h-5Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016" y="-131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KVS-Kc-GQk">
+            <objects>
+                <viewController id="Bmj-5i-v9W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KcY-yT-rk1"/>
+                        <viewControllerLayoutGuide type="bottom" id="EeE-da-IHu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nRv-Ll-r2T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNR-Cd-pCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711" y="-131"/>
         </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">

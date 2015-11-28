@@ -11,25 +11,31 @@ import Cosmos
 
 class BookSearcherTableViewController: UITableViewController {
 
+	// MARK: - @IBOutlet
 	@IBOutlet weak var searchBar: UISearchBar!
 
-	var books: BookSearchResultModel?
-	
+	// MARK: - Property
+	var searchResult: BookSearchResultModel?
+	var books: [BookDataParentModel]?
+	var nowLoading = false
+
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
 		// xibをテーブルビューのセルとして使う
 		let xib = UINib(nibName: "BookSearcherTableViewCell", bundle: nil)
 		tableView.registerNib(xib, forCellReuseIdentifier: "bookSearcherCell")
-		
+
+		// 初期設定
 		searchBar.delegate = self
-		//tableView.delegate = self
+		tableView.delegate = self
 		tableView.estimatedRowHeight = 108
 		//tableView.rowHeight = UITableViewAutomaticDimension
 
 		// キーボード外のタッチでキーボードを閉じるための設定
-		let gestureRecognizer = UITapGestureRecognizer(target: self, action: "closeSoftKeyboard")
-		self.view.addGestureRecognizer(gestureRecognizer)
+		// MEMO:TableViewではUITapGestureRecognizerを使うとセルのタップが検知できない
+		//		そのためUIScrollViewのkeyboardDismissModeを設定する（Storyboardにて）
 	}
 
     override func didReceiveMemoryWarning() {
@@ -48,41 +54,53 @@ class BookSearcherTableViewController: UITableViewController {
     */
 
 	// MARK: - Private Methods
-	func closeSoftKeyboard() {
-		self.view.endEditing(true)
-	}
-
 	private func loadBookData(word: String) {
+		var page = 1
+
+		// 前回の結果がある場合の処理
+		if let lastResult = self.searchResult {
+			if lastResult.last == lastResult.count {
+				return	// もう無い
+			}
+			page++
+		}
+
 		let logic = BookSearcherTableViewLogic()
-		logic.loadBookDataWithWord(word, page: 1) { result in
-			if let books = result {
-				self.books = books
+		logic.loadBookDataWithWord(word, page: page) { result in
+			self.nowLoading = false
+			if let result = result {
+				self.searchResult = result
+				if result.page == 1 {
+					self.books = result.items
+				} else {
+					// MEMO:両者アンラップしたものを再設定するしか方法が見つからなかった
+					self.books = self.books! + result.items!
+				}
 				self.tableView.reloadData()
 			}
 		}
+		nowLoading = true
 	}
 }
 
 extension BookSearcherTableViewController {
-	// MARK: - Table view data source
+	// MARK: - UITableViewDataSource
 	
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		// #warning Incomplete implementation, return the number of sections
 		return 1
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		// #warning Incomplete implementation, return the number of rows
-		if let array = books?.items {
-			return array.count
+		guard let count = books?.count else {
+			return 0
 		}
-		return 0
+		return count
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("bookSearcherCell") as! BookSearcherTableViewCell
 
-		guard let book = books?.items![indexPath.row].item else {
+		guard let book = books![indexPath.row].item else {
 			return cell
 		}
 		print(indexPath.row)
@@ -103,59 +121,33 @@ extension BookSearcherTableViewController {
 
 		return cell
 	}
-	
-//	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//		print("didselect")
-//	}
+}
 
-	/*
-	// Override to support conditional editing of the table view.
-	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-		// Return false if you do not want the specified item to be editable.
-		return true
+extension BookSearcherTableViewController {
+	// MARK: - UITableViewDelegate
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let cell = tableView.cellForRowAtIndexPath(indexPath) as! BookSearcherTableViewCell
+		print(cell.titleLabel.text)
+		performSegueWithIdentifier("toBookSearchDetailSegue", sender: nil)
 	}
-	*/
 	
-	/*
-	// Override to support editing the table view.
-	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-		if editingStyle == .Delete {
-		// Delete the row from the data source
-		tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-		} else if editingStyle == .Insert {
-		// Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+	override func scrollViewDidScroll(scrollView: UIScrollView) {
+		if nowLoading == true {
+			return
 		}
+		
+		let scrollValue = scrollView.contentSize.height - scrollView.bounds.height
+		if scrollValue > scrollView.contentOffset.y {
+			return
+		}
+		
+		// 一番下までスクロールしたというこでデータを追加する
+		loadBookData(searchBar.text!)
 	}
-	*/
-	
-	/*
-	// Override to support rearranging the table view.
-	override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-	
-	}
-	*/
-	
-	/*
-	// Override to support conditional rearranging of the table view.
-	override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-		// Return false if you do not want the item to be re-orderable.
-		return true
-	}
-	*/
-	
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		// Get the new view controller using segue.destinationViewController.
-		// Pass the selected object to the new view controller.
-	}
-	*/
-	
 }
 
 extension BookSearcherTableViewController: UISearchBarDelegate {
+	// MARK: - UISearchBarDelegate
 	func searchBarSearchButtonClicked(searchBar: UISearchBar) {
 		loadBookData(searchBar.text!)
 		searchBar.resignFirstResponder()

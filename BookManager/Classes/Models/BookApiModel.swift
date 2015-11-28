@@ -14,11 +14,13 @@ struct BookApiModel {
 	static let api = "services/api/BooksBook/Search/20130522?"
 	
 	static func searchApiWithIsbn(isbn: String) -> String {
-		return prot + host + api + "format=json&carrier=1" + "&page=1" + "&isbn=\(isbn)" + "&applicationId=\(appId())"
+		let urlString = prot + host + api + "format=json&carrier=1" + "&page=1" + "&title=\(isbn)" + "&applicationId=\(appId())"
+		return urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 	}
 
 	static func searchApiWithKeyword(word: String, page:Int) -> String {
-		return prot + host + api + "format=json&carrier=1" + "&page=\(page)" + "&title=\(word)" + "&applicationId=\(appId())"
+		let urlString = prot + host + api + "format=json&carrier=1" + "&page=\(page)" + "&title=\(word)" + "&applicationId=\(appId())"
+		return urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 	}
 	
 	static func appId() -> String {
