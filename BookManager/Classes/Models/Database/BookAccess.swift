@@ -11,11 +11,12 @@ import Foundation
 import Foundation
 import Realm
 import RealmSwift
+import ObjectMapper
 
 class BookAccess {
 	
 	// MARK: - Static Methods
-	static func createBookObjectFromBookModel(data: BookDataModel) -> BookObject {
+	static func createBookObjectFromBookData(data: BookDataModel) -> BookObject {
 		let bookObject = BookObject()
 		
 		bookObject.isbn = data.isbn!
@@ -33,6 +34,27 @@ class BookAccess {
 
 		return bookObject
 	}
+
+	static func createBookDataFromBookObject(object: BookObject) -> BookDataModel {
+		let srcObject = [
+			"isbn": object.isbn,
+			"title": object.title,
+			"author": object.author,
+			"publisherName": object.publisher,
+			"itemPrice": object.price,
+			"salesDate": object.salesDate,
+			"itemCaption": object.itemCaption,
+			"itemUrl": object.itemUrl,
+			"largeImageUrl": object.imageUrl,
+			"reviewCount": object.reviewCount,
+			"reviewAverage": object.reviewAverage,
+			"booksGenreId": object.genreId
+		]
+		
+		let bookData = Mapper<BookDataModel>().map(srcObject)
+		return bookData!
+	}
+	
 //	static func addWishList(data: BookDataModel) -> Bool {
 //		let realm = try! Realm()
 //		

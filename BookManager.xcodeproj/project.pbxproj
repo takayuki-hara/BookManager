@@ -37,6 +37,9 @@
 		A1BC07131C09C4F200CED9AE /* WishListAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07121C09C4F200CED9AE /* WishListAccess.swift */; };
 		A1BC07151C09CFC200CED9AE /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07141C09CFC200CED9AE /* DateFunctions.swift */; };
 		A1BC07171C09EC2800CED9AE /* BookAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07161C09EC2800CED9AE /* BookAccess.swift */; };
+		A1BC071A1C09F74500CED9AE /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07181C09F74500CED9AE /* WishListTableViewCell.swift */; };
+		A1BC071B1C09F74500CED9AE /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC07191C09F74500CED9AE /* WishListTableViewCell.xib */; };
+		A1BC071F1C09FD4400CED9AE /* WishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC071E1C09FD4400CED9AE /* WishListTableViewController.swift */; };
 		BBA6875127C94F993BE5A029 /* Pods_BookManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B2AA7BA0342966B08623082 /* Pods_BookManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,9 @@
 		A1BC07121C09C4F200CED9AE /* WishListAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListAccess.swift; sourceTree = "<group>"; };
 		A1BC07141C09CFC200CED9AE /* DateFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		A1BC07161C09EC2800CED9AE /* BookAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookAccess.swift; sourceTree = "<group>"; };
+		A1BC07181C09F74500CED9AE /* WishListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
+		A1BC07191C09F74500CED9AE /* WishListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
+		A1BC071E1C09FD4400CED9AE /* WishListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListTableViewController.swift; sourceTree = "<group>"; };
 		C2CC2E6C7A36387C89A755E9 /* Pods-BookManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookManager/Pods-BookManager.debug.xcconfig"; sourceTree = "<group>"; };
 		F2C27330D751B1FEF6F0D0BB /* Pods-BookManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookManager/Pods-BookManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,6 +280,7 @@
 				A12CF6AB1C032A56009260A7 /* BookInfoLoaderViewController.swift */,
 				A12CF6AD1C032A76009260A7 /* BookSearcherTableViewController.swift */,
 				A12CF6AF1C032A89009260A7 /* BookLibraryTableViewController.swift */,
+				A1BC071E1C09FD4400CED9AE /* WishListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -301,6 +308,8 @@
 			children = (
 				A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */,
 				A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */,
+				A1BC07181C09F74500CED9AE /* WishListTableViewCell.swift */,
+				A1BC07191C09F74500CED9AE /* WishListTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 				A12CF6AA1C02ED48009260A7 /* HomeStoryboard.storyboard in Resources */,
 				A1BC07071C096EA000CED9AE /* Tips.md in Resources */,
 				A12CF64C1C02BDC9009260A7 /* LaunchScreen.storyboard in Resources */,
+				A1BC071B1C09F74500CED9AE /* WishListTableViewCell.xib in Resources */,
 				A12CF6491C02BDC9009260A7 /* Assets.xcassets in Resources */,
 				A12CF6441C02BDC9009260A7 /* Main.storyboard in Resources */,
 				A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */,
@@ -503,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BC071F1C09FD4400CED9AE /* WishListTableViewController.swift in Sources */,
 				A1BC07171C09EC2800CED9AE /* BookAccess.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
@@ -521,6 +532,7 @@
 				A12CF6A21C02C4C3009260A7 /* BookSearchResultModel.swift in Sources */,
 				A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */,
 				A12CF6A41C02C4D2009260A7 /* IsbnReaderView.swift in Sources */,
+				A1BC071A1C09F74500CED9AE /* WishListTableViewCell.swift in Sources */,
 				A12CF6B41C033CCD009260A7 /* BookInfoLoaderViewLogic.swift in Sources */,
 				A1BC07131C09C4F200CED9AE /* WishListAccess.swift in Sources */,
 				A12CF6A01C02C4C3009260A7 /* BookApiModel.swift in Sources */,

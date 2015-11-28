@@ -26,7 +26,7 @@ class WishListAccess {
 		let wishList = WishListObject()
 		wishList.isbn = data.isbn!
 		wishList.addDate = nowDateString()
-		wishList.book = BookAccess.createBookObjectFromBookModel(data)
+		wishList.book = BookAccess.createBookObjectFromBookData(data)
 		try! realm.write {
 			realm.add(wishList)
 		}
@@ -50,7 +50,17 @@ class WishListAccess {
 		
 		return true
 	}
-	
+
+	static func allObjects() -> [BookDataModel]? {
+		let realm = try! Realm()
+		let results = realm.objects(WishListObject)
+		var array: [BookDataModel]? = []
+		for result in results {
+			array?.append(BookAccess.createBookDataFromBookObject(result.book!))
+		}
+		return array
+	}
+
 	static func allDeleteWishList() {
 		let realm = try! Realm()
 		

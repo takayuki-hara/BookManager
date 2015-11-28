@@ -61,7 +61,7 @@ class BookSearcherTableViewController: UITableViewController {
 			if lastResult.last == lastResult.count {
 				return	// もう無い
 			}
-			page++
+			page = lastResult.page! + 1
 		}
 
 		let logic = BookSearcherTableViewLogic()
