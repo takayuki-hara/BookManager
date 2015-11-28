@@ -12,6 +12,10 @@ import Haneke
 
 class BookDetailViewController: UIViewController {
 
+	enum MenuType {
+		case Info, Search, Library, WishList
+	}
+
 	// MARK: - @IBOutlet
 	@IBOutlet weak var scrollView: UIScrollView!
 	@IBOutlet weak var bookImageView: UIImageView!
@@ -23,15 +27,25 @@ class BookDetailViewController: UIViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var textView: UITextView!
 
+	@IBAction func didPushWishListButton(sender: AnyObject) {
+	}
+
+	@IBAction func didPushLibraryButton(sender: AnyObject) {
+	}
+
+	@IBAction func didPushReviewButton(sender: AnyObject) {
+	}
+	
 	// MARK: - Property
-	var book: BookDataModel?
+	var book: BookDataModel!
+	var menu: MenuType!
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		displayBookInfo(book!)
+		displayBookInfo(book)
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,7 +16,7 @@ struct BookApiModel {
 	
 	// MARK: - Static Methods
 	static func searchApiWithIsbn(isbn: String) -> String {
-		let urlString = prot + host + api + "format=json&carrier=1" + "&page=1" + "&title=\(isbn)" + "&applicationId=\(appId())"
+		let urlString = prot + host + api + "format=json&carrier=1" + "&page=1" + "&isbn=\(isbn)" + "&applicationId=\(appId())"
 		return urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 	}
 

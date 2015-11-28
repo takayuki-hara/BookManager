@@ -158,7 +158,7 @@
                                                     <constraint firstAttribute="width" constant="32" id="bAo-90-1nA"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or">
                                                 <rect key="frame" x="32" y="0.0" width="240" height="60"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -200,17 +200,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7f-d2-7os" userLabel="ReadView">
-                                <rect key="frame" x="150" y="164" width="300" height="300"/>
+                                <rect key="frame" x="165" y="164" width="270" height="250"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarcodeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3jM-sB-bdN">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="09H-j4-Wj7"/>
+                                            <constraint firstAttribute="height" constant="32" id="Lfo-tt-1U3"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBNを入力する(10 or 13桁)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-pl-olT">
-                                        <rect key="frame" x="0.0" y="0.0" width="212" height="21"/>
+                                        <rect key="frame" x="52" y="0.0" width="212" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9784800710703" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2W-PU-468">
-                                        <rect key="frame" x="50" y="26" width="150" height="30"/>
+                                        <rect key="frame" x="120" y="41" width="150" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="9EM-Bk-Ku5"/>
@@ -218,45 +226,57 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カメラで読み込む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-yF-RWg">
-                                        <rect key="frame" x="0.0" y="156" width="136" height="21"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw">
-                                        <rect key="frame" x="240" y="156" width="60" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="読み込み"/>
-                                        <connections>
-                                            <action selector="didPushCameraSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="Saf-UW-auU"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-Ed-Vl5">
-                                        <rect key="frame" x="240" y="26" width="60" height="30"/>
+                                        <rect key="frame" x="210" y="91" width="60" height="30"/>
                                         <animations/>
                                         <state key="normal" title="取得する"/>
                                         <connections>
                                             <action selector="didPushIsbnSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="en5-7Q-cB3"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-8u-gkE">
+                                        <rect key="frame" x="0.0" y="151" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="13t-IS-kOZ"/>
+                                            <constraint firstAttribute="height" constant="32" id="nUk-Qb-zMY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カメラで読み込む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-yF-RWg">
+                                        <rect key="frame" x="52" y="151" width="136" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw">
+                                        <rect key="frame" x="210" y="192" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="読み込み"/>
+                                        <connections>
+                                            <action selector="didPushCameraSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="Saf-UW-auU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="TPt-Ed-Vl5" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="top" id="3Cm-5q-alh"/>
-                                    <constraint firstAttribute="trailing" secondItem="TPt-Ed-Vl5" secondAttribute="trailing" id="3gv-zc-gg4"/>
-                                    <constraint firstItem="Z2W-PU-468" firstAttribute="top" secondItem="SYW-pl-olT" secondAttribute="bottom" constant="5" id="3j3-qu-3xx"/>
-                                    <constraint firstItem="ESb-im-kaw" firstAttribute="top" secondItem="HCJ-yF-RWg" secondAttribute="top" id="3lt-Yn-Edl"/>
-                                    <constraint firstItem="SYW-pl-olT" firstAttribute="top" secondItem="f7f-d2-7os" secondAttribute="top" id="7RP-ho-13j"/>
-                                    <constraint firstAttribute="height" constant="300" id="Cit-3W-4vx"/>
-                                    <constraint firstAttribute="width" constant="300" id="D2c-gp-7ni"/>
-                                    <constraint firstItem="SYW-pl-olT" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="aYh-8x-RYO"/>
-                                    <constraint firstItem="Z2W-PU-468" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" constant="50" id="bYI-ih-WxK"/>
-                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="bottom" constant="100" id="cpD-eq-jfX"/>
-                                    <constraint firstItem="ESb-im-kaw" firstAttribute="leading" secondItem="TPt-Ed-Vl5" secondAttribute="leading" id="g5q-AO-Pyh"/>
-                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="sFm-r7-DIG"/>
+                                    <constraint firstItem="TPt-Ed-Vl5" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="bottom" constant="20" id="48m-8c-EoW"/>
+                                    <constraint firstItem="J4Y-8u-gkE" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="52k-Ft-zEO"/>
+                                    <constraint firstItem="3jM-sB-bdN" firstAttribute="leading" secondItem="f7f-d2-7os" secondAttribute="leading" id="59A-cB-VOZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z2W-PU-468" secondAttribute="trailing" id="98e-Gw-yf4"/>
+                                    <constraint firstItem="ESb-im-kaw" firstAttribute="top" secondItem="HCJ-yF-RWg" secondAttribute="bottom" constant="20" id="AY1-xV-FCw"/>
+                                    <constraint firstAttribute="height" constant="250" id="Cit-3W-4vx"/>
+                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="top" secondItem="TPt-Ed-Vl5" secondAttribute="bottom" constant="30" id="Cv7-8y-v4n"/>
+                                    <constraint firstAttribute="width" constant="270" id="D2c-gp-7ni"/>
+                                    <constraint firstItem="3jM-sB-bdN" firstAttribute="top" secondItem="f7f-d2-7os" secondAttribute="top" id="GI4-aj-hUi"/>
+                                    <constraint firstItem="Z2W-PU-468" firstAttribute="top" secondItem="SYW-pl-olT" secondAttribute="bottom" constant="20" id="TI8-Ug-Ccr"/>
+                                    <constraint firstItem="HCJ-yF-RWg" firstAttribute="leading" secondItem="J4Y-8u-gkE" secondAttribute="trailing" constant="20" id="Ysj-1s-mjs"/>
+                                    <constraint firstItem="SYW-pl-olT" firstAttribute="top" secondItem="f7f-d2-7os" secondAttribute="top" id="bHB-fI-VcL"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPt-Ed-Vl5" secondAttribute="trailing" id="bfq-4F-5S4"/>
+                                    <constraint firstItem="SYW-pl-olT" firstAttribute="leading" secondItem="3jM-sB-bdN" secondAttribute="trailing" constant="20" id="gLD-kS-bXE"/>
+                                    <constraint firstAttribute="trailing" secondItem="ESb-im-kaw" secondAttribute="trailing" id="hoV-Eu-WlM"/>
+                                    <constraint firstItem="J4Y-8u-gkE" firstAttribute="top" secondItem="TPt-Ed-Vl5" secondAttribute="bottom" constant="30" id="qRv-uP-g77"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -275,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ol-3E-B64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-791"/>
+            <point key="canvasLocation" x="2272" y="-803"/>
         </scene>
         <!--BookSearcher Table View Controller-->
         <scene sceneID="1xA-fF-yYr">
@@ -323,7 +343,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNb-4h-5Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="-131"/>
+            <point key="canvasLocation" x="2272" y="-123"/>
         </scene>
         <!--BookDetail View Controller-->
         <scene sceneID="KVS-Kc-GQk">
@@ -493,6 +513,94 @@
                                     <constraint firstAttribute="height" constant="3" id="SrE-bb-qsJ"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-kZ-wgG">
+                                <rect key="frame" x="175" y="417" width="250" height="160"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0v0-Ql-XTf">
+                                        <rect key="frame" x="0.0" y="6" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="4wU-z3-cjS"/>
+                                            <constraint firstAttribute="width" constant="32" id="iGB-5g-2Qc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-w9-1tu">
+                                        <rect key="frame" x="52" y="8" width="180" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="欲しいものリストに加える"/>
+                                        <connections>
+                                            <action selector="didPushWishListButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="amh-cr-32e"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-jI-MNq">
+                                        <rect key="frame" x="0.0" y="46" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="2X1-X9-huv"/>
+                                            <constraint firstAttribute="height" constant="32" id="a9X-IG-EAg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMb-QO-lXo">
+                                        <rect key="frame" x="52" y="46" width="90" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="蔵書登録する"/>
+                                        <connections>
+                                            <action selector="didPushLibraryButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="0hx-uv-UEX"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-m0-p1M">
+                                        <rect key="frame" x="0.0" y="86" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="BUZ-6t-RDv"/>
+                                            <constraint firstAttribute="width" constant="32" id="E4f-sf-fgY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz">
+                                        <rect key="frame" x="52" y="84" width="135" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="レビューを投稿する"/>
+                                        <connections>
+                                            <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="iaE-uj-YCw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-6y-Eqx">
+                                        <rect key="frame" x="52" y="122" width="120" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="この書籍を借りる"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9bZ-d8-Fim">
+                                        <rect key="frame" x="0.0" y="126" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="BZr-uz-ac9"/>
+                                            <constraint firstAttribute="height" constant="32" id="UFh-7h-SL6"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9bZ-d8-Fim" firstAttribute="top" secondItem="ieM-m0-p1M" secondAttribute="bottom" constant="8" id="1ik-gf-yft"/>
+                                    <constraint firstAttribute="width" constant="250" id="7KZ-mc-55J"/>
+                                    <constraint firstItem="R5W-b7-eXz" firstAttribute="top" secondItem="jMb-QO-lXo" secondAttribute="bottom" constant="8" id="7jg-K7-gfp"/>
+                                    <constraint firstItem="TYB-6y-Eqx" firstAttribute="leading" secondItem="9bZ-d8-Fim" secondAttribute="trailing" constant="20" id="Bb9-0i-gRe"/>
+                                    <constraint firstAttribute="height" constant="160" id="HGB-oc-ykN"/>
+                                    <constraint firstItem="jMb-QO-lXo" firstAttribute="top" secondItem="DOy-w9-1tu" secondAttribute="bottom" constant="8" id="RcT-Mw-UfU"/>
+                                    <constraint firstItem="9bZ-d8-Fim" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="aup-iA-6PW"/>
+                                    <constraint firstItem="8iZ-jI-MNq" firstAttribute="top" secondItem="0v0-Ql-XTf" secondAttribute="bottom" constant="8" id="fVe-MM-IZj"/>
+                                    <constraint firstItem="ieM-m0-p1M" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="jNh-Zf-Cqw"/>
+                                    <constraint firstItem="8iZ-jI-MNq" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="nen-Fe-gBP"/>
+                                    <constraint firstItem="TYB-6y-Eqx" firstAttribute="top" secondItem="R5W-b7-eXz" secondAttribute="bottom" constant="8" id="rIG-qU-HiC"/>
+                                    <constraint firstItem="R5W-b7-eXz" firstAttribute="leading" secondItem="ieM-m0-p1M" secondAttribute="trailing" constant="20" id="srg-1G-W8d"/>
+                                    <constraint firstItem="0v0-Ql-XTf" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="tzH-TE-85W"/>
+                                    <constraint firstItem="0v0-Ql-XTf" firstAttribute="top" secondItem="dhP-kZ-wgG" secondAttribute="top" constant="6" id="v9T-3L-OpI"/>
+                                    <constraint firstItem="ieM-m0-p1M" firstAttribute="top" secondItem="8iZ-jI-MNq" secondAttribute="bottom" constant="8" id="vts-4d-hsy"/>
+                                    <constraint firstItem="DOy-w9-1tu" firstAttribute="top" secondItem="dhP-kZ-wgG" secondAttribute="top" constant="8" id="wUV-Da-ZEP"/>
+                                    <constraint firstItem="jMb-QO-lXo" firstAttribute="leading" secondItem="8iZ-jI-MNq" secondAttribute="trailing" constant="20" id="yRv-xU-haY"/>
+                                    <constraint firstItem="DOy-w9-1tu" firstAttribute="leading" secondItem="0v0-Ql-XTf" secondAttribute="trailing" constant="20" id="yl3-bx-uo8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -500,9 +608,11 @@
                             <constraint firstItem="pGQ-FE-Jp3" firstAttribute="top" secondItem="xqv-8m-VAr" secondAttribute="bottom" constant="10" id="9Ec-Xr-q7T"/>
                             <constraint firstAttribute="trailing" secondItem="pGQ-FE-Jp3" secondAttribute="trailing" constant="20" id="B31-SM-Ea4"/>
                             <constraint firstAttribute="trailing" secondItem="xqv-8m-VAr" secondAttribute="trailing" constant="20" id="FLy-Vh-PiU"/>
+                            <constraint firstItem="dhP-kZ-wgG" firstAttribute="top" secondItem="pGQ-FE-Jp3" secondAttribute="bottom" constant="20" id="Iqg-Oj-RqX"/>
                             <constraint firstItem="pGQ-FE-Jp3" firstAttribute="leading" secondItem="nRv-Ll-r2T" secondAttribute="leading" constant="20" id="gj8-Ox-m0G"/>
                             <constraint firstItem="xqv-8m-VAr" firstAttribute="top" secondItem="KcY-yT-rk1" secondAttribute="bottom" constant="20" id="mL3-1X-Qo3"/>
                             <constraint firstItem="xqv-8m-VAr" firstAttribute="leading" secondItem="nRv-Ll-r2T" secondAttribute="leading" constant="20" id="nlt-Zb-QaE"/>
+                            <constraint firstItem="dhP-kZ-wgG" firstAttribute="centerX" secondItem="nRv-Ll-r2T" secondAttribute="centerX" id="q1f-qC-y51"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="書籍管理メニュー" id="vAp-zS-AK6"/>
@@ -520,7 +630,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNR-Cd-pCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="-222"/>
+            <point key="canvasLocation" x="3375" y="-218"/>
         </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">
@@ -552,7 +662,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-h6-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="608"/>
+            <point key="canvasLocation" x="2272" y="708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0z-dU-saZ">
@@ -575,6 +685,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BarcodeIcon" width="128" height="128"/>
+        <image name="CameraIcon" width="128" height="128"/>
         <image name="LibraryIcon" width="128" height="128"/>
         <image name="LoadIcon" width="128" height="128"/>
         <image name="RentalIcon" width="128" height="128"/>
@@ -583,6 +695,6 @@
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TMe-SM-QE5"/>
+        <segue reference="KuK-pc-gCd"/>
     </inferredMetricsTieBreakers>
 </document>
