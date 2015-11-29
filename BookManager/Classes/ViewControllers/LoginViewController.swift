@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
 	// MARK: - @IBAction
 	@IBAction func didPushLoginButton(sender: AnyObject) {
 		if UserAccess.checkUser(userNameText.text!) == true {
+			setLoginUserToUserDefaults(userNameText.text!)
 			performSegueWithIdentifier("toHomeViewSegue", sender: nil)
 		} else {
 			// アラート表示
@@ -32,7 +33,10 @@ class LoginViewController: UIViewController {
 
 		// Adminユーザーの確認（なければ追加）
 		UserAccess.initAdminUser()
-		
+
+		// 前回のログインユーザー名を表示しておく
+		userNameText.text = getLoginUserFromUserDefaults()
+
 		// キーボード外のタッチでキーボードを閉じるための設定
 		let gestureRecognizer = UITapGestureRecognizer(target: self, action: "closeSoftKeyboard")
 		self.view.addGestureRecognizer(gestureRecognizer)
