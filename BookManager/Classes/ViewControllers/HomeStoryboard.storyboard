@@ -138,7 +138,7 @@
                                                     <constraint firstAttribute="width" constant="32" id="RgB-TR-y1I"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
                                                 <rect key="frame" x="32" y="0.0" width="240" height="60"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ol-3E-B64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="-803"/>
+            <point key="canvasLocation" x="2272" y="-739"/>
         </scene>
         <!--BookSearcher Table View Controller-->
         <scene sceneID="1xA-fF-yYr">
@@ -346,7 +346,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNb-4h-5Zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="-123"/>
+            <point key="canvasLocation" x="2272" y="-51"/>
         </scene>
         <!--BookDetail View Controller-->
         <scene sceneID="KVS-Kc-GQk">
@@ -559,7 +559,7 @@
                                             <constraint firstAttribute="width" constant="32" id="E4f-sf-fgY"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz">
                                         <rect key="frame" x="52" y="84" width="135" height="30"/>
                                         <animations/>
                                         <state key="normal" title="レビューを投稿する"/>
@@ -665,7 +665,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-h6-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="554"/>
+            <point key="canvasLocation" x="2272" y="654"/>
         </scene>
         <!--WishList Table View Controller-->
         <scene sceneID="N88-4d-Rj9">
@@ -697,7 +697,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8I-kR-fZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="1232"/>
+            <point key="canvasLocation" x="1062" y="1338"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0z-dU-saZ">
@@ -730,6 +730,6 @@
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuK-pc-gCd"/>
+        <segue reference="TMe-SM-QE5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,20 +13,30 @@ import RealmSwift
 class WishListAccess {
 
 	// MARK: - Static Methods
+	static func countWishLists() -> Int {
+		let realm = try! Realm()
+		let results = realm.objects(WishListObject)
+		return results.count
+	}
+	
 	static func addWishList(data: BookDataModel) -> Bool {
 		let realm = try! Realm()
 
-		// 存在確認（ある場合はエラー）
-		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@", data.isbn!))
+		// 存在確認（ある場合はエラー）:同じ人が同じ本について登録しない
+		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@ AND wisher == %@", data.isbn!, getLoginUserFromUserDefaults()))
 		if results.count != 0 {
 			return false
 		}
 
+		// BookObjectの追加
+		BookAccess.addBook(data)
+
 		// 追加
 		let wishList = WishListObject()
+		wishList.id = countWishLists() + 1
 		wishList.isbn = data.isbn!
+		wishList.wisher = getLoginUserFromUserDefaults()
 		wishList.addDate = nowDateString()
-		wishList.book = BookAccess.createBookObjectFromBookData(data)
 		try! realm.write {
 			realm.add(wishList)
 		}
@@ -38,7 +48,7 @@ class WishListAccess {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
-		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@", data.isbn!))
+		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@ AND wisher == %@", data.isbn!, getLoginUserFromUserDefaults()))
 		if results.count == 0 {
 			return false
 		}
@@ -56,12 +66,12 @@ class WishListAccess {
 		let results = realm.objects(WishListObject)
 		var array: [BookDataModel]? = []
 		for result in results {
-			array?.append(BookAccess.createBookDataFromBookObject(result.book!))
+			array?.append(BookAccess.getBook(result.isbn)!)
 		}
 		return array
 	}
 
-	static func allDeleteWishList() {
+	static func allDeleteWishLists() {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
@@ -80,7 +90,7 @@ class WishListAccess {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
 		for result in results {
-			print("\(result.isbn), \(result.addDate), \(result.book?.title)")
+			print("\(result.id), \(result.isbn), \(result.wisher), \(result.addDate)")
 		}
 	}
 }

@@ -33,7 +33,7 @@ class UserAccess {
 
 		let realm = try! Realm()
 		
-		// 存在確認（ある場合はエラー）
+		// 存在確認（ある場合はエラー）：同名の人は登録できない
 		let results = realm.objects(UserObject).filter(NSPredicate(format:"name == %@", name))
 		if results.count != 0 {
 			return false

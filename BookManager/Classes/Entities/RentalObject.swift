@@ -13,10 +13,9 @@ import RealmSwift
 class RentalObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""
-	dynamic var owner = ""
-	dynamic var addDate = ""
-	dynamic var rentalable = false
-	dynamic var isRented = false
+	dynamic var renter = ""
+	dynamic var date = ""
+	dynamic var isReturned = false
 
 	override class func primaryKey() -> String {
 		return "id"
