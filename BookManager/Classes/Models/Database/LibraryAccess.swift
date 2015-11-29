@@ -47,11 +47,23 @@ class LibraryAccess {
 		return true
 	}
 	
+	static func existLibrary(data: BookDataModel, user: String) -> Bool {
+		let realm = try! Realm()
+
+		// 存在確認
+		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"isbn == %@ AND owner == %@", data.isbn!, user))
+		if results.count == 0 {
+			return false
+		}
+
+		return true
+	}
+
 	static func deleteWishList(data: BookDataModel) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
-		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@", data.isbn!))
+		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"isbn == %@", data.isbn!))
 		if results.count == 0 {
 			return false
 		}
