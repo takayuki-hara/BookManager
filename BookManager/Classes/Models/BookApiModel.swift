@@ -25,6 +25,11 @@ struct BookApiModel {
 		return urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 	}
 	
+	static func searchApiWithOreilly(page:Int) -> String {
+		let urlString = prot + host + api + "format=json&carrier=1" + "&page=\(page)" + "&publisherName=オライリー" + "&applicationId=\(appId())"
+		return urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+	}
+	
 	static func appId() -> String {
 		// FIXME: 楽天ウェブサービスの applicationId を返してください
 		return ""

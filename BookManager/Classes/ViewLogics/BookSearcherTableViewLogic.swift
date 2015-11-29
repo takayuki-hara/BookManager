@@ -13,7 +13,11 @@ class BookSearcherTableViewLogic {
 
 	// MARK: - Public Functions
 	func loadBookDataWithWord(word: String, page: Int, loaded: (BookSearchResultModel?) -> ()) {
-		Alamofire.request(.GET, BookApiModel.searchApiWithKeyword(word, page: page))
+		var url = BookApiModel.searchApiWithKeyword(word, page: page)
+		if word == "オライリー" {
+			url = BookApiModel.searchApiWithOreilly(page)
+		}
+		Alamofire.request(.GET, url)
 			.responseObject { (response: Response<BookSearchResultModel, NSError>) in
 				print(response.request)  // original URL request
 				print(response.response) // URL response
