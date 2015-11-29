@@ -24,6 +24,8 @@
 		A12CF6AE1C032A76009260A7 /* BookSearcherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6AD1C032A76009260A7 /* BookSearcherTableViewController.swift */; };
 		A12CF6B01C032A89009260A7 /* BookLibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6AF1C032A89009260A7 /* BookLibraryTableViewController.swift */; };
 		A12CF6B41C033CCD009260A7 /* BookInfoLoaderViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6B31C033CCD009260A7 /* BookInfoLoaderViewLogic.swift */; };
+		A140784C1C0ACF1A0079D030 /* UserRegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140784B1C0ACF1A0079D030 /* UserRegistViewController.swift */; };
+		A140784E1C0AD3110079D030 /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A140784D1C0AD3110079D030 /* UserAccess.swift */; };
 		A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */; };
 		A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */; };
 		A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */; };
@@ -85,6 +87,8 @@
 		A12CF6AD1C032A76009260A7 /* BookSearcherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewController.swift; sourceTree = "<group>"; };
 		A12CF6AF1C032A89009260A7 /* BookLibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLibraryTableViewController.swift; sourceTree = "<group>"; };
 		A12CF6B31C033CCD009260A7 /* BookInfoLoaderViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoLoaderViewLogic.swift; sourceTree = "<group>"; };
+		A140784B1C0ACF1A0079D030 /* UserRegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRegistViewController.swift; sourceTree = "<group>"; };
+		A140784D1C0AD3110079D030 /* UserAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
 		A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewCell.swift; sourceTree = "<group>"; };
 		A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearcherTableViewCell.xib; sourceTree = "<group>"; };
 		A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewLogic.swift; sourceTree = "<group>"; };
@@ -249,8 +253,9 @@
 		A12CF6771C02C08C009260A7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				A1BC07121C09C4F200CED9AE /* WishListAccess.swift */,
 				A1BC07161C09EC2800CED9AE /* BookAccess.swift */,
+				A1BC07121C09C4F200CED9AE /* WishListAccess.swift */,
+				A140784D1C0AD3110079D030 /* UserAccess.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				A12CF6AD1C032A76009260A7 /* BookSearcherTableViewController.swift */,
 				A12CF6AF1C032A89009260A7 /* BookLibraryTableViewController.swift */,
 				A1BC071E1C09FD4400CED9AE /* WishListTableViewController.swift */,
+				A140784B1C0ACF1A0079D030 /* UserRegistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -518,8 +524,10 @@
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
 				A12CF67F1C02C08D009260A7 /* AppDelegate.swift in Sources */,
+				A140784C1C0ACF1A0079D030 /* UserRegistViewController.swift in Sources */,
 				A12CF6AC1C032A56009260A7 /* BookInfoLoaderViewController.swift in Sources */,
 				A1BC07091C097E1F00CED9AE /* BookObject.swift in Sources */,
+				A140784E1C0AD3110079D030 /* UserAccess.swift in Sources */,
 				A1BC07111C09A31700CED9AE /* WishListObject.swift in Sources */,
 				A1BC07051C0954C600CED9AE /* BookDetailViewController.swift in Sources */,
 				A1BC070F1C09A31700CED9AE /* ReviewObject.swift in Sources */,

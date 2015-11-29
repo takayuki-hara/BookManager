@@ -76,7 +76,7 @@ class WishListAccess {
 		}
 	}
 	
-	static func consoleOutWishList() {
+	static func consoleOutWishLists() {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
 		for result in results {

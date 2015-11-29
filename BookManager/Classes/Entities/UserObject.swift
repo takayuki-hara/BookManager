@@ -10,8 +10,8 @@ import Foundation
 import Realm
 import RealmSwift
 
-class UserObject: RLMObject {
-	dynamic var id = ""
+class UserObject: Object {
+	dynamic var id = 0
 	dynamic var name = ""
 
 	override class func primaryKey() -> String {

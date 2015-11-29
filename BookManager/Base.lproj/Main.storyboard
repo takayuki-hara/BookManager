@@ -35,8 +35,8 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登録したID・ユーザー名でログインしてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxk-gV-T4e">
-                                        <rect key="frame" x="47" y="26" width="251" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="登録したユーザー情報でログインしてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxk-gV-T4e">
+                                        <rect key="frame" x="46" y="26" width="252" height="15"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,7 +48,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enj-3j-qZu">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="not use" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enj-3j-qZu">
                                         <rect key="frame" x="50" y="111" width="250" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,7 +59,7 @@
                                         <animations/>
                                         <state key="normal" title="ログイン"/>
                                         <connections>
-                                            <segue destination="gaI-02-EGo" kind="show" id="GXJ-xX-wns"/>
+                                            <action selector="didPushLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MNG-jN-BIY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,6 +144,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ログイン・ユーザー登録" id="EvH-i7-M2y"/>
+                    <connections>
+                        <outlet property="userNameText" destination="Pdr-rh-Q49" id="DCV-62-kEp"/>
+                        <segue destination="gaI-02-EGo" kind="show" identifier="toHomeViewSegue" id="hCE-Ml-P8e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,7 +156,7 @@
         <!--UserRegistration View Controller-->
         <scene sceneID="YEv-AX-kpb">
             <objects>
-                <viewController id="lS2-Rs-mZn" userLabel="UserRegistration View Controller" sceneMemberID="viewController">
+                <viewController id="lS2-Rs-mZn" userLabel="UserRegistration View Controller" customClass="UserRegistViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LHN-JZ-p8X"/>
                         <viewControllerLayoutGuide type="bottom" id="oax-vx-73Y"/>
@@ -160,10 +164,74 @@
                     <view key="view" contentMode="scaleToFill" id="BrD-5y-2Io">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTk-Mg-3Tt">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規登録" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAB-jy-AZn">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8C-gG-mS8">
+                                        <rect key="frame" x="135" y="151" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="登録"/>
+                                        <connections>
+                                            <action selector="didPushRegistButton:" destination="lS2-Rs-mZn" eventType="touchUpInside" id="uUU-PZ-Rqi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレスの＠より前の部分を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwH-gJ-dYf">
+                                        <rect key="frame" x="50" y="41" width="200" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="NCW-rY-7lO"/>
+                                            <constraint firstAttribute="height" constant="40" id="qhg-Mb-xwX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gln-yn-6xK">
+                                        <rect key="frame" x="60" y="101" width="180" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="A7X-5m-Iyk"/>
+                                            <constraint firstAttribute="height" constant="30" id="W5d-Ow-JQ5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="KAB-jy-AZn" firstAttribute="top" secondItem="aTk-Mg-3Tt" secondAttribute="top" id="342-1Q-WOc"/>
+                                    <constraint firstItem="Y8C-gG-mS8" firstAttribute="centerX" secondItem="aTk-Mg-3Tt" secondAttribute="centerX" id="38I-aq-ZyH"/>
+                                    <constraint firstAttribute="width" constant="300" id="9Do-9z-8bL"/>
+                                    <constraint firstItem="Y8C-gG-mS8" firstAttribute="top" secondItem="Gln-yn-6xK" secondAttribute="bottom" constant="20" id="FrR-qz-NwR"/>
+                                    <constraint firstItem="iwH-gJ-dYf" firstAttribute="centerX" secondItem="aTk-Mg-3Tt" secondAttribute="centerX" id="LQB-8a-oxu"/>
+                                    <constraint firstItem="iwH-gJ-dYf" firstAttribute="top" secondItem="KAB-jy-AZn" secondAttribute="bottom" constant="20" id="OF0-Cf-MY5"/>
+                                    <constraint firstItem="Gln-yn-6xK" firstAttribute="centerX" secondItem="aTk-Mg-3Tt" secondAttribute="centerX" id="OOA-8d-D0d"/>
+                                    <constraint firstItem="KAB-jy-AZn" firstAttribute="leading" secondItem="aTk-Mg-3Tt" secondAttribute="leading" id="ght-Uc-JYE"/>
+                                    <constraint firstItem="Gln-yn-6xK" firstAttribute="top" secondItem="iwH-gJ-dYf" secondAttribute="bottom" constant="20" id="wwE-QI-Tth"/>
+                                    <constraint firstAttribute="height" constant="300" id="ycl-iJ-6MT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aTk-Mg-3Tt" firstAttribute="centerX" secondItem="BrD-5y-2Io" secondAttribute="centerX" id="5ST-Kw-4Dj"/>
+                            <constraint firstItem="aTk-Mg-3Tt" firstAttribute="centerY" secondItem="BrD-5y-2Io" secondAttribute="centerY" id="p7q-An-6be"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ユーザー登録" id="hgK-W5-7fO"/>
+                    <connections>
+                        <outlet property="userNameText" destination="Gln-yn-6xK" id="8uj-z9-yV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MC9-4b-fAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

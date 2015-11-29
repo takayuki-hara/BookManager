@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-class BookObject: RLMObject {
+class BookObject: Object {
 	dynamic var isbn = ""
 	dynamic var title = ""
 	dynamic var author = ""

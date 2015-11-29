@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-class ReviewObject: RLMObject {
+class ReviewObject: Object {
 	dynamic var isbn = ""
 	dynamic var reviewer = ""
 	dynamic var date = ""

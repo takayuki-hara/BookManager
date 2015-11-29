@@ -29,18 +29,23 @@ class BookDetailViewController: UIViewController {
 
 	// MARK: - @IBAction
 	@IBAction func didPushWishListButton(sender: AnyObject) {
-		WishListAccess.addWishList(book)
-		WishListAccess.consoleOutWishList()
+		if WishListAccess.addWishList(book) == false {
+			// アラート表示
+			let alertController = UIAlertController(title: "登録エラー", message: "登録済みの書籍です", preferredStyle: .Alert)
+			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+			alertController.addAction(defaultAction)
+			presentViewController(alertController, animated: true, completion: nil)
+
+		}
+		WishListAccess.consoleOutWishLists()
 	}
 
 	@IBAction func didPushLibraryButton(sender: AnyObject) {
-		WishListAccess.deleteWishList(book)
-		WishListAccess.consoleOutWishList()
+		//
 	}
 
 	@IBAction func didPushReviewButton(sender: AnyObject) {
-		WishListAccess.allDeleteWishList()
-		WishListAccess.consoleOutWishList()
+		//
 	}
 	
 	// MARK: - Property

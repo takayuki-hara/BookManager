@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-class RentalObject: RLMObject {
+class RentalObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""
 	dynamic var owner = ""
