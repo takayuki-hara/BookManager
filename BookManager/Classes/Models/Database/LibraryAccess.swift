@@ -76,12 +76,13 @@ class LibraryAccess {
 		return true
 	}
 	
-	static func allObjects() -> [BookDataModel]? {
+	static func allObjects() -> [BookLibraryDataModel]? {
 		let realm = try! Realm()
 		let results = realm.objects(LibraryObject)
-		var array: [BookDataModel]? = []
+		var array: [BookLibraryDataModel]? = []
 		for result in results {
-			array?.append(BookAccess.getBook(result.isbn)!)
+			let lib = BookLibraryDataModel(library: result)
+			array?.append(lib)
 		}
 		return array
 	}

@@ -645,7 +645,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g4c-jM-2YK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g4c-jM-2YK" customClass="BookLibraryTableViewCell" customModule="BookManager" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4c-jM-2YK" id="7Fg-pD-ozr">
@@ -730,6 +730,6 @@
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TMe-SM-QE5"/>
+        <segue reference="KuK-pc-gCd"/>
     </inferredMetricsTieBreakers>
 </document>
