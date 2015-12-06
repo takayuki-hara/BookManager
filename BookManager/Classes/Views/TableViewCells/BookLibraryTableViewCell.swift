@@ -16,9 +16,9 @@ class BookLibraryTableViewCell: UITableViewCell {
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var authorLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var rentabableLabel: UILabel!
 	@IBOutlet weak var ownerLabel: UILabel!
-	@IBOutlet weak var cosmosView: CosmosView!
-	@IBOutlet weak var reviewLabel: UILabel!
+	@IBOutlet weak var isRentedLabel: UILabel!
 
 	
 	// MARK: - Lifecycle
@@ -41,13 +41,20 @@ class BookLibraryTableViewCell: UITableViewCell {
 		
 		titleLabel.text = library.book.title
 		authorLabel.text = library.book.author
-		dateLabel.text = library.addDate
-		ownerLabel.text = library.owner
-		
-		if let rating = library.book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
+		dateLabel.text = "登録日：" + library.addDate
+		ownerLabel.text = "所有者：" + library.owner
+		if !library.rentalable {
+			rentabableLabel.text = "Rental：○"
+			if library.isRented {
+				isRentedLabel.text = "貸出中"
+				isRentedLabel.textColor = UIColor.redColor()
+			} else {
+				isRentedLabel.text = "貸出可能"
+				isRentedLabel.textColor = UIColor.blueColor()
+			}
+		} else {
+			rentabableLabel.text = "Rental：○"
+			isRentedLabel.text = "---"
 		}
-		reviewLabel.text = " (" + String(library.book.reviewCount!) + ")"
 	}
 }
