@@ -15,10 +15,10 @@ class BookDetailView: UIView {
 	@IBOutlet weak var bookImageView: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var authorLabel: UILabel!
-	@IBOutlet weak var isbnLabel: UILabel!
 	@IBOutlet weak var publisherLabel: UILabel!
-	@IBOutlet weak var priceLabel: UILabel!
+	@IBOutlet weak var isbnLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var cosmosView: CosmosView!
 	@IBOutlet weak var reviewLabel: UILabel!
 	@IBOutlet weak var textView: UITextView!
@@ -37,16 +37,16 @@ class BookDetailView: UIView {
 		
 		titleLabel.text = book.title
 		authorLabel.text = book.author
-		isbnLabel.text = book.isbn
 		publisherLabel.text = book.publisher
-		priceLabel.text = String(book.price!) + " 円"
+		isbnLabel.text = book.isbn
 		dateLabel.text = book.salesDate
+		priceLabel.text = "¥ " + String(book.price!)
 		
 		if let rating = book.reviewAverage {
 			cosmosView.rating = Double(rating)!
 			cosmosView.settings.updateOnTouch = false
 		}
-		reviewLabel.text = String(book.reviewCount!) + " 件"
+		reviewLabel.text = " (" + String(book.reviewCount!) + ")"
 		
 		textView.text = book.itemCaption
 	}

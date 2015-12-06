@@ -17,15 +17,7 @@ class BookDetailViewController: UIViewController {
 	}
 
 	// MARK: - @IBOutlet
-	@IBOutlet weak var scrollView: UIScrollView!
-	@IBOutlet weak var bookImageView: UIImageView!
-	@IBOutlet weak var titleLabel: UILabel!
-	@IBOutlet weak var cosmosView: CosmosView!
-	@IBOutlet weak var reviewLabel: UILabel!
-	@IBOutlet weak var authorLabel: UILabel!
-	@IBOutlet weak var priceLabel: UILabel!
-	@IBOutlet weak var dateLabel: UILabel!
-	@IBOutlet weak var textView: UITextView!
+	@IBOutlet weak var bookDetailView: BookDetailView!
 
 	// MARK: - @IBAction
 	@IBAction func didPushWishListButton(sender: AnyObject) {
@@ -71,7 +63,7 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		displayBookInfo(book)
+		bookDetailView.setBookInfo(book)
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,24 +83,6 @@ class BookDetailViewController: UIViewController {
     */
 
 	// MARK: - Private Methods
-	private func displayBookInfo(book: BookDataModel) {
-		let url = NSURL(string: book.imageUrl!)
-		bookImageView.hnk_setImageFromURL(url!)
-		
-		titleLabel.text = book.title
-		authorLabel.text = book.author
-		
-		if let rating = book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
-		}
-		reviewLabel.text = String(book.reviewCount!) + " 件"
-		
-		priceLabel.text = String(book.price!) + " 円"
-		dateLabel.text = book.salesDate
-		textView.text = book.itemCaption
-	}
-
 	private func addLibrary() {
 		if LibraryAccess.addLibrary(book, user: getLoginUserFromUserDefaults()) == false {
 			// アラート表示
