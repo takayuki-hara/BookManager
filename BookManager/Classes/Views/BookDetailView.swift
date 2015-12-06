@@ -46,7 +46,7 @@ class BookDetailView: UIView {
 			cosmosView.rating = Double(rating)!
 			cosmosView.settings.updateOnTouch = false
 		}
-		reviewLabel.text = " (" + String(book.reviewCount!) + ")"
+		reviewLabel.text = "(" + String(book.reviewCount!) + ")"
 		
 		textView.text = book.itemCaption
 	}

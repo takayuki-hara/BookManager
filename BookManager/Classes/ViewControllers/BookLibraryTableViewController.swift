@@ -78,18 +78,7 @@ extension BookLibraryTableViewController {
 			return cell
 		}
 		let library = libraries![indexPath.row]
-		
-		cell.titleLabel.text = library.book.title
-		cell.authorLabel.text = library.book.author
-		cell.dateLabel.text = library.addDate
-		cell.ownerLabel.text = library.owner
-		cell.reviewLabel.text = String(library.book.reviewCount!) + " 件"
-		if let rating = library.book.reviewAverage {
-			cell.cosmosView.rating = Double(rating)!
-			cell.cosmosView.settings.updateOnTouch = false
-		}
-		let url = NSURL(string: (library.book.imageUrl!))
-		cell.bookImageView.hnk_setImageFromURL(url!)
+		cell.setBookInfo(library)
 		
 		return cell
     }

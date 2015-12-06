@@ -59,18 +59,7 @@ extension WishListTableViewController {
 			return cell
 		}
 		let book = books![indexPath.row]
-		
-		cell.titleLabel.text = book.title
-		cell.authorLabel.text = book.author
-		cell.dateLabel.text = book.salesDate
-		cell.priceLabel.text = String(book.price!) + " 円"
-		cell.reviewLabel.text = String(book.reviewCount!) + " 件"
-		if let rating = book.reviewAverage {
-			cell.cosmosView.rating = Double(rating)!
-			cell.cosmosView.settings.updateOnTouch = false
-		}
-		let url = NSURL(string: (book.imageUrl!))
-		cell.bookImageView.hnk_setImageFromURL(url!)
+		cell.setBookInfo(book)
 		
 		return cell
 	}

@@ -34,4 +34,20 @@ class BookLibraryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+	// MARK: - Public Method
+	func setBookInfo(library: BookLibraryDataModel) {
+		let url = NSURL(string: library.book.imageUrl!)
+		bookImageView.hnk_setImageFromURL(url!)
+		
+		titleLabel.text = library.book.title
+		authorLabel.text = library.book.author
+		dateLabel.text = library.addDate
+		ownerLabel.text = library.owner
+		
+		if let rating = library.book.reviewAverage {
+			cosmosView.rating = Double(rating)!
+			cosmosView.settings.updateOnTouch = false
+		}
+		reviewLabel.text = " (" + String(library.book.reviewCount!) + ")"
+	}
 }

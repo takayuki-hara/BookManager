@@ -75,10 +75,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szh-ke-A8I">
-                    <rect key="frame" x="156" y="161" width="434" height="17"/>
+                    <rect key="frame" x="156" y="161" width="434" height="16"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="845-Vh-9WZ" customClass="CosmosView" customModule="Cosmos">
-                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="16"/>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -86,14 +86,14 @@
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                    <real key="value" value="14"/>
+                                    <real key="value" value="15"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfY-7h-eif">
-                            <rect key="frame" x="100" y="0.0" width="334" height="17"/>
+                            <rect key="frame" x="100" y="0.0" width="334" height="16"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -101,7 +101,7 @@
                     <animations/>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Irg-fv-SSf">
-                    <rect key="frame" x="10" y="188" width="580" height="150"/>
+                    <rect key="frame" x="10" y="187" width="580" height="150"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>

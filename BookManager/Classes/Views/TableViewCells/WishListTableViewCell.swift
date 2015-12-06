@@ -33,4 +33,20 @@ class WishListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+	// MARK: - Public Method
+	func setBookInfo(book: BookDataModel) {
+		let url = NSURL(string: book.imageUrl!)
+		bookImageView.hnk_setImageFromURL(url!)
+		
+		titleLabel.text = book.title
+		authorLabel.text = book.author
+		dateLabel.text = book.salesDate
+		priceLabel.text = "¥ " + String(book.price!)
+		
+		if let rating = book.reviewAverage {
+			cosmosView.rating = Double(rating)!
+			cosmosView.settings.updateOnTouch = false
+		}
+		reviewLabel.text = " (" + String(book.reviewCount!) + ")"
+	}
 }
