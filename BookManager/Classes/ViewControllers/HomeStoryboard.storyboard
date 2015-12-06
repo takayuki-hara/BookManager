@@ -635,6 +635,121 @@
             </objects>
             <point key="canvasLocation" x="3375" y="-218"/>
         </scene>
+        <!--BookLibrary View Controller-->
+        <scene sceneID="EvX-LJ-jCl">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qFi-ie-qYq" userLabel="BookLibrary View Controller" customClass="BookLibraryViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKs-hQ-UHT"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rJ-nA-tgn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0HW-Rd-hUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgi-qm-frV">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-2b-fM1" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="LPG-2g-zMm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="qcl-2b-fM1" firstAttribute="width" secondItem="tgi-qm-frV" secondAttribute="width" id="4u1-Mx-rTG"/>
+                                    <constraint firstAttribute="height" constant="300" id="8dz-B6-ep4"/>
+                                    <constraint firstItem="qcl-2b-fM1" firstAttribute="top" secondItem="tgi-qm-frV" secondAttribute="top" id="BKX-wq-HSb"/>
+                                    <constraint firstAttribute="trailing" secondItem="qcl-2b-fM1" secondAttribute="trailing" id="GkT-9l-TwH"/>
+                                    <constraint firstItem="qcl-2b-fM1" firstAttribute="leading" secondItem="tgi-qm-frV" secondAttribute="leading" id="Kqu-uu-tVz"/>
+                                    <constraint firstAttribute="bottom" secondItem="qcl-2b-fM1" secondAttribute="bottom" id="cIH-dO-UDM"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-SY-RK6" userLabel="VerticalLine">
+                                <rect key="frame" x="20" y="374" width="560" height="3"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="VyG-52-UKq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-0u-87o">
+                                <rect key="frame" x="175" y="387" width="250" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-5v-xsI">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="dlb-lh-kqG"/>
+                                            <constraint firstAttribute="height" constant="32" id="zfB-p0-xrT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE">
+                                        <rect key="frame" x="52" y="8" width="135" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="レビューを投稿する"/>
+                                        <connections>
+                                            <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="SZb-fp-gGC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz">
+                                        <rect key="frame" x="52" y="46" width="120" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="この書籍を借りる"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-Hv-sd8">
+                                        <rect key="frame" x="0.0" y="40" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="GTD-di-0qw"/>
+                                            <constraint firstAttribute="width" constant="32" id="slD-EM-UTq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8ET-pC-Sh4"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ai8-kn-X3f"/>
+                                    <constraint firstItem="Mj6-89-RmE" firstAttribute="leading" secondItem="cFG-5v-xsI" secondAttribute="trailing" constant="20" id="I6E-z7-5Th"/>
+                                    <constraint firstItem="Mj6-89-RmE" firstAttribute="leading" secondItem="cFG-5v-xsI" secondAttribute="trailing" constant="20" id="MmS-I6-tdM"/>
+                                    <constraint firstItem="JQJ-Hv-sd8" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="UNT-62-PFN"/>
+                                    <constraint firstItem="ZB1-cS-6Gz" firstAttribute="top" secondItem="Mj6-89-RmE" secondAttribute="bottom" constant="8" id="bip-p0-Gxb"/>
+                                    <constraint firstItem="cFG-5v-xsI" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="cpV-xJ-2js"/>
+                                    <constraint firstItem="cFG-5v-xsI" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="iBy-3g-W1q"/>
+                                    <constraint firstItem="JQJ-Hv-sd8" firstAttribute="top" secondItem="cFG-5v-xsI" secondAttribute="bottom" constant="8" id="lza-Ip-KQ2"/>
+                                    <constraint firstItem="cFG-5v-xsI" firstAttribute="top" secondItem="HPE-0u-87o" secondAttribute="top" id="ow7-Wx-rrX"/>
+                                    <constraint firstItem="ZB1-cS-6Gz" firstAttribute="leading" secondItem="JQJ-Hv-sd8" secondAttribute="trailing" constant="20" id="tcy-1w-YVC"/>
+                                    <constraint firstItem="Mj6-89-RmE" firstAttribute="top" secondItem="HPE-0u-87o" secondAttribute="top" constant="8" id="vI2-sR-rRY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D8L-SY-RK6" secondAttribute="trailing" constant="20" id="J73-E5-VIc"/>
+                            <constraint firstItem="HPE-0u-87o" firstAttribute="centerX" secondItem="0HW-Rd-hUJ" secondAttribute="centerX" id="R3m-be-PBi"/>
+                            <constraint firstAttribute="trailing" secondItem="tgi-qm-frV" secondAttribute="trailing" id="aLv-13-8qE"/>
+                            <constraint firstItem="D8L-SY-RK6" firstAttribute="top" secondItem="tgi-qm-frV" secondAttribute="bottom" constant="10" id="duu-Wf-EB3"/>
+                            <constraint firstItem="D8L-SY-RK6" firstAttribute="leading" secondItem="0HW-Rd-hUJ" secondAttribute="leading" constant="20" id="eCU-3v-iVS"/>
+                            <constraint firstItem="tgi-qm-frV" firstAttribute="leading" secondItem="0HW-Rd-hUJ" secondAttribute="leading" id="xYv-1x-Hq8"/>
+                            <constraint firstItem="HPE-0u-87o" firstAttribute="top" secondItem="D8L-SY-RK6" secondAttribute="bottom" constant="10" id="xZ3-bI-YD2"/>
+                            <constraint firstItem="tgi-qm-frV" firstAttribute="top" secondItem="wKs-hQ-UHT" secondAttribute="bottom" id="yNb-Ze-422"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="蔵書メニュー" id="fyS-zg-t58"/>
+                    <connections>
+                        <outlet property="bookDetailView" destination="qcl-2b-fM1" id="wHa-8H-s74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-of-X1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3375" y="746"/>
+        </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">
             <objects>
@@ -654,6 +769,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="qFi-ie-qYq" kind="show" identifier="toBookLibrarySegue" id="dJQ-IP-1NP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

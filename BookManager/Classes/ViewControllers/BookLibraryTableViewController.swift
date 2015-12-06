@@ -39,6 +39,16 @@ class BookLibraryTableViewController: UITableViewController {
 		// Pass the selected object to the new view controller.
 	}
 	*/
+	// MARK: - Navigation
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "toBookLibrarySegue" {
+			let next = segue.destinationViewController as! BookLibraryViewController
+			
+			if let libraries = libraries {
+				next.library = libraries[(tableView.indexPathForSelectedRow?.row)!]
+			}
+		}
+	}
 	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -84,4 +94,11 @@ extension BookLibraryTableViewController {
 		return cell
     }
 
+}
+
+extension BookLibraryTableViewController {
+	// MARK: - UITableViewDelegate
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		performSegueWithIdentifier("toBookLibrarySegue", sender: nil)
+	}
 }

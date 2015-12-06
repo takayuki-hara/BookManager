@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="ioc-Sm-P3h">
-                        <rect key="frame" x="4" y="4" width="68" height="100"/>
+                        <rect key="frame" x="16" y="4" width="68" height="100"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="73N-44-byC"/>
@@ -23,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoU-ZO-SXg">
-                        <rect key="frame" x="80" y="8" width="232" height="36"/>
+                        <rect key="frame" x="92" y="8" width="220" height="36"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="B0r-3a-wgG"/>
@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h1-CG-UdA" userLabel="Stack View1">
-                        <rect key="frame" x="80" y="52" width="232" height="20"/>
+                        <rect key="frame" x="92" y="52" width="220" height="20"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K5-JD-qs2">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="20"/>
@@ -46,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lah-Gc-ki0">
-                                <rect key="frame" x="130" y="0.0" width="102" height="20"/>
+                                <rect key="frame" x="130" y="0.0" width="90" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,7 +59,7 @@
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3i-EK-kBI" userLabel="Stack View2">
-                        <rect key="frame" x="80" y="80" width="232" height="20"/>
+                        <rect key="frame" x="92" y="80" width="220" height="20"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-N6-gH2" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
@@ -88,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zE9-Y6-vny">
-                                <rect key="frame" x="150" y="0.0" width="82" height="20"/>
+                                <rect key="frame" x="150" y="0.0" width="70" height="20"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -103,7 +103,7 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="ioc-Sm-P3h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="6CB-t4-4He"/>
+                    <constraint firstItem="ioc-Sm-P3h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6CB-t4-4He"/>
                     <constraint firstItem="zoU-ZO-SXg" firstAttribute="leading" secondItem="ioc-Sm-P3h" secondAttribute="trailing" constant="8" id="ACq-TI-Aab"/>
                     <constraint firstItem="zoU-ZO-SXg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="EOQ-Q7-avD"/>
                     <constraint firstItem="4h1-CG-UdA" firstAttribute="top" secondItem="zoU-ZO-SXg" secondAttribute="bottom" constant="8" id="Ea9-Wn-GNC"/>
