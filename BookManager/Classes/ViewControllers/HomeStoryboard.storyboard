@@ -138,11 +138,14 @@
                                                     <constraint firstAttribute="width" constant="32" id="RgB-TR-y1I"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
                                                 <rect key="frame" x="32" y="0.0" width="240" height="60"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="レビューの内容を見る"/>
+                                                <connections>
+                                                    <segue destination="qbn-tu-uUE" kind="show" id="qJL-xa-Vc2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -906,6 +909,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8I-kR-fZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2272" y="1346"/>
+        </scene>
+        <!--Review Table View Controller-->
+        <scene sceneID="TKX-V2-gF2">
+            <objects>
+                <tableViewController id="qbn-tu-uUE" customClass="ReviewTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5OM-UN-4v4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iuA-Pb-aVO" customClass="ReviewListTableViewCell" customModule="BookManager" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iuA-Pb-aVO" id="xff-Ut-Y4a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qbn-tu-uUE" id="VRb-Lz-dJB"/>
+                            <outlet property="delegate" destination="qbn-tu-uUE" id="nnb-nQ-ebA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUK-Fy-xlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="2096"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0z-dU-saZ">

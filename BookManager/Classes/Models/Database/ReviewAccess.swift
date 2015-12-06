@@ -63,14 +63,16 @@ class ReviewAccess {
 		return true
 	}
 	
-//	static func allObjects() -> [xxx]? {
-//		let realm = try! Realm()
-//		let results = realm.objects(ReviewObject)
-//		var array: [xxx]? = []
-//		for result in results {
-//		}
-//		return array
-//	}
+	static func allObjects() -> [ReviewDataModel]? {
+		let realm = try! Realm()
+		let results = realm.objects(ReviewObject)
+		var array: [ReviewDataModel]? = []
+		for result in results {
+			let review = ReviewDataModel(review: result)
+			array?.append(review)
+		}
+		return array
+	}
 
 	static func allDeleteReview() {
 		let realm = try! Realm()
@@ -91,7 +93,7 @@ class ReviewAccess {
 		let realm = try! Realm()
 		let results = realm.objects(ReviewObject)
 		for result in results {
-			print("Review: \(result.id), \(result.isbn), \(result.reviewer), \(result.addDate)")
+			print("Review: \(result.id), \(result.isbn), \(result.reviewer), \(result.addDate), \(result.rate)")
 		}
 	}
 }

@@ -41,6 +41,10 @@
 		A161140E1C1436D000739B59 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161140D1C1436D000739B59 /* ReviewViewController.swift */; };
 		A16114101C1436F300739B59 /* RentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161140F1C1436F300739B59 /* RentalViewController.swift */; };
 		A16114121C144A0100739B59 /* ReviewAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114111C144A0100739B59 /* ReviewAccess.swift */; };
+		A16114151C14689F00739B59 /* ReviewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114131C14689F00739B59 /* ReviewListTableViewCell.swift */; };
+		A16114161C14689F00739B59 /* ReviewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */; };
+		A16114181C146D1400739B59 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114171C146D1400739B59 /* ReviewDataModel.swift */; };
+		A161141A1C146F0100739B59 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114191C146F0100739B59 /* ReviewTableViewController.swift */; };
 		A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */; };
 		A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */; };
 		A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */; };
@@ -119,6 +123,10 @@
 		A161140D1C1436D000739B59 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		A161140F1C1436F300739B59 /* RentalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentalViewController.swift; sourceTree = "<group>"; };
 		A16114111C144A0100739B59 /* ReviewAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewAccess.swift; sourceTree = "<group>"; };
+		A16114131C14689F00739B59 /* ReviewListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableViewCell.swift; sourceTree = "<group>"; };
+		A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableViewCell.xib; sourceTree = "<group>"; };
+		A16114171C146D1400739B59 /* ReviewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDataModel.swift; sourceTree = "<group>"; };
+		A16114191C146F0100739B59 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewCell.swift; sourceTree = "<group>"; };
 		A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearcherTableViewCell.xib; sourceTree = "<group>"; };
 		A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewLogic.swift; sourceTree = "<group>"; };
@@ -281,6 +289,7 @@
 				A12CF69F1C02C4C3009260A7 /* BookSearchResultModel.swift */,
 				A16114011C1320EF00739B59 /* BookLibraryDataModel.swift */,
 				A16114091C13F61E00739B59 /* WishListDataModel.swift */,
+				A16114171C146D1400739B59 /* ReviewDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,6 +337,7 @@
 				A161140B1C14033200739B59 /* WishListViewController.swift */,
 				A161140D1C1436D000739B59 /* ReviewViewController.swift */,
 				A161140F1C1436F300739B59 /* RentalViewController.swift */,
+				A16114191C146F0100739B59 /* ReviewTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -361,6 +371,8 @@
 				A1BC07191C09F74500CED9AE /* WishListTableViewCell.xib */,
 				A14078571C0C9C6B0079D030 /* BookLibraryTableViewCell.swift */,
 				A14078581C0C9C6B0079D030 /* BookLibraryTableViewCell.xib */,
+				A16114131C14689F00739B59 /* ReviewListTableViewCell.swift */,
+				A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -493,6 +505,7 @@
 				A12CF6491C02BDC9009260A7 /* Assets.xcassets in Resources */,
 				A140785A1C0C9C6B0079D030 /* BookLibraryTableViewCell.xib in Resources */,
 				A12CF6441C02BDC9009260A7 /* Main.storyboard in Resources */,
+				A16114161C14689F00739B59 /* ReviewListTableViewCell.xib in Resources */,
 				A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,14 +600,17 @@
 				A1BC07111C09A31700CED9AE /* WishListObject.swift in Sources */,
 				A1BC07051C0954C600CED9AE /* BookDetailViewController.swift in Sources */,
 				A1BC070F1C09A31700CED9AE /* ReviewObject.swift in Sources */,
+				A16114181C146D1400739B59 /* ReviewDataModel.swift in Sources */,
 				A12CF6A81C02E829009260A7 /* LoginViewController.swift in Sources */,
 				A14078521C0B05FB0079D030 /* LibraryAccess.swift in Sources */,
 				A12CF6AE1C032A76009260A7 /* BookSearcherTableViewController.swift in Sources */,
 				A12CF6A11C02C4C3009260A7 /* BookDataModel.swift in Sources */,
+				A161141A1C146F0100739B59 /* ReviewTableViewController.swift in Sources */,
 				A12CF6B01C032A89009260A7 /* BookLibraryTableViewController.swift in Sources */,
 				A1BC07101C09A31700CED9AE /* UserObject.swift in Sources */,
 				A1BC07151C09CFC200CED9AE /* DateFunctions.swift in Sources */,
 				A161140E1C1436D000739B59 /* ReviewViewController.swift in Sources */,
+				A16114151C14689F00739B59 /* ReviewListTableViewCell.swift in Sources */,
 				A12CF6A21C02C4C3009260A7 /* BookSearchResultModel.swift in Sources */,
 				A14078561C0B3FBF0079D030 /* Todo.md in Sources */,
 				A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */,
