@@ -15,6 +15,7 @@ class BookSearcherTableViewCell: UITableViewCell {
 	@IBOutlet weak var bookImageView: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var authorLabel: UILabel!
+	@IBOutlet weak var publisherLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var priceLabel: UILabel!
 	@IBOutlet weak var cosmosView: CosmosView!
@@ -40,6 +41,7 @@ class BookSearcherTableViewCell: UITableViewCell {
 		
 		titleLabel.text = book.title
 		authorLabel.text = book.author
+		publisherLabel.text = book.publisher
 		dateLabel.text = book.salesDate
 		priceLabel.text = "¥ " + String(book.price!)
 		

@@ -12,7 +12,7 @@ import Cosmos
 class WishListTableViewController: UITableViewController {
 
 	// MARK: - Property
-	var books: [BookDataModel]?
+	var wishes: [WishListDataModel]?
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
@@ -27,7 +27,7 @@ class WishListTableViewController: UITableViewController {
 		tableView.estimatedRowHeight = 108
 
 		//
-		books = WishListAccess.allObjects()
+		wishes = WishListAccess.allObjects()
 		tableView.reloadData()
 	}
 
@@ -47,7 +47,7 @@ extension WishListTableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		guard let count = books?.count else {
+		guard let count = wishes?.count else {
 			return 0
 		}
 		return count
@@ -55,10 +55,10 @@ extension WishListTableViewController {
 
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("wishListCell") as! WishListTableViewCell
-		if books == nil {
+		if wishes == nil {
 			return cell
 		}
-		let book = books![indexPath.row]
+		let book = wishes![indexPath.row]
 		cell.setBookInfo(book)
 		
 		return cell

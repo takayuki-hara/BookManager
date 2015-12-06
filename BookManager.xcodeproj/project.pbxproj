@@ -36,6 +36,7 @@
 		A16114041C1333C900739B59 /* BookDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16114031C1333C900739B59 /* BookDetailView.xib */; };
 		A16114061C1333FD00739B59 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114051C1333FD00739B59 /* BookDetailView.swift */; };
 		A16114081C13C28F00739B59 /* BookLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114071C13C28F00739B59 /* BookLibraryViewController.swift */; };
+		A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114091C13F61E00739B59 /* WishListDataModel.swift */; };
 		A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */; };
 		A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */; };
 		A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */; };
@@ -109,6 +110,7 @@
 		A16114031C1333C900739B59 /* BookDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailView.xib; sourceTree = "<group>"; };
 		A16114051C1333FD00739B59 /* BookDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		A16114071C13C28F00739B59 /* BookLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLibraryViewController.swift; sourceTree = "<group>"; };
+		A16114091C13F61E00739B59 /* WishListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListDataModel.swift; sourceTree = "<group>"; };
 		A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewCell.swift; sourceTree = "<group>"; };
 		A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearcherTableViewCell.xib; sourceTree = "<group>"; };
 		A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewLogic.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				A12CF69E1C02C4C3009260A7 /* BookDataModel.swift */,
 				A12CF69F1C02C4C3009260A7 /* BookSearchResultModel.swift */,
 				A16114011C1320EF00739B59 /* BookLibraryDataModel.swift */,
+				A16114091C13F61E00739B59 /* WishListDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				A14078591C0C9C6B0079D030 /* BookLibraryTableViewCell.swift in Sources */,
 				A14078541C0B09050079D030 /* LibraryObject.swift in Sources */,
 				A14078501C0AFD400079D030 /* UserDefaultFunctions.swift in Sources */,
+				A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
 				A12CF67F1C02C08D009260A7 /* AppDelegate.swift in Sources */,

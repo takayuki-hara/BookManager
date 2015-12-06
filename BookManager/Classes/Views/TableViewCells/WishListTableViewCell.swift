@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Cosmos
 
 class WishListTableViewCell: UITableViewCell {
 
@@ -15,10 +14,10 @@ class WishListTableViewCell: UITableViewCell {
 	@IBOutlet weak var bookImageView: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var authorLabel: UILabel!
+	@IBOutlet weak var addDateLabel: UILabel!
 	@IBOutlet weak var dateLabel: UILabel!
+	@IBOutlet weak var wisherLabel: UILabel!
 	@IBOutlet weak var priceLabel: UILabel!
-	@IBOutlet weak var cosmosView: CosmosView!
-	@IBOutlet weak var reviewLabel: UILabel!
 
 	// MARK: - Lifecycle
     override func awakeFromNib() {
@@ -34,19 +33,15 @@ class WishListTableViewCell: UITableViewCell {
     }
     
 	// MARK: - Public Method
-	func setBookInfo(book: BookDataModel) {
-		let url = NSURL(string: book.imageUrl!)
+	func setBookInfo(wish: WishListDataModel) {
+		let url = NSURL(string: wish.book.imageUrl!)
 		bookImageView.hnk_setImageFromURL(url!)
 		
-		titleLabel.text = book.title
-		authorLabel.text = book.author
-		dateLabel.text = book.salesDate
-		priceLabel.text = "¥ " + String(book.price!)
-		
-		if let rating = book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
-		}
-		reviewLabel.text = " (" + String(book.reviewCount!) + ")"
+		titleLabel.text = wish.book.title
+		authorLabel.text = wish.book.author
+		addDateLabel.text = "追加日：" + wish.addDate
+		dateLabel.text = "発売日：" + wish.book.salesDate!
+		wisherLabel.text = "登録者：" + wish.wisher
+		priceLabel.text = "¥ " + String(wish.book.price!)
 	}
 }

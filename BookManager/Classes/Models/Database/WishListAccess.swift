@@ -61,12 +61,13 @@ class WishListAccess {
 		return true
 	}
 
-	static func allObjects() -> [BookDataModel]? {
+	static func allObjects() -> [WishListDataModel]? {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
-		var array: [BookDataModel]? = []
+		var array: [WishListDataModel]? = []
 		for result in results {
-			array?.append(BookAccess.getBook(result.isbn)!)
+			let wish = WishListDataModel(wishList: result)
+			array?.append(wish)
 		}
 		return array
 	}
