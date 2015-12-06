@@ -12,10 +12,6 @@ import Haneke
 
 class BookDetailViewController: UIViewController {
 
-	enum MenuType {
-		case Info, Search, Library, WishList
-	}
-
 	// MARK: - @IBOutlet
 	@IBOutlet weak var bookDetailView: BookDetailView!
 
@@ -56,7 +52,6 @@ class BookDetailViewController: UIViewController {
 	
 	// MARK: - Property
 	var book: BookDataModel!
-	var menu: MenuType!
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {

@@ -36,6 +36,17 @@ class WishListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+	// MARK: - Navigation
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "toWishListSegue" {
+			let next = segue.destinationViewController as! WishListViewController
+			
+			if let wishes = wishes {
+				next.wish = wishes[(tableView.indexPathForSelectedRow?.row)!]
+			}
+		}
+	}
+	
 	// MARK: - Private Methods
 }
 
@@ -99,4 +110,11 @@ extension WishListTableViewController {
 	}
 	*/
 	
+}
+
+extension WishListTableViewController {
+	// MARK: - UITableViewDelegate
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		performSegueWithIdentifier("toWishListSegue", sender: nil)
+	}
 }

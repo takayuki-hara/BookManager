@@ -43,7 +43,7 @@ class BookLibraryTableViewCell: UITableViewCell {
 		authorLabel.text = library.book.author
 		dateLabel.text = "登録日：" + library.addDate
 		ownerLabel.text = "所有者：" + library.owner
-		if !library.rentalable {
+		if library.rentalable {
 			rentabableLabel.text = "Rental：○"
 			if library.isRented {
 				isRentedLabel.text = "貸出中"
