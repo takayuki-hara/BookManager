@@ -53,7 +53,7 @@ class BookLibraryTableViewCell: UITableViewCell {
 				isRentedLabel.textColor = UIColor.blueColor()
 			}
 		} else {
-			rentabableLabel.text = "Rental：○"
+			rentabableLabel.text = "Rental：×"
 			isRentedLabel.text = "---"
 		}
 	}

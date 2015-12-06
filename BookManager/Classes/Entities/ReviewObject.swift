@@ -14,8 +14,8 @@ class ReviewObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""
 	dynamic var reviewer = ""
-	dynamic var date = ""
-	dynamic var datail = ""
+	dynamic var addDate = ""
+	dynamic var detail = ""
 	dynamic var rate = 0.0
 
 	override class func primaryKey() -> String {

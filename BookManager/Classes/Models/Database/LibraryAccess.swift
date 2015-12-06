@@ -106,7 +106,7 @@ class LibraryAccess {
 		let realm = try! Realm()
 		let results = realm.objects(LibraryObject)
 		for result in results {
-			print("\(result.id), \(result.isbn), \(result.owner), \(result.addDate)")
+			print("Lib: \(result.id), \(result.isbn), \(result.owner), \(result.addDate)")
 		}
 	}
 }

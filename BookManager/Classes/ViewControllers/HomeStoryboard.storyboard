@@ -554,18 +554,22 @@
                                             <constraint firstAttribute="height" constant="32" id="zfB-p0-xrT"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE">
                                         <rect key="frame" x="52" y="8" width="135" height="30"/>
                                         <animations/>
                                         <state key="normal" title="レビューを投稿する"/>
                                         <connections>
                                             <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="SZb-fp-gGC"/>
+                                            <action selector="didPushReviewButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="ko1-eV-05j"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz">
                                         <rect key="frame" x="52" y="46" width="120" height="30"/>
                                         <animations/>
                                         <state key="normal" title="この書籍を借りる"/>
+                                        <connections>
+                                            <action selector="didPushRentalButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="U6e-FL-hXm"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-Hv-sd8">
                                         <rect key="frame" x="0.0" y="40" width="32" height="32"/>
@@ -610,11 +614,156 @@
                     <navigationItem key="navigationItem" title="蔵書メニュー" id="fyS-zg-t58"/>
                     <connections>
                         <outlet property="bookDetailView" destination="qcl-2b-fM1" id="wHa-8H-s74"/>
+                        <segue destination="tfW-Ag-AB4" kind="show" identifier="toReviewSegue" id="jse-4t-87D"/>
+                        <segue destination="vwz-at-BXq" kind="show" identifier="toRentalSegue" id="5mg-d0-4F7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-of-X1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3023" y="654"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="9bs-Ss-If4">
+            <objects>
+                <viewController id="tfW-Ag-AB4" userLabel="Review View Controller" customClass="ReviewViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcy-sz-d9R"/>
+                        <viewControllerLayoutGuide type="bottom" id="cOc-b6-sEr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ov-rl-g7E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-qg-sqb" userLabel="Target View">
+                                <rect key="frame" x="150" y="84" width="300" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レビュー対象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-QY-hOk">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axj-OV-e6i">
+                                        <rect key="frame" x="20" y="31" width="68" height="100"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="M8Y-dD-ykz"/>
+                                            <constraint firstAttribute="width" constant="68" id="Xra-kv-a8l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNt-JX-mnJ">
+                                        <rect key="frame" x="98" y="31" width="192" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-xA-q25">
+                                        <rect key="frame" x="98" y="62" width="202" height="17"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NNt-JX-mnJ" secondAttribute="trailing" constant="10" id="3zD-V4-wGP"/>
+                                    <constraint firstItem="axj-OV-e6i" firstAttribute="leading" secondItem="NZt-qg-sqb" secondAttribute="leading" constant="20" id="A8l-wb-pTy"/>
+                                    <constraint firstAttribute="height" constant="150" id="FLT-wY-eUx"/>
+                                    <constraint firstItem="dHi-QY-hOk" firstAttribute="top" secondItem="NZt-qg-sqb" secondAttribute="top" id="J7Z-og-NjF"/>
+                                    <constraint firstItem="axj-OV-e6i" firstAttribute="top" secondItem="dHi-QY-hOk" secondAttribute="bottom" constant="10" id="Ksb-cr-FRP"/>
+                                    <constraint firstItem="NNt-JX-mnJ" firstAttribute="top" secondItem="dHi-QY-hOk" secondAttribute="bottom" constant="10" id="TR0-7J-ZPO"/>
+                                    <constraint firstItem="dHi-QY-hOk" firstAttribute="leading" secondItem="NZt-qg-sqb" secondAttribute="leading" id="WLa-vn-R5i"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZNU-xA-q25" secondAttribute="trailing" id="WtP-43-WTT"/>
+                                    <constraint firstItem="ZNU-xA-q25" firstAttribute="top" secondItem="NNt-JX-mnJ" secondAttribute="bottom" constant="10" id="Xve-Al-SPf"/>
+                                    <constraint firstItem="NNt-JX-mnJ" firstAttribute="leading" secondItem="axj-OV-e6i" secondAttribute="trailing" constant="10" id="imL-bk-3Ki"/>
+                                    <constraint firstAttribute="width" constant="300" id="vFA-pJ-6eu"/>
+                                    <constraint firstItem="ZNU-xA-q25" firstAttribute="leading" secondItem="axj-OV-e6i" secondAttribute="trailing" constant="10" id="xTJ-K5-beW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEz-y7-qfg" userLabel="Review View">
+                                <rect key="frame" x="150" y="254" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レビュー入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-FA-g4t">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-aj-Dka" customClass="CosmosView" customModule="Cosmos">
+                                        <rect key="frame" x="90" y="31" width="120" height="20"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorEmpty">
+                                                <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-FS-iub">
+                                        <rect key="frame" x="20" y="61" width="280" height="150"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="FKh-Z2-cHw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmB-Xg-FaN">
+                                        <rect key="frame" x="120" y="231" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="投稿する"/>
+                                        <connections>
+                                            <action selector="didPushReviewButton:" destination="tfW-Ag-AB4" eventType="touchUpInside" id="2WB-ZL-rTt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6UF-FS-iub" firstAttribute="leading" secondItem="SEz-y7-qfg" secondAttribute="leading" constant="20" id="0Jb-QE-5ca"/>
+                                    <constraint firstAttribute="trailing" secondItem="6UF-FS-iub" secondAttribute="trailing" id="7iV-Od-Yhz"/>
+                                    <constraint firstItem="Rur-FA-g4t" firstAttribute="leading" secondItem="SEz-y7-qfg" secondAttribute="leading" id="Fb7-C2-hKY"/>
+                                    <constraint firstItem="YmB-Xg-FaN" firstAttribute="top" secondItem="6UF-FS-iub" secondAttribute="bottom" constant="20" id="IEy-iF-TNC"/>
+                                    <constraint firstAttribute="height" constant="300" id="J3z-a2-vgB"/>
+                                    <constraint firstItem="Rur-FA-g4t" firstAttribute="top" secondItem="SEz-y7-qfg" secondAttribute="top" id="Ycu-UD-IV5"/>
+                                    <constraint firstItem="aMi-aj-Dka" firstAttribute="centerX" secondItem="SEz-y7-qfg" secondAttribute="centerX" id="dza-wp-JaR"/>
+                                    <constraint firstAttribute="width" constant="300" id="fef-Vg-zba"/>
+                                    <constraint firstItem="aMi-aj-Dka" firstAttribute="top" secondItem="Rur-FA-g4t" secondAttribute="bottom" constant="10" id="h2Z-q8-JXM"/>
+                                    <constraint firstItem="YmB-Xg-FaN" firstAttribute="centerX" secondItem="SEz-y7-qfg" secondAttribute="centerX" id="uq9-03-ipS"/>
+                                    <constraint firstItem="6UF-FS-iub" firstAttribute="top" secondItem="aMi-aj-Dka" secondAttribute="bottom" constant="10" id="vMu-AM-InD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NZt-qg-sqb" firstAttribute="top" secondItem="bcy-sz-d9R" secondAttribute="bottom" constant="20" id="0pu-7p-KK5"/>
+                            <constraint firstItem="NZt-qg-sqb" firstAttribute="centerX" secondItem="0Ov-rl-g7E" secondAttribute="centerX" id="Dua-Ej-z5N"/>
+                            <constraint firstItem="SEz-y7-qfg" firstAttribute="top" secondItem="NZt-qg-sqb" secondAttribute="bottom" constant="20" id="OOr-tJ-5L8"/>
+                            <constraint firstItem="SEz-y7-qfg" firstAttribute="centerX" secondItem="0Ov-rl-g7E" secondAttribute="centerX" id="wOU-0d-agu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="レビュー投稿" id="EFK-Sb-cR1"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="ZNU-xA-q25" id="QcB-w2-0Vc"/>
+                        <outlet property="bookImageView" destination="axj-OV-e6i" id="VCn-A3-9O1"/>
+                        <outlet property="cosmosView" destination="aMi-aj-Dka" id="CYF-91-4bu"/>
+                        <outlet property="textView" destination="6UF-FS-iub" id="izs-6Z-GaP"/>
+                        <outlet property="titleLabel" destination="NNt-JX-mnJ" id="CA0-wT-vhe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FO4-Lu-Mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3832" y="220"/>
         </scene>
         <!--WishList View Controller-->
         <scene sceneID="rLL-vv-f9i">
@@ -659,6 +808,7 @@
                             <constraint firstAttribute="trailing" secondItem="W0H-A9-jJN" secondAttribute="trailing" id="eZd-2g-IYm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="書籍詳細" id="TXl-aq-gR9"/>
                     <connections>
                         <outlet property="bookDetailView" destination="haV-qz-2fD" id="Yl9-4W-Ndu"/>
                     </connections>
@@ -666,6 +816,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUy-GM-0KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3023" y="1346"/>
+        </scene>
+        <!--Rental View Controller-->
+        <scene sceneID="Shq-EW-9vS">
+            <objects>
+                <viewController id="vwz-at-BXq" userLabel="Rental View Controller" customClass="RentalViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GxA-ht-w6g"/>
+                        <viewControllerLayoutGuide type="bottom" id="r9c-9k-YQt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29R-XF-FRc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="書籍貸出" id="gsh-yx-fmI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z83-hE-7Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3832" y="944"/>
         </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">

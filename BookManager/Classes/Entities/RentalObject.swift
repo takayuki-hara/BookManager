@@ -14,7 +14,7 @@ class RentalObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""
 	dynamic var renter = ""
-	dynamic var date = ""
+	dynamic var rentDate = ""
 	dynamic var isReturned = false
 
 	override class func primaryKey() -> String {

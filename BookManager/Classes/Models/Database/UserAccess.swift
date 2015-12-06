@@ -70,7 +70,7 @@ class UserAccess {
 		let realm = try! Realm()
 		let results = realm.objects(UserObject)
 		for result in results {
-			print("\(result.id), \(result.name)")
+			print("User: \(result.id), \(result.name)")
 		}
 	}
 

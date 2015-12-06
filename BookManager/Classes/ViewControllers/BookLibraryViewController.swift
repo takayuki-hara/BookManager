@@ -13,6 +13,23 @@ class BookLibraryViewController: UIViewController {
 	// MARK: - @IBOutlet
 	@IBOutlet weak var bookDetailView: BookDetailView!
 
+	// MARK: - @IBAction
+	@IBAction func didPushReviewButton(sender: AnyObject) {
+		performSegueWithIdentifier("toReviewSegue", sender: nil)
+	}
+
+	@IBAction func didPushRentalButton(sender: AnyObject) {
+		if !library.rentalable || library.isRented {
+			// アラート表示
+			let alertController = UIAlertController(title: "エラー", message: "貸し出し出来ない書籍です", preferredStyle: .Alert)
+			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+			alertController.addAction(defaultAction)
+			presentViewController(alertController, animated: true, completion: nil)
+		} else {
+			performSegueWithIdentifier("toRentalSegue", sender: nil)
+		}
+	}
+
 	// MARK: - Property
 	var library: BookLibraryDataModel!
 
@@ -38,5 +55,18 @@ class BookLibraryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "toReviewSegue" {
+			let next = segue.destinationViewController as! ReviewViewController
+			if let library = library {
+				next.library = library
+			}
+		} else if segue.identifier == "toRentalSegue" {
+			let next = segue.destinationViewController as! RentalViewController
+			if let library = library {
+				next.library = library
+			}
+		}
+	}
 
 }
