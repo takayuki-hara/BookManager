@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10706961C25AFC80005CE7B /* credit.md in Sources */ = {isa = PBXBuildFile; fileRef = A10706941C25AFC80005CE7B /* credit.md */; };
 		A12CF6441C02BDC9009260A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12CF6421C02BDC9009260A7 /* Main.storyboard */; };
 		A12CF6491C02BDC9009260A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12CF6481C02BDC9009260A7 /* Assets.xcassets */; };
 		A12CF64C1C02BDC9009260A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12CF64A1C02BDC9009260A7 /* LaunchScreen.storyboard */; };
@@ -17,7 +18,6 @@
 		A12CF6A11C02C4C3009260A7 /* BookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF69E1C02C4C3009260A7 /* BookDataModel.swift */; };
 		A12CF6A21C02C4C3009260A7 /* BookSearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF69F1C02C4C3009260A7 /* BookSearchResultModel.swift */; };
 		A12CF6A41C02C4D2009260A7 /* IsbnReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6A31C02C4D2009260A7 /* IsbnReaderView.swift */; };
-		A12CF6A61C02C800009260A7 /* credit.md in Resources */ = {isa = PBXBuildFile; fileRef = A12CF6A51C02C800009260A7 /* credit.md */; };
 		A12CF6A81C02E829009260A7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6A71C02E829009260A7 /* LoginViewController.swift */; };
 		A12CF6AA1C02ED48009260A7 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12CF6A91C02ED48009260A7 /* HomeStoryboard.storyboard */; };
 		A12CF6AC1C032A56009260A7 /* BookInfoLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12CF6AB1C032A56009260A7 /* BookInfoLoaderViewController.swift */; };
@@ -83,6 +83,8 @@
 
 /* Begin PBXFileReference section */
 		4B2AA7BA0342966B08623082 /* Pods_BookManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10706941C25AFC80005CE7B /* credit.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = credit.md; sourceTree = "<group>"; };
+		A10706951C25AFC80005CE7B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12CF63B1C02BDC9009260A7 /* BookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A12CF6431C02BDC9009260A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A12CF6481C02BDC9009260A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,12 +96,10 @@
 		A12CF6611C02BDCA009260A7 /* BookManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManagerUITests.swift; sourceTree = "<group>"; };
 		A12CF6631C02BDCA009260A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12CF6701C02C08C009260A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A12CF67A1C02C08D009260A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A12CF69D1C02C4C3009260A7 /* BookApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookApiModel.swift; sourceTree = "<group>"; };
 		A12CF69E1C02C4C3009260A7 /* BookDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDataModel.swift; sourceTree = "<group>"; };
 		A12CF69F1C02C4C3009260A7 /* BookSearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchResultModel.swift; sourceTree = "<group>"; };
 		A12CF6A31C02C4D2009260A7 /* IsbnReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsbnReaderView.swift; sourceTree = "<group>"; };
-		A12CF6A51C02C800009260A7 /* credit.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = credit.md; sourceTree = "<group>"; };
 		A12CF6A71C02E829009260A7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A12CF6A91C02ED48009260A7 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		A12CF6AB1C032A56009260A7 /* BookInfoLoaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInfoLoaderViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +181,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A10706931C25AFC80005CE7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A10706941C25AFC80005CE7B /* credit.md */,
+				A10706951C25AFC80005CE7B /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A12CF6321C02BDC9009260A7 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +218,7 @@
 				A1BC07061C096EA000CED9AE /* Tips.md */,
 				A14078551C0B3FBF0079D030 /* Todo.md */,
 				A12CF66F1C02C08C009260A7 /* Classes */,
+				A10706931C25AFC80005CE7B /* Supporting Files */,
 				A12CF6481C02BDC9009260A7 /* Assets.xcassets */,
 				A12CF6421C02BDC9009260A7 /* Main.storyboard */,
 				A12CF64A1C02BDC9009260A7 /* LaunchScreen.storyboard */,
@@ -246,7 +256,6 @@
 				A12CF6751C02C08C009260A7 /* Functions */,
 				A12CF6741C02C08C009260A7 /* Extensions */,
 				A12CF6781C02C08C009260A7 /* Modules */,
-				A12CF6791C02C08C009260A7 /* Supporting Files */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -311,15 +320,6 @@
 			children = (
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		A12CF6791C02C08C009260A7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A12CF67A1C02C08D009260A7 /* Info.plist */,
-				A12CF6A51C02C800009260A7 /* credit.md */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A12CF67B1C02C08D009260A7 /* ViewControllers */ = {
@@ -496,7 +496,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12CF6A61C02C800009260A7 /* credit.md in Resources */,
 				A12CF6AA1C02ED48009260A7 /* HomeStoryboard.storyboard in Resources */,
 				A16114041C1333C900739B59 /* BookDetailView.xib in Resources */,
 				A1BC07071C096EA000CED9AE /* Tips.md in Resources */,
@@ -588,6 +587,7 @@
 				A14078541C0B09050079D030 /* LibraryObject.swift in Sources */,
 				A16114121C144A0100739B59 /* ReviewAccess.swift in Sources */,
 				A14078501C0AFD400079D030 /* UserDefaultFunctions.swift in Sources */,
+				A10706961C25AFC80005CE7B /* credit.md in Sources */,
 				A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
@@ -762,7 +762,7 @@
 			baseConfigurationReference = C2CC2E6C7A36387C89A755E9 /* Pods-BookManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "BookManager/Classes/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "BookManager/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.takayuki-hara.BookManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -774,7 +774,7 @@
 			baseConfigurationReference = F2C27330D751B1FEF6F0D0BB /* Pods-BookManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "BookManager/Classes/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "BookManager/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ne.takayuki-hara.BookManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
