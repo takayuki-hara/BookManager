@@ -10,6 +10,9 @@ target 'BookManager' do
 	pod 'HanekeSwift'
 	pod 'Cosmos', '~> 1.1'
 	pod 'RealmSwift'
+
+	pod 'netfox'
+	pod 'XCGLogger'
 end
 
 target 'BookManagerTests' do
