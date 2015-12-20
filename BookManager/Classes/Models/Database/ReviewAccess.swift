@@ -93,7 +93,7 @@ class ReviewAccess {
 		let realm = try! Realm()
 		let results = realm.objects(ReviewObject)
 		for result in results {
-			print("Review: \(result.id), \(result.isbn), \(result.reviewer), \(result.addDate), \(result.rate)")
+			log.info("Review: \(result.id), \(result.isbn), \(result.reviewer), \(result.addDate), \(result.rate)")
 		}
 	}
 }

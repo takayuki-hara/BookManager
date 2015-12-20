@@ -31,11 +31,11 @@ class BookDetailViewController: UIViewController {
 		if LibraryAccess.existLibrary(book, user: getLoginUserFromUserDefaults()) {
 			let alertController = UIAlertController(title: "確認", message: "登録済みの書籍です。追加登録しますか？", preferredStyle: .Alert)
 			let otherAction = UIAlertAction(title: "OK", style: .Default) { action in
-				print("pushed OK!")
+				log.debug("pushed OK!")
 				self.addLibrary()
 			}
 			let cancelAction = UIAlertAction(title: "CANCEL", style: .Cancel) { action in
-				print("Pushed CANCEL!")
+				log.debug("Pushed CANCEL!")
 				return
 			}
 			alertController.addAction(otherAction)

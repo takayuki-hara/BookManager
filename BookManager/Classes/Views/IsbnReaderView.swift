@@ -35,7 +35,7 @@ final class IsbnReaderView: UIView {
 			let input = try AVCaptureDeviceInput(device: device)
 			session.addInput(input)
 		} catch let error as NSError {
-			print(error)
+			log.error(error.debugDescription)
 			return false
 		}
 		
@@ -77,7 +77,7 @@ extension IsbnReaderView: AVCaptureMetadataOutputObjectsDelegate {
 
 			// ISBN13桁かつ97から始まる場合はISBNコードとして認識
 			if obj.type == AVMetadataObjectTypeEAN13Code && strValue.hasPrefix("97") {
-				print(strValue)
+				log.info(strValue)
 				session.stopRunning()
 				// クロージャの呼び出し
 				closure!(strValue)

@@ -7,14 +7,52 @@
 //
 
 import UIKit
-import CoreData
 import netfox
+import XCGLogger
+
+
+// for access to appDelegate
+let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+// for XCGLogger
+let log: XCGLogger = {
+	let log = XCGLogger.defaultInstance()
+	log.xcodeColorsEnabled = true
+	log.xcodeColors = [
+		.Verbose: .darkGrey,
+		.Debug: .black,
+		.Info: .darkGreen,
+		.Warning: .orange,
+		.Error: .red,
+		.Severe: .whiteOnRed
+	]
+	
+	let logPath: NSURL = appDelegate.cacheDirectory.URLByAppendingPathComponent("XCGLogger_Log.txt")
+	#if DEBUG
+		log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
+	#else
+		log.setup(.Severe, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: logPath)
+	#endif
+	
+	return log
+}()
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
+
+	// for access to application's directory
+	let documentsDirectory: NSURL = {
+		let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+		return urls[urls.endIndex - 1]
+	}()
+	let cacheDirectory: NSURL = {
+		let urls = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask)
+		return urls[urls.endIndex - 1]
+	}()
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
@@ -23,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// setup netfox
 		NFX.sharedInstance().start()
 		#endif
+
+		log.debug("cacheDir=\(documentsDirectory)")
 
 		return true
 	}

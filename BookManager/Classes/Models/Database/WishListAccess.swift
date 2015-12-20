@@ -91,7 +91,7 @@ class WishListAccess {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
 		for result in results {
-			print("Wish: \(result.id), \(result.isbn), \(result.wisher), \(result.addDate)")
+			log.info("Wish: \(result.id), \(result.isbn), \(result.wisher), \(result.addDate)")
 		}
 	}
 }

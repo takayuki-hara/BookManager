@@ -50,7 +50,7 @@ class BookAccess {
 		let realm = try! Realm()
 		let results = realm.objects(BookObject)
 		for result in results {
-			print("\(result.isbn), \(result.title)")
+			log.info("\(result.isbn), \(result.title)")
 		}
 	}
 
