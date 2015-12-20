@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class LoginViewController: UIViewController {
 
@@ -19,11 +20,7 @@ class LoginViewController: UIViewController {
 			setLoginUserToUserDefaults(userNameText.text!)
 			performSegueWithIdentifier("toHomeViewSegue", sender: nil)
 		} else {
-			// アラート表示
-			let alertController = UIAlertController(title: "ログインエラー", message: "登録されたユーザーではありません", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			SCLAlertView().showError("ログインエラー", subTitle: "登録されたユーザーではありません")
 		}
 	}
 

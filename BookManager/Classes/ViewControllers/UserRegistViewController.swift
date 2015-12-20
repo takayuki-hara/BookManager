@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class UserRegistViewController: UIViewController {
 
@@ -16,11 +17,9 @@ class UserRegistViewController: UIViewController {
 	// MARK: - @IBAction
 	@IBAction func didPushRegistButton(sender: AnyObject) {
 		if UserAccess.addUser(userNameText.text!) == false {
-			// アラート表示
-			let alertController = UIAlertController(title: "ユーザー登録エラー", message: "登録済みのユーザーです", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			SCLAlertView().showNotice("登録済みユーザー", subTitle: "既に登録されています")
+		} else {
+			SCLAlertView().showSuccess("ユーザー登録", subTitle: "\(userNameText.text!) さんを登録しました")
 		}
 		UserAccess.consoleOutUsers()
 	}

@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import SCLAlertView
 
 class ReviewViewController: UIViewController {
 
@@ -21,11 +22,18 @@ class ReviewViewController: UIViewController {
 	// MARK: - @IBOutlet
 	@IBAction func didPushReviewButton(sender: AnyObject) {
 		if ReviewAccess.addReview(library.book, rate: cosmosView.rating, detail: textView.text) == false {
-			// アラート表示
-			let alertController = UIAlertController(title: "登録エラー", message: "レビュー済みの書籍です", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			let alertView = SCLAlertView()
+			alertView.addButton("更新") {
+				log.debug("pushed OK!")
+				ReviewAccess.addReview(self.library.book, rate: self.cosmosView.rating, detail: self.textView.text, update: true)
+			}
+			alertView.addButton("CANCEL") {
+				log.debug("Pushed CANCEL!")
+				return
+			}
+			alertView.showWarning("確認", subTitle: "レビュー済みの書籍です。更新しますか？")
+		} else {
+			SCLAlertView().showSuccess("レビュー", subTitle: "レビューを投稿しました")
 		}
 		ReviewAccess.consoleOutReviews()
 	}

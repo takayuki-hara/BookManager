@@ -19,13 +19,15 @@ class ReviewAccess {
 		return results.count
 	}
 	
-	static func addReview(data: BookDataModel, rate: Double, detail: String) -> Bool {
+	static func addReview(data: BookDataModel, rate: Double, detail: String, update: Bool = false) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（ある場合はエラー）:同じ人が同じ本について登録しない
-		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, getLoginUserFromUserDefaults()))
-		if results.count != 0 {
-			return false
+		if !update {
+			let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, getLoginUserFromUserDefaults()))
+			if results.count != 0 {
+				return false
+			}
 		}
 		
 		// BookObjectの追加（今のところ蔵書しかレビューしないので不要）
@@ -40,7 +42,7 @@ class ReviewAccess {
 		review.rate = rate
 		review.detail = detail
 		try! realm.write {
-			realm.add(review)
+			realm.add(review, update: true)
 		}
 		
 		return true

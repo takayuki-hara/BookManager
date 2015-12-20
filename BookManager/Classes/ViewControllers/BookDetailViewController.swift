@@ -9,6 +9,7 @@
 import UIKit
 import Cosmos
 import Haneke
+import SCLAlertView
 
 class BookDetailViewController: UIViewController {
 
@@ -18,29 +19,25 @@ class BookDetailViewController: UIViewController {
 	// MARK: - @IBAction
 	@IBAction func didPushWishListButton(sender: AnyObject) {
 		if WishListAccess.addWishList(book) == false {
-			// アラート表示
-			let alertController = UIAlertController(title: "登録エラー", message: "登録済みの書籍です", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			SCLAlertView().showNotice("登録エラー", subTitle: "登録済みです")
+		} else {
+			SCLAlertView().showSuccess("欲しいものリスト登録", subTitle: "登録しました")
 		}
 		WishListAccess.consoleOutWishLists()
 	}
 
 	@IBAction func didPushLibraryButton(sender: AnyObject) {
 		if LibraryAccess.existLibrary(book, user: getLoginUserFromUserDefaults()) {
-			let alertController = UIAlertController(title: "確認", message: "登録済みの書籍です。追加登録しますか？", preferredStyle: .Alert)
-			let otherAction = UIAlertAction(title: "OK", style: .Default) { action in
+			let alertView = SCLAlertView()
+			alertView.addButton("追加登録") {
 				log.debug("pushed OK!")
 				self.addLibrary()
 			}
-			let cancelAction = UIAlertAction(title: "CANCEL", style: .Cancel) { action in
+			alertView.addButton("CANCEL") {
 				log.debug("Pushed CANCEL!")
 				return
 			}
-			alertController.addAction(otherAction)
-			alertController.addAction(cancelAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			alertView.showWarning("確認", subTitle: "登録済みの書籍です。追加登録しますか？")
 		} else {
 			addLibrary()
 		}
@@ -80,11 +77,9 @@ class BookDetailViewController: UIViewController {
 	// MARK: - Private Methods
 	private func addLibrary() {
 		if LibraryAccess.addLibrary(book, user: getLoginUserFromUserDefaults()) == false {
-			// アラート表示
-			let alertController = UIAlertController(title: "登録エラー", message: "登録済みの書籍です", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			SCLAlertView().showError("登録エラー", subTitle: "登録済みの書籍です")
+		} else {
+			SCLAlertView().showSuccess("蔵書登録", subTitle: "登録しました")
 		}
 		LibraryAccess.consoleOutLibraries()
 	}

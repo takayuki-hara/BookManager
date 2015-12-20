@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class BookLibraryViewController: UIViewController {
 
@@ -20,11 +21,7 @@ class BookLibraryViewController: UIViewController {
 
 	@IBAction func didPushRentalButton(sender: AnyObject) {
 		if !library.rentalable || library.isRented {
-			// アラート表示
-			let alertController = UIAlertController(title: "エラー", message: "貸し出し出来ない書籍です", preferredStyle: .Alert)
-			let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-			alertController.addAction(defaultAction)
-			presentViewController(alertController, animated: true, completion: nil)
+			SCLAlertView().showError("エラー", subTitle: "貸し出し出来ない書籍です")
 		} else {
 			performSegueWithIdentifier("toRentalSegue", sender: nil)
 		}
