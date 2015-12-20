@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ApiCredit" translatesAutoresizingMaskIntoConstraints="NO" id="pUS-ZH-CJL" userLabel="Credit">
-                                <rect key="frame" x="25" y="574" width="221" height="21"/>
+                                <rect key="frame" x="190" y="574" width="221" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="221" id="7ur-F6-ANY"/>
@@ -60,8 +59,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pUS-ZH-CJL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="5" id="X53-Np-hRj"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pUS-ZH-CJL" secondAttribute="bottom" constant="5" id="DJR-iE-USO"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pUS-ZH-CJL" secondAttribute="bottom" constant="5" id="Z2h-GE-aff"/>
+                            <constraint firstItem="pUS-ZH-CJL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gjZ-ao-WUL"/>
                             <constraint firstItem="V47-Ac-PCc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="q1s-0L-ixQ"/>
                             <constraint firstItem="V47-Ac-PCc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-100" id="qn1-lH-0kj"/>
                         </constraints>

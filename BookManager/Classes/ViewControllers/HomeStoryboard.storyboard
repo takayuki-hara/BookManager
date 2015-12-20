@@ -232,9 +232,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-Ed-Vl5">
-                                        <rect key="frame" x="210" y="91" width="60" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-Ed-Vl5" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="91" width="80" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Lsv-HQ-TzB"/>
+                                        </constraints>
                                         <state key="normal" title="取得する"/>
                                         <connections>
                                             <action selector="didPushIsbnSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="en5-7Q-cB3"/>
@@ -255,9 +258,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw">
-                                        <rect key="frame" x="210" y="192" width="60" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="192" width="80" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Luk-YK-VRZ"/>
+                                        </constraints>
                                         <state key="normal" title="読み込み"/>
                                         <connections>
                                             <action selector="didPushCameraSearchButton:" destination="D3Z-Va-Fge" eventType="touchUpInside" id="Saf-UW-auU"/>
@@ -404,9 +410,12 @@
                                             <constraint firstAttribute="width" constant="32" id="iGB-5g-2Qc"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-w9-1tu">
-                                        <rect key="frame" x="52" y="8" width="180" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-w9-1tu" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="200" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="EZR-d5-wrg"/>
+                                        </constraints>
                                         <state key="normal" title="欲しいものリストに加える"/>
                                         <connections>
                                             <action selector="didPushWishListButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="amh-cr-32e"/>
@@ -420,9 +429,12 @@
                                             <constraint firstAttribute="height" constant="32" id="a9X-IG-EAg"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMb-QO-lXo">
-                                        <rect key="frame" x="52" y="46" width="90" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMb-QO-lXo" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="46" width="200" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="jB7-1e-OTz"/>
+                                        </constraints>
                                         <state key="normal" title="蔵書登録する"/>
                                         <connections>
                                             <action selector="didPushLibraryButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="0hx-uv-UEX"/>
@@ -436,17 +448,23 @@
                                             <constraint firstAttribute="width" constant="32" id="E4f-sf-fgY"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz">
-                                        <rect key="frame" x="52" y="84" width="135" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="84" width="200" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0MD-eR-zlf"/>
+                                        </constraints>
                                         <state key="normal" title="レビューを投稿する"/>
                                         <connections>
                                             <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="iaE-uj-YCw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-6y-Eqx">
-                                        <rect key="frame" x="52" y="122" width="120" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-6y-Eqx" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="122" width="200" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="yqz-od-Vrl"/>
+                                        </constraints>
                                         <state key="normal" title="この書籍を借りる"/>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9bZ-d8-Fim">
@@ -557,18 +575,24 @@
                                             <constraint firstAttribute="height" constant="32" id="zfB-p0-xrT"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE">
-                                        <rect key="frame" x="52" y="8" width="135" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="8" width="160" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="c0I-Ss-TcJ"/>
+                                        </constraints>
                                         <state key="normal" title="レビューを投稿する"/>
                                         <connections>
                                             <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="SZb-fp-gGC"/>
                                             <action selector="didPushReviewButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="ko1-eV-05j"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz">
-                                        <rect key="frame" x="52" y="46" width="120" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="46" width="160" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="37f-cu-Bfs"/>
+                                        </constraints>
                                         <state key="normal" title="この書籍を借りる"/>
                                         <connections>
                                             <action selector="didPushRentalButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="U6e-FL-hXm"/>
@@ -720,9 +744,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmB-Xg-FaN">
-                                        <rect key="frame" x="120" y="231" width="60" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmB-Xg-FaN" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="231" width="80" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="hj8-GQ-jkr"/>
+                                        </constraints>
                                         <state key="normal" title="投稿する"/>
                                         <connections>
                                             <action selector="didPushReviewButton:" destination="tfW-Ag-AB4" eventType="touchUpInside" id="2WB-ZL-rTt"/>
@@ -972,6 +999,6 @@
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuK-pc-gCd"/>
+        <segue reference="TMe-SM-QE5"/>
     </inferredMetricsTieBreakers>
 </document>
