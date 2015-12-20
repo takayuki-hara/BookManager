@@ -13,6 +13,8 @@ target 'BookManager' do
 
 	pod 'netfox'
 	pod 'XCGLogger'
+	pod 'ChameleonFramework'
+	pod 'SCLAlertView'
 end
 
 target 'BookManagerTests' do

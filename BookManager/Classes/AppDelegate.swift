@@ -9,6 +9,7 @@
 import UIKit
 import netfox
 import XCGLogger
+import ChameleonFramework
 
 
 // for access to appDelegate
@@ -57,12 +58,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 
-		#if DEBUG
+	#if DEBUG
 		// setup netfox
 		NFX.sharedInstance().start()
-		#endif
 
+		// キャッシュディレクトリの取得（デバッグ用）
 		log.debug("cacheDir=\(documentsDirectory)")
+	#endif
+
+		// テーマカラーを設定する（UIパーツの配色が設定される）
+		Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatNavyBlueColor(),
+			withSecondaryColor: UIColor.flatBlueColor(),
+			andContentStyle: UIContentStyle.Contrast)
 
 		return true
 	}
@@ -88,10 +95,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 
-		#if DEBUG
+	#if DEBUG
 		// finalize netfox
 		NFX.sharedInstance().stop()
-		#endif
+	#endif
 	}
 
 }
