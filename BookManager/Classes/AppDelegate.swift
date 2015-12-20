@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		// テーマカラーを設定する（UIパーツの配色が設定される）
 		Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatMintColor(),
-			withSecondaryColor: UIColor.flatOrangeColor(),
+			withSecondaryColor: UIColor.flatYellowColor(),
 			andContentStyle: UIContentStyle.Contrast)
 
 		return true

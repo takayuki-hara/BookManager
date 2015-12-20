@@ -18,22 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D3x-fu-hdq">
-                                <rect key="frame" x="164" y="120" width="272" height="360"/>
+                                <rect key="frame" x="175" y="60" width="250" height="480"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xm4-iT-lJd" userLabel="Stack View1">
-                                        <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uN-Pc-NvF">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-Rp-a97">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="KEq-Sh-ty5"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="zDg-dE-2fw"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-H3-r8M">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-H3-r8M" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="eqz-Vq-aq6"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="書籍情報を取得する"/>
                                                 <connections>
@@ -42,24 +45,32 @@
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="U7b-BT-i1g"/>
+                                            <constraint firstItem="8Hd-Rp-a97" firstAttribute="leading" secondItem="5uN-Pc-NvF" secondAttribute="leading" id="Bn6-2Z-ZWo"/>
+                                            <constraint firstAttribute="height" constant="80" id="jRK-2D-ndZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="hfl-H3-r8M" secondAttribute="trailing" id="jq9-Ch-C70"/>
+                                            <constraint firstItem="hfl-H3-r8M" firstAttribute="centerY" secondItem="5uN-Pc-NvF" secondAttribute="centerY" id="rta-Cf-3cZ"/>
+                                            <constraint firstItem="8Hd-Rp-a97" firstAttribute="centerY" secondItem="5uN-Pc-NvF" secondAttribute="centerY" id="zjY-Nh-BnW"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjj-au-2cb" userLabel="Stack View2">
-                                        <rect key="frame" x="0.0" y="60" width="272" height="60"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-2M-MuA">
+                                        <rect key="frame" x="0.0" y="80" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-F1-0KK">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="0TI-tz-CIP"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="sGR-4m-Zxf"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxx-SH-3Kd">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxx-SH-3Kd" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="CYF-Jk-TKt"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="書籍を検索する"/>
                                                 <connections>
@@ -68,24 +79,32 @@
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="z2o-ks-tPL"/>
+                                            <constraint firstItem="GnB-F1-0KK" firstAttribute="leading" secondItem="gfW-2M-MuA" secondAttribute="leading" id="Gqr-rf-2Lb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vxx-SH-3Kd" secondAttribute="trailing" id="OWr-Qc-dod"/>
+                                            <constraint firstItem="Vxx-SH-3Kd" firstAttribute="centerY" secondItem="gfW-2M-MuA" secondAttribute="centerY" id="PtE-Qv-sGM"/>
+                                            <constraint firstItem="GnB-F1-0KK" firstAttribute="centerY" secondItem="gfW-2M-MuA" secondAttribute="centerY" id="f9N-gj-iF2"/>
+                                            <constraint firstAttribute="height" constant="80" id="iuT-Sc-Lco"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoe-Ha-3SX" userLabel="Stack View3">
-                                        <rect key="frame" x="0.0" y="120" width="272" height="60"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gud-8S-l8v">
+                                        <rect key="frame" x="0.0" y="160" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-9V-qKL">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="TXR-LK-9sD"/>
                                                     <constraint firstAttribute="width" constant="32" id="ehZ-4R-cfn"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-wN-r6y">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-wN-r6y" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="aiJ-GM-dv6"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="蔵書を確認する"/>
                                                 <connections>
@@ -94,26 +113,31 @@
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="YSt-Wk-Gyi"/>
+                                            <constraint firstAttribute="height" constant="80" id="Vrt-L0-jaT"/>
+                                            <constraint firstItem="4e3-9V-qKL" firstAttribute="leading" secondItem="gud-8S-l8v" secondAttribute="leading" id="ZDF-1T-pX4"/>
+                                            <constraint firstItem="4e3-9V-qKL" firstAttribute="centerY" secondItem="gud-8S-l8v" secondAttribute="centerY" id="qba-9c-SqK"/>
+                                            <constraint firstAttribute="trailing" secondItem="xsk-wN-r6y" secondAttribute="trailing" id="vKu-Pp-J8i"/>
+                                            <constraint firstItem="xsk-wN-r6y" firstAttribute="centerY" secondItem="gud-8S-l8v" secondAttribute="centerY" id="x9a-nj-vrN"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqY-Fr-fI9" userLabel="Stack View4">
-                                        <rect key="frame" x="0.0" y="180" width="272" height="60"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jw5-g1-8ge">
+                                        <rect key="frame" x="0.0" y="240" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-8F-zrK">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="WDc-i1-RFX"/>
                                                     <constraint firstAttribute="width" constant="32" id="kHz-7r-pYu"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-9P-M3l">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-9P-M3l" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="vbD-En-UKe"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="mZG-IV-Mjc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="欲しい物リストを見る"/>
@@ -123,24 +147,32 @@
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Ig5-0V-3VV"/>
+                                            <constraint firstItem="XHF-9P-M3l" firstAttribute="centerY" secondItem="jw5-g1-8ge" secondAttribute="centerY" id="8X0-y6-IDc"/>
+                                            <constraint firstItem="0ec-8F-zrK" firstAttribute="leading" secondItem="jw5-g1-8ge" secondAttribute="leading" id="9Fc-PB-y0u"/>
+                                            <constraint firstAttribute="height" constant="80" id="OSA-k8-fB4"/>
+                                            <constraint firstItem="0ec-8F-zrK" firstAttribute="centerY" secondItem="jw5-g1-8ge" secondAttribute="centerY" id="ZLI-OT-9Kk"/>
+                                            <constraint firstItem="XHF-9P-M3l" firstAttribute="trailing" secondItem="jw5-g1-8ge" secondAttribute="trailing" id="cpe-B6-sRO"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-Xk-9p5" userLabel="Stack View5">
-                                        <rect key="frame" x="0.0" y="240" width="272" height="60"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wz-cB-E8D">
+                                        <rect key="frame" x="0.0" y="320" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="udU-nC-fBe">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="OMB-bN-66z"/>
                                                     <constraint firstAttribute="width" constant="32" id="RgB-TR-y1I"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="d9z-tO-3KB"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="レビューの内容を見る"/>
                                                 <connections>
@@ -149,35 +181,51 @@
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="kGs-BW-J9s"/>
+                                            <constraint firstItem="udU-nC-fBe" firstAttribute="leading" secondItem="2Wz-cB-E8D" secondAttribute="leading" id="5fm-U7-V4G"/>
+                                            <constraint firstItem="udU-nC-fBe" firstAttribute="centerY" secondItem="2Wz-cB-E8D" secondAttribute="centerY" id="HkY-Ih-YQO"/>
+                                            <constraint firstAttribute="height" constant="80" id="efq-gK-ZGU"/>
+                                            <constraint firstItem="iIN-xf-CmO" firstAttribute="centerY" secondItem="2Wz-cB-E8D" secondAttribute="centerY" id="oIZ-uR-FS6"/>
+                                            <constraint firstAttribute="trailing" secondItem="iIN-xf-CmO" secondAttribute="trailing" id="uao-2u-SIO"/>
                                         </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUw-xm-a6a" userLabel="Stack View6">
-                                        <rect key="frame" x="0.0" y="300" width="272" height="60"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lw-3w-UBU">
+                                        <rect key="frame" x="0.0" y="400" width="250" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="woy-aR-1ue">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="60"/>
+                                                <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="PL1-Pr-9gR"/>
                                                     <constraint firstAttribute="width" constant="32" id="bAo-90-1nA"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or">
-                                                <rect key="frame" x="32" y="0.0" width="240" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="24" width="200" height="33"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="t5x-P3-6dn"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="貸出中の書籍の管理"/>
                                             </button>
                                         </subviews>
                                         <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="rgv-pN-9fT"/>
+                                            <constraint firstAttribute="height" constant="80" id="6un-3O-Hn6"/>
+                                            <constraint firstAttribute="trailing" secondItem="5J2-kD-4Or" secondAttribute="trailing" id="DbN-Cw-IhI"/>
+                                            <constraint firstItem="woy-aR-1ue" firstAttribute="centerY" secondItem="4lw-3w-UBU" secondAttribute="centerY" id="G6t-rV-7N1"/>
+                                            <constraint firstItem="woy-aR-1ue" firstAttribute="leading" secondItem="4lw-3w-UBU" secondAttribute="leading" id="fC9-eE-Cke"/>
+                                            <constraint firstItem="5J2-kD-4Or" firstAttribute="centerY" secondItem="4lw-3w-UBU" secondAttribute="centerY" id="hzJ-bv-uI6"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="0Bs-Ih-oBB"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <animations/>
