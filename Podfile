@@ -25,3 +25,5 @@ target 'BookManagerUITests' do
 
 end
 
+# no pods
+#https://github.com/jathu/UIImageColors

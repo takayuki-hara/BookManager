@@ -46,6 +46,7 @@
 		A16114161C14689F00739B59 /* ReviewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */; };
 		A16114181C146D1400739B59 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114171C146D1400739B59 /* ReviewDataModel.swift */; };
 		A161141A1C146F0100739B59 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114191C146F0100739B59 /* ReviewTableViewController.swift */; };
+		A1985BB11C2AC49A00D1F561 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */; };
 		A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */; };
 		A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */; };
 		A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */; };
@@ -129,6 +130,7 @@
 		A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableViewCell.xib; sourceTree = "<group>"; };
 		A16114171C146D1400739B59 /* ReviewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDataModel.swift; sourceTree = "<group>"; };
 		A16114191C146F0100739B59 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewCell.swift; sourceTree = "<group>"; };
 		A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearcherTableViewCell.xib; sourceTree = "<group>"; };
 		A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewLogic.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		A12CF66F1C02C08C009260A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A1985BAE1C2AC49A00D1F561 /* Libraries */,
 				A12CF6701C02C08C009260A7 /* AppDelegate.swift */,
 				A12CF6711C02C08C009260A7 /* Entities */,
 				A12CF6761C02C08C009260A7 /* Models */,
@@ -378,6 +381,22 @@
 				A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		A1985BAE1C2AC49A00D1F561 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A1985BAF1C2AC49A00D1F561 /* UIImageColors */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A1985BAF1C2AC49A00D1F561 /* UIImageColors */ = {
+			isa = PBXGroup;
+			children = (
+				A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */,
+			);
+			path = UIImageColors;
 			sourceTree = "<group>";
 		};
 		BDCF6D1FC2DB86FA43E20AAD /* Pods */ = {
@@ -582,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BC071F1C09FD4400CED9AE /* WishListTableViewController.swift in Sources */,
+				A1985BB11C2AC49A00D1F561 /* UIImageColors.swift in Sources */,
 				A161140C1C14033200739B59 /* WishListViewController.swift in Sources */,
 				A1BC07171C09EC2800CED9AE /* BookAccess.swift in Sources */,
 				A16114081C13C28F00739B59 /* BookLibraryViewController.swift in Sources */,
