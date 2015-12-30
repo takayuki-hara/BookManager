@@ -95,7 +95,7 @@
                         </label>
                     </subviews>
                 </stackView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Irg-fv-SSf">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Irg-fv-SSf">
                     <rect key="frame" x="10" y="187" width="580" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="5Rx-OI-Q6f"/>

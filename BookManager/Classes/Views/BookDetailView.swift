@@ -34,19 +34,30 @@ class BookDetailView: UIView {
 	func setBookInfo(book: BookDataModel) {
 		let url = NSURL(string: book.imageUrl!)
 		bookImageView.hnk_setImageFromURL(url!)
+		setBookInfoCommon(book)
+	}
+
+	func setBookInfoCustomColor(book: BookDataModel, closure: () -> ()) {
+		let url = NSURL(string: book.imageUrl!)
 		// 画像の色に合わせて背景やテキストを調整する
-		//bookImageView.hnk_setImageFromURL(url!, placeholder: nil, format: nil, failure: nil) { image in
-		//	self.bookImageView.image = image
-		//	let colors = image.getColors()
-		//	self.backgroundColor = colors.backgroundColor
-		//	self.titleLabel.textColor = colors.primaryColor
-		//	self.authorLabel.textColor = colors.secondaryColor
-		//	self.publisherLabel.textColor = colors.detailColor
-		//	self.isbnLabel.textColor = colors.detailColor
-		//	self.dateLabel.textColor = colors.detailColor
-		//	self.priceLabel.textColor = colors.detailColor
-		//	self.textView.textColor = colors.detailColor
-		//}
+		bookImageView.hnk_setImageFromURL(url!, placeholder: nil, format: nil, failure: nil) { image in
+			self.bookImageView.image = image
+			let colors = image.getColors()
+			self.backgroundColor = colors.backgroundColor
+			self.titleLabel.textColor = colors.primaryColor
+			self.authorLabel.textColor = colors.secondaryColor
+			self.publisherLabel.textColor = colors.detailColor
+			self.isbnLabel.textColor = colors.detailColor
+			self.dateLabel.textColor = colors.detailColor
+			self.priceLabel.textColor = colors.detailColor
+			self.textView.textColor = colors.detailColor
+			// 画像取得後に実行したい処理を行う
+			closure()
+		}
+		setBookInfoCommon(book)
+	}
+
+	private func setBookInfoCommon(book: BookDataModel) {
 		
 		titleLabel.text = book.title
 		authorLabel.text = book.author

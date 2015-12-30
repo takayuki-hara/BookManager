@@ -27,3 +27,4 @@ end
 
 # no pods
 #https://github.com/jathu/UIImageColors
+#https://github.com/codestergit/SweetAlert-iOS
