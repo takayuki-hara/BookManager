@@ -19,14 +19,6 @@ class BookLibraryViewController: UIViewController {
 		performSegueWithIdentifier("toReviewSegue", sender: nil)
 	}
 
-	@IBAction func didPushRentalButton(sender: AnyObject) {
-		if !library.rentalable || library.isRented {
-			SCLAlertView().showError("エラー", subTitle: "貸し出し出来ない書籍です")
-		} else {
-			performSegueWithIdentifier("toRentalSegue", sender: nil)
-		}
-	}
-
 	@IBAction func didPushTrushButton(sender: AnyObject) {
 		if LibraryAccess.deleteLibrary(library.id) {
 			SCLAlertView().showSuccess("成功", subTitle: "削除しました")
@@ -63,11 +55,6 @@ class BookLibraryViewController: UIViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "toReviewSegue" {
 			let next = segue.destinationViewController as! ReviewViewController
-			if let library = library {
-				next.library = library
-			}
-		} else if segue.identifier == "toRentalSegue" {
-			let next = segue.destinationViewController as! RentalViewController
 			if let library = library {
 				next.library = library
 			}
