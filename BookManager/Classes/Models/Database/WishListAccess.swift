@@ -47,11 +47,11 @@ class WishListAccess {
 		return true
 	}
 
-	static func deleteWishList(data: BookDataModel) -> Bool {
+	static func deleteWishList(id: Int) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
-		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@ AND wisher == %@", data.isbn!, getLoginUserFromUserDefaults()))
+		let results = realm.objects(WishListObject).filter(NSPredicate(format:"id == %d", id))
 		if results.count == 0 {
 			return false
 		}
