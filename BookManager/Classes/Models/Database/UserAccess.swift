@@ -13,15 +13,18 @@ import RealmSwift
 class UserAccess {
 
 	// MARK: - Static Methods
-	static func countUsers() -> Int {
+	static func nextId() -> Int {
 		let realm = try! Realm()
-		let results = realm.objects(UserObject)
-		return results.count
+		let results = realm.objects(UserObject).sorted("id", ascending: false)
+		if results.count == 0 {
+			return 1
+		}
+		return (results.first?.id)! + 1
 	}
 
 	static func initAdminUser() {
 		// 存在確認し、ない場合はAdminユーザーを登録
-		if countUsers() == 0 {
+		if nextId() == 1 {
 			addUser("admin")
 		}
 	}
@@ -41,7 +44,7 @@ class UserAccess {
 		
 		// 追加
 		let user = UserObject()
-		user.id = countUsers() + 1
+		user.id = nextId()
 		user.name = name
 		try! realm.write {
 			realm.add(user)

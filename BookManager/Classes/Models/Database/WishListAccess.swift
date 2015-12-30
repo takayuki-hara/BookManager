@@ -13,10 +13,13 @@ import RealmSwift
 class WishListAccess {
 
 	// MARK: - Static Methods
-	static func countWishLists() -> Int {
+	static func nextId() -> Int {
 		let realm = try! Realm()
-		let results = realm.objects(WishListObject)
-		return results.count
+		let results = realm.objects(WishListObject).sorted("id", ascending: false)
+		if results.count == 0 {
+			return 1
+		}
+		return (results.first?.id)! + 1
 	}
 	
 	static func addWishList(data: BookDataModel) -> Bool {
@@ -33,7 +36,7 @@ class WishListAccess {
 
 		// 追加
 		let wishList = WishListObject()
-		wishList.id = countWishLists() + 1
+		wishList.id = nextId()
 		wishList.isbn = data.isbn!
 		wishList.wisher = getLoginUserFromUserDefaults()
 		wishList.addDate = nowDateString()

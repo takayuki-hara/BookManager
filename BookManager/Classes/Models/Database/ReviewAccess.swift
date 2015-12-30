@@ -13,10 +13,13 @@ import RealmSwift
 class ReviewAccess {
 
 	// MARK: - Static Methods
-	static func countReviews() -> Int {
+	static func nextId() -> Int {
 		let realm = try! Realm()
-		let results = realm.objects(ReviewObject)
-		return results.count
+		let results = realm.objects(ReviewObject).sorted("id", ascending: false)
+		if results.count == 0 {
+			return 1
+		}
+		return (results.first?.id)! + 1
 	}
 	
 	static func addReview(data: BookDataModel, rate: Double, detail: String, update: Bool = false) -> Bool {
@@ -35,7 +38,7 @@ class ReviewAccess {
 		
 		// 追加
 		let review = ReviewObject()
-		review.id = countReviews() + 1
+		review.id = nextId()
 		review.isbn = data.isbn!
 		review.reviewer = getLoginUserFromUserDefaults()
 		review.addDate = nowDateString()

@@ -13,10 +13,13 @@ import RealmSwift
 class LibraryAccess {
 	
 	// MARK: - Static Methods
-	static func countLibraries() -> Int {
+	static func nextId() -> Int {
 		let realm = try! Realm()
-		let results = realm.objects(LibraryObject)
-		return results.count
+		let results = realm.objects(LibraryObject).sorted("id", ascending: false)
+		if results.count == 0 {
+			return 1
+		}
+		return (results.first?.id)! + 1
 	}
 	
 	static func addLibrary(data: BookDataModel, user: String) -> Bool {
@@ -30,7 +33,7 @@ class LibraryAccess {
 		
 		// 追加
 		let library = LibraryObject()
-		library.id = countLibraries() + 1
+		library.id = nextId()
 		library.isbn = data.isbn!
 		library.owner = user
 		library.addDate = nowDateString()
@@ -59,11 +62,11 @@ class LibraryAccess {
 		return true
 	}
 
-	static func deleteWishList(data: BookDataModel) -> Bool {
+	static func deleteLibrary(id: Int) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
-		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"isbn == %@", data.isbn!))
+		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"id == %d", id))
 		if results.count == 0 {
 			return false
 		}

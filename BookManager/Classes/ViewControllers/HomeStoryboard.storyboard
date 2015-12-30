@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zfk-MK-ucc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zfk-MK-ucc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -25,7 +25,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-Rp-a97">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="KEq-Sh-ty5"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="zDg-dE-2fw"/>
@@ -33,7 +32,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfl-H3-r8M" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="eqz-Vq-aq6"/>
                                                 </constraints>
@@ -44,7 +42,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="8Hd-Rp-a97" firstAttribute="leading" secondItem="5uN-Pc-NvF" secondAttribute="leading" id="Bn6-2Z-ZWo"/>
@@ -59,7 +56,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-F1-0KK">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="0TI-tz-CIP"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="sGR-4m-Zxf"/>
@@ -67,7 +63,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxx-SH-3Kd" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="CYF-Jk-TKt"/>
                                                 </constraints>
@@ -78,7 +73,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="GnB-F1-0KK" firstAttribute="leading" secondItem="gfW-2M-MuA" secondAttribute="leading" id="Gqr-rf-2Lb"/>
@@ -93,7 +87,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4e3-9V-qKL">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="TXR-LK-9sD"/>
                                                     <constraint firstAttribute="width" constant="32" id="ehZ-4R-cfn"/>
@@ -101,7 +94,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-wN-r6y" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="aiJ-GM-dv6"/>
                                                 </constraints>
@@ -112,7 +104,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Vrt-L0-jaT"/>
@@ -127,7 +118,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-8F-zrK">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="WDc-i1-RFX"/>
                                                     <constraint firstAttribute="width" constant="32" id="kHz-7r-pYu"/>
@@ -135,7 +125,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHF-9P-M3l" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="mZG-IV-Mjc"/>
                                                 </constraints>
@@ -146,7 +135,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="XHF-9P-M3l" firstAttribute="centerY" secondItem="jw5-g1-8ge" secondAttribute="centerY" id="8X0-y6-IDc"/>
@@ -161,7 +149,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="udU-nC-fBe">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="OMB-bN-66z"/>
                                                     <constraint firstAttribute="width" constant="32" id="RgB-TR-y1I"/>
@@ -169,7 +156,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIN-xf-CmO" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="d9z-tO-3KB"/>
                                                 </constraints>
@@ -180,7 +166,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="udU-nC-fBe" firstAttribute="leading" secondItem="2Wz-cB-E8D" secondAttribute="leading" id="5fm-U7-V4G"/>
@@ -195,7 +180,6 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="woy-aR-1ue">
                                                 <rect key="frame" x="0.0" y="-24" width="32" height="128"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="PL1-Pr-9gR"/>
                                                     <constraint firstAttribute="width" constant="32" id="bAo-90-1nA"/>
@@ -203,7 +187,6 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-kD-4Or" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                                 <rect key="frame" x="50" y="24" width="200" height="33"/>
-                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="t5x-P3-6dn"/>
                                                 </constraints>
@@ -211,7 +194,6 @@
                                                 <state key="normal" title="貸出中の書籍の管理"/>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="6un-3O-Hn6"/>
@@ -222,13 +204,11 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="0Bs-Ih-oBB"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="D3x-fu-hdq" firstAttribute="centerY" secondItem="XsZ-fu-sey" secondAttribute="centerY" id="HAT-jH-lHK"/>
@@ -258,7 +238,6 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BarcodeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3jM-sB-bdN">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="09H-j4-Wj7"/>
                                             <constraint firstAttribute="height" constant="32" id="Lfo-tt-1U3"/>
@@ -266,14 +245,12 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBNを入力する(10 or 13桁)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-pl-olT">
                                         <rect key="frame" x="52" y="0.0" width="212" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9784800710703" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2W-PU-468">
                                         <rect key="frame" x="120" y="41" width="150" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="9EM-Bk-Ku5"/>
                                         </constraints>
@@ -282,7 +259,6 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-Ed-Vl5" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="190" y="91" width="80" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Lsv-HQ-TzB"/>
                                         </constraints>
@@ -293,7 +269,6 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CameraIcon" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-8u-gkE">
                                         <rect key="frame" x="0.0" y="151" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="13t-IS-kOZ"/>
                                             <constraint firstAttribute="height" constant="32" id="nUk-Qb-zMY"/>
@@ -301,14 +276,12 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カメラで読み込む" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-yF-RWg">
                                         <rect key="frame" x="52" y="151" width="136" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESb-im-kaw" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="190" y="192" width="80" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="Luk-YK-VRZ"/>
                                         </constraints>
@@ -318,7 +291,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="TPt-Ed-Vl5" firstAttribute="top" secondItem="Z2W-PU-468" secondAttribute="bottom" constant="20" id="48m-8c-EoW"/>
@@ -340,7 +312,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f7f-d2-7os" firstAttribute="top" secondItem="sUu-1j-NvC" secondAttribute="bottom" constant="100" id="Ufw-Dm-iEc"/>
@@ -364,12 +335,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3qQ-fA-Duh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="x5n-e8-j7R">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <animations/>
                             <textInputTraits key="textInputTraits"/>
                             <scopeButtonTitles>
                                 <string>Title</string>
@@ -383,9 +352,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jns-i4-v4Y" id="YNg-Uk-zII">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="Bmj-5i-v9W" kind="show" identifier="toBookSearchDetailSegue" id="KuK-pc-gCd"/>
                                 </connections>
@@ -422,14 +389,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-ep-lgU" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="FM4-Il-yWn"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Fxd-VG-TJB"/>
                                     <constraint firstAttribute="bottom" secondItem="Xas-ep-lgU" secondAttribute="bottom" id="Mkx-O4-eok"/>
@@ -441,7 +406,6 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGQ-FE-Jp3" userLabel="VerticalLine">
                                 <rect key="frame" x="10" y="374" width="580" height="3"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="SrE-bb-qsJ"/>
@@ -452,7 +416,6 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0v0-Ql-XTf">
                                         <rect key="frame" x="0.0" y="6" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="4wU-z3-cjS"/>
                                             <constraint firstAttribute="width" constant="32" id="iGB-5g-2Qc"/>
@@ -460,7 +423,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOy-w9-1tu" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="8" width="200" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="EZR-d5-wrg"/>
                                         </constraints>
@@ -471,7 +433,6 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LibraryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-jI-MNq">
                                         <rect key="frame" x="0.0" y="46" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="2X1-X9-huv"/>
                                             <constraint firstAttribute="height" constant="32" id="a9X-IG-EAg"/>
@@ -479,7 +440,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMb-QO-lXo" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="46" width="200" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="jB7-1e-OTz"/>
                                         </constraints>
@@ -490,7 +450,6 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-m0-p1M">
                                         <rect key="frame" x="0.0" y="86" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="BUZ-6t-RDv"/>
                                             <constraint firstAttribute="width" constant="32" id="E4f-sf-fgY"/>
@@ -498,7 +457,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="84" width="200" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="0MD-eR-zlf"/>
                                         </constraints>
@@ -509,7 +467,6 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYB-6y-Eqx" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="122" width="200" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="yqz-od-Vrl"/>
                                         </constraints>
@@ -517,14 +474,12 @@
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9bZ-d8-Fim">
                                         <rect key="frame" x="0.0" y="126" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="BZr-uz-ac9"/>
                                             <constraint firstAttribute="height" constant="32" id="UFh-7h-SL6"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="9bZ-d8-Fim" firstAttribute="top" secondItem="ieM-m0-p1M" secondAttribute="bottom" constant="8" id="1ik-gf-yft"/>
@@ -548,7 +503,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pGQ-FE-Jp3" firstAttribute="top" secondItem="xqv-8m-VAr" secondAttribute="bottom" constant="10" id="9Ec-Xr-q7T"/>
@@ -587,14 +541,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-2b-fM1" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="LPG-2g-zMm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="qcl-2b-fM1" firstAttribute="width" secondItem="tgi-qm-frV" secondAttribute="width" id="4u1-Mx-rTG"/>
                                     <constraint firstAttribute="height" constant="300" id="8dz-B6-ep4"/>
@@ -606,18 +558,16 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-SY-RK6" userLabel="VerticalLine">
                                 <rect key="frame" x="10" y="374" width="580" height="3"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="VyG-52-UKq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-0u-87o">
-                                <rect key="frame" x="175" y="387" width="250" height="80"/>
+                                <rect key="frame" x="175" y="387" width="250" height="120"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cFG-5v-xsI">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="dlb-lh-kqG"/>
                                             <constraint firstAttribute="height" constant="32" id="zfB-p0-xrT"/>
@@ -625,7 +575,6 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mj6-89-RmE" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="8" width="160" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="c0I-Ss-TcJ"/>
                                         </constraints>
@@ -635,9 +584,15 @@
                                             <action selector="didPushReviewButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="ko1-eV-05j"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-Hv-sd8">
+                                        <rect key="frame" x="0.0" y="40" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="GTD-di-0qw"/>
+                                            <constraint firstAttribute="width" constant="32" id="slD-EM-UTq"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB1-cS-6Gz" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="52" y="46" width="160" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="160" id="37f-cu-Bfs"/>
                                         </constraints>
@@ -646,25 +601,36 @@
                                             <action selector="didPushRentalButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="U6e-FL-hXm"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RentalIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JQJ-Hv-sd8">
-                                        <rect key="frame" x="0.0" y="40" width="32" height="32"/>
-                                        <animations/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrushIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ZqK-0L-dJD">
+                                        <rect key="frame" x="0.0" y="80" width="32" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="GTD-di-0qw"/>
-                                            <constraint firstAttribute="width" constant="32" id="slD-EM-UTq"/>
+                                            <constraint firstAttribute="width" constant="32" id="Agz-GR-3Wp"/>
+                                            <constraint firstAttribute="height" constant="32" id="nRR-yT-gbc"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cih-7R-tae">
+                                        <rect key="frame" x="52" y="84" width="160" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="kYQ-PC-Hd0"/>
+                                        </constraints>
+                                        <state key="normal" title="蔵書から削除する"/>
+                                        <connections>
+                                            <action selector="didPushTrushButton:" destination="qFi-ie-qYq" eventType="touchUpInside" id="2XN-RV-7Pn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="8ET-pC-Sh4"/>
+                                    <constraint firstItem="cih-7R-tae" firstAttribute="top" secondItem="ZB1-cS-6Gz" secondAttribute="bottom" constant="8" id="0D5-Dc-Zbs"/>
+                                    <constraint firstItem="cih-7R-tae" firstAttribute="leading" secondItem="ZqK-0L-dJD" secondAttribute="trailing" constant="20" id="7I7-O5-gfr"/>
+                                    <constraint firstAttribute="height" constant="120" id="8ET-pC-Sh4"/>
                                     <constraint firstAttribute="width" constant="250" id="Ai8-kn-X3f"/>
                                     <constraint firstItem="Mj6-89-RmE" firstAttribute="leading" secondItem="cFG-5v-xsI" secondAttribute="trailing" constant="20" id="I6E-z7-5Th"/>
                                     <constraint firstItem="Mj6-89-RmE" firstAttribute="leading" secondItem="cFG-5v-xsI" secondAttribute="trailing" constant="20" id="MmS-I6-tdM"/>
+                                    <constraint firstItem="ZqK-0L-dJD" firstAttribute="top" secondItem="JQJ-Hv-sd8" secondAttribute="bottom" constant="8" id="NJd-qz-qRC"/>
                                     <constraint firstItem="JQJ-Hv-sd8" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="UNT-62-PFN"/>
                                     <constraint firstItem="ZB1-cS-6Gz" firstAttribute="top" secondItem="Mj6-89-RmE" secondAttribute="bottom" constant="8" id="bip-p0-Gxb"/>
-                                    <constraint firstItem="cFG-5v-xsI" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="cpV-xJ-2js"/>
+                                    <constraint firstItem="ZqK-0L-dJD" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="f4W-zW-nWw"/>
                                     <constraint firstItem="cFG-5v-xsI" firstAttribute="leading" secondItem="HPE-0u-87o" secondAttribute="leading" id="iBy-3g-W1q"/>
                                     <constraint firstItem="JQJ-Hv-sd8" firstAttribute="top" secondItem="cFG-5v-xsI" secondAttribute="bottom" constant="8" id="lza-Ip-KQ2"/>
                                     <constraint firstItem="cFG-5v-xsI" firstAttribute="top" secondItem="HPE-0u-87o" secondAttribute="top" id="ow7-Wx-rrX"/>
@@ -673,7 +639,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="D8L-SY-RK6" secondAttribute="trailing" constant="10" id="J73-E5-VIc"/>
@@ -714,14 +679,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レビュー対象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-QY-hOk">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axj-OV-e6i">
                                         <rect key="frame" x="20" y="31" width="68" height="100"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="M8Y-dD-ykz"/>
                                             <constraint firstAttribute="width" constant="68" id="Xra-kv-a8l"/>
@@ -729,20 +692,17 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNt-JX-mnJ">
                                         <rect key="frame" x="98" y="31" width="192" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-xA-q25">
                                         <rect key="frame" x="98" y="62" width="202" height="17"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NNt-JX-mnJ" secondAttribute="trailing" constant="10" id="3zD-V4-wGP"/>
@@ -764,14 +724,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レビュー入力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-FA-g4t">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-aj-Dka" customClass="CosmosView" customModule="Cosmos">
                                         <rect key="frame" x="90" y="31" width="120" height="20"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
@@ -784,7 +742,6 @@
                                     </view>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-FS-iub">
                                         <rect key="frame" x="20" y="61" width="280" height="150"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="FKh-Z2-cHw"/>
@@ -794,7 +751,6 @@
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmB-Xg-FaN" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="110" y="231" width="80" height="30"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="hj8-GQ-jkr"/>
                                         </constraints>
@@ -804,7 +760,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6UF-FS-iub" firstAttribute="leading" secondItem="SEz-y7-qfg" secondAttribute="leading" constant="20" id="0Jb-QE-5ca"/>
@@ -821,7 +776,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NZt-qg-sqb" firstAttribute="top" secondItem="bcy-sz-d9R" secondAttribute="bottom" constant="20" id="0pu-7p-KK5"/>
@@ -860,14 +814,12 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haV-qz-2fD" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="350" id="RXP-R0-HgF"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="haV-qz-2fD" secondAttribute="trailing" id="8EA-Ep-aia"/>
                                     <constraint firstAttribute="bottom" secondItem="haV-qz-2fD" secondAttribute="bottom" id="GQ5-xy-pVe"/>
@@ -877,7 +829,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="W0H-A9-jJN" firstAttribute="top" secondItem="jab-0C-Lq3" secondAttribute="bottom" id="1fr-Kh-yRF"/>
@@ -906,7 +857,6 @@
                     <view key="view" contentMode="scaleToFill" id="29R-XF-FRc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="書籍貸出" id="gsh-yx-fmI"/>
@@ -922,7 +872,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aKu-Bw-ztz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g4c-jM-2YK" customClass="BookLibraryTableViewCell" customModule="BookManager" customModuleProvider="target">
@@ -931,9 +880,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g4c-jM-2YK" id="7Fg-pD-ozr">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="qFi-ie-qYq" kind="show" identifier="toBookLibrarySegue" id="dJQ-IP-1NP"/>
                                 </connections>
@@ -957,7 +904,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6ce-bT-Vby">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="I07-rj-y20" customClass="WishListTableViewCell" customModule="BookManager" customModuleProvider="target">
@@ -966,9 +912,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I07-rj-y20" id="UnN-Co-wrV">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                                 <connections>
                                     <segue destination="WUl-OE-Zvg" kind="show" identifier="toWishListSegue" id="OxD-iJ-PAg"/>
                                 </connections>
@@ -992,7 +936,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5OM-UN-4v4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iuA-Pb-aVO" customClass="ReviewListTableViewCell" customModule="BookManager" customModuleProvider="target">
@@ -1001,9 +944,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iuA-Pb-aVO" id="xff-Ut-Y4a">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </tableViewCellContentView>
-                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1024,7 +965,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zwo-hq-wZx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1044,6 +984,7 @@
         <image name="RentalIcon" width="128" height="128"/>
         <image name="ReviewIcon" width="128" height="128"/>
         <image name="SearchIcon" width="128" height="128"/>
+        <image name="TrushIcon" width="128" height="128"/>
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>

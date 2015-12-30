@@ -27,6 +27,14 @@ class BookLibraryViewController: UIViewController {
 		}
 	}
 
+	@IBAction func didPushTrushButton(sender: AnyObject) {
+		if LibraryAccess.deleteLibrary(library.id) {
+			SCLAlertView().showSuccess("成功", subTitle: "削除しました")
+		} else {
+			SCLAlertView().showError("エラー", subTitle: "削除できませんでした")
+		}
+	}
+
 	// MARK: - Property
 	var library: BookLibraryDataModel!
 
