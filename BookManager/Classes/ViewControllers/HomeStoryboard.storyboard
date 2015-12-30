@@ -729,55 +729,6 @@
             </objects>
             <point key="canvasLocation" x="3814" y="654"/>
         </scene>
-        <!--WishList View Controller-->
-        <scene sceneID="rLL-vv-f9i">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="WUl-OE-Zvg" userLabel="WishList View Controller" customClass="WishListViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jab-0C-Lq3"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ec9-qA-vIU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8iH-dg-OEE">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0H-A9-jJN">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haV-qz-2fD" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="350" id="RXP-R0-HgF"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="haV-qz-2fD" secondAttribute="trailing" id="8EA-Ep-aia"/>
-                                    <constraint firstAttribute="bottom" secondItem="haV-qz-2fD" secondAttribute="bottom" id="GQ5-xy-pVe"/>
-                                    <constraint firstItem="haV-qz-2fD" firstAttribute="top" secondItem="W0H-A9-jJN" secondAttribute="top" id="I4K-h2-KjF"/>
-                                    <constraint firstItem="haV-qz-2fD" firstAttribute="leading" secondItem="W0H-A9-jJN" secondAttribute="leading" id="bbC-3L-kOM"/>
-                                    <constraint firstItem="haV-qz-2fD" firstAttribute="width" secondItem="W0H-A9-jJN" secondAttribute="width" id="ttA-SU-aBq"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="W0H-A9-jJN" firstAttribute="top" secondItem="jab-0C-Lq3" secondAttribute="bottom" id="1fr-Kh-yRF"/>
-                            <constraint firstItem="W0H-A9-jJN" firstAttribute="leading" secondItem="8iH-dg-OEE" secondAttribute="leading" id="Kmz-Um-hEE"/>
-                            <constraint firstItem="Ec9-qA-vIU" firstAttribute="top" secondItem="W0H-A9-jJN" secondAttribute="bottom" id="YAR-pN-dVH"/>
-                            <constraint firstAttribute="trailing" secondItem="W0H-A9-jJN" secondAttribute="trailing" id="eZd-2g-IYm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="書籍詳細" id="TXl-aq-gR9"/>
-                    <connections>
-                        <outlet property="bookDetailView" destination="haV-qz-2fD" id="Yl9-4W-Ndu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QUy-GM-0KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2007" y="2218"/>
-        </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">
             <objects>
@@ -826,9 +777,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="WUl-OE-Zvg" kind="show" identifier="toWishListSegue" id="OxD-iJ-PAg"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -840,7 +788,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8I-kR-fZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="2218"/>
+            <point key="canvasLocation" x="1256" y="1662"/>
         </scene>
         <!--Review Table View Controller-->
         <scene sceneID="TKX-V2-gF2">
