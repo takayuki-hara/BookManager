@@ -25,7 +25,7 @@ class LibraryAccess {
 	static func addLibrary(data: BookDataModel, user: String) -> Bool {
 		let realm = try! Realm()
 		
-		// 存在確認はここでは行わない：同じ所有者が何冊も持っている倍があり得る
+		// 存在確認はここでは行わない：同じ所有者が何冊も持っている場合があり得る
 		// →チェックはUI上で行う（追加確認など）
 		
 		// BookObjectの追加

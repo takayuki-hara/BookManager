@@ -43,10 +43,6 @@ class BookDetailViewController: UIViewController {
 		}
 	}
 
-	@IBAction func didPushReviewButton(sender: AnyObject) {
-		//
-	}
-	
 	// MARK: - Property
 	var book: BookDataModel!
 

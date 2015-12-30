@@ -30,6 +30,12 @@ class BookLibraryTableViewController: UITableViewController {
 		tableView.reloadData()
     }
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		libraries = LibraryAccess.allObjects()
+		tableView.reloadData()
+	}
+
 	// MARK: - Navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == "toBookLibrarySegue" {
