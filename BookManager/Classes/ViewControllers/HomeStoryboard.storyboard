@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ol-3E-B64" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="-739"/>
+            <point key="canvasLocation" x="2272" y="-827"/>
         </scene>
         <!--BookSearcher Table View Controller-->
         <scene sceneID="1xA-fF-yYr">
@@ -357,7 +357,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqv-8m-VAr">
-                                <rect key="frame" x="0.0" y="64" width="600" height="343"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="383"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-ep-lgU" customClass="BookDetailView" customModule="BookManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
@@ -376,14 +376,14 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGQ-FE-Jp3" userLabel="VerticalLine">
-                                <rect key="frame" x="10" y="417" width="580" height="3"/>
+                                <rect key="frame" x="10" y="457" width="580" height="3"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="SrE-bb-qsJ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-kZ-wgG">
-                                <rect key="frame" x="175" y="440" width="250" height="120"/>
+                                <rect key="frame" x="175" y="480" width="250" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WishIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0v0-Ql-XTf">
                                         <rect key="frame" x="0.0" y="6" width="32" height="32"/>
@@ -419,37 +419,16 @@
                                             <action selector="didPushLibraryButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="0hx-uv-UEX"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReviewIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-m0-p1M">
-                                        <rect key="frame" x="0.0" y="86" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="BUZ-6t-RDv"/>
-                                            <constraint firstAttribute="width" constant="32" id="E4f-sf-fgY"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-b7-eXz" customClass="CustomButton" customModule="BookManager" customModuleProvider="target">
-                                        <rect key="frame" x="52" y="84" width="200" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="0MD-eR-zlf"/>
-                                        </constraints>
-                                        <state key="normal" title="レビューを投稿する"/>
-                                        <connections>
-                                            <action selector="didPushReviewButton:" destination="Bmj-5i-v9W" eventType="touchUpInside" id="iaE-uj-YCw"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="7KZ-mc-55J"/>
-                                    <constraint firstItem="R5W-b7-eXz" firstAttribute="top" secondItem="jMb-QO-lXo" secondAttribute="bottom" constant="8" id="7jg-K7-gfp"/>
-                                    <constraint firstAttribute="height" constant="120" id="HGB-oc-ykN"/>
+                                    <constraint firstAttribute="height" constant="80" id="HGB-oc-ykN"/>
                                     <constraint firstItem="jMb-QO-lXo" firstAttribute="top" secondItem="DOy-w9-1tu" secondAttribute="bottom" constant="8" id="RcT-Mw-UfU"/>
                                     <constraint firstItem="8iZ-jI-MNq" firstAttribute="top" secondItem="0v0-Ql-XTf" secondAttribute="bottom" constant="8" id="fVe-MM-IZj"/>
-                                    <constraint firstItem="ieM-m0-p1M" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="jNh-Zf-Cqw"/>
                                     <constraint firstItem="8iZ-jI-MNq" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="nen-Fe-gBP"/>
-                                    <constraint firstItem="R5W-b7-eXz" firstAttribute="leading" secondItem="ieM-m0-p1M" secondAttribute="trailing" constant="20" id="srg-1G-W8d"/>
                                     <constraint firstItem="0v0-Ql-XTf" firstAttribute="leading" secondItem="dhP-kZ-wgG" secondAttribute="leading" id="tzH-TE-85W"/>
                                     <constraint firstItem="0v0-Ql-XTf" firstAttribute="top" secondItem="dhP-kZ-wgG" secondAttribute="top" constant="6" id="v9T-3L-OpI"/>
-                                    <constraint firstItem="ieM-m0-p1M" firstAttribute="top" secondItem="8iZ-jI-MNq" secondAttribute="bottom" constant="8" id="vts-4d-hsy"/>
                                     <constraint firstItem="DOy-w9-1tu" firstAttribute="top" secondItem="dhP-kZ-wgG" secondAttribute="top" constant="8" id="wUV-Da-ZEP"/>
                                     <constraint firstItem="jMb-QO-lXo" firstAttribute="leading" secondItem="8iZ-jI-MNq" secondAttribute="trailing" constant="20" id="yRv-xU-haY"/>
                                     <constraint firstItem="DOy-w9-1tu" firstAttribute="leading" secondItem="0v0-Ql-XTf" secondAttribute="trailing" constant="20" id="yl3-bx-uo8"/>
@@ -476,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNR-Cd-pCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3023" y="-390"/>
+            <point key="canvasLocation" x="3327" y="-390"/>
         </scene>
         <!--BookLibrary View Controller-->
         <scene sceneID="EvX-LJ-jCl">
@@ -592,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhZ-of-X1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3023" y="654"/>
+            <point key="canvasLocation" x="3119" y="654"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="9bs-Ss-If4">
@@ -727,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FO4-Lu-Mvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3814" y="654"/>
+            <point key="canvasLocation" x="4047" y="976"/>
         </scene>
         <!--BookLibrary Table View Controller-->
         <scene sceneID="QPv-of-kpS">
@@ -759,7 +738,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-h6-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2272" y="654"/>
+            <point key="canvasLocation" x="2272" y="686"/>
         </scene>
         <!--WishList Table View Controller-->
         <scene sceneID="N88-4d-Rj9">
@@ -788,9 +767,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8I-kR-fZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256" y="1662"/>
+            <point key="canvasLocation" x="1256" y="1974"/>
         </scene>
-        <!--Review Table View Controller-->
+        <!--レビュー一覧-->
         <scene sceneID="TKX-V2-gF2">
             <objects>
                 <tableViewController id="qbn-tu-uUE" customClass="ReviewTableViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -806,6 +785,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tfW-Ag-AB4" kind="show" identifier="toReviewSegue" id="854-8n-TEP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -813,6 +795,7 @@
                             <outlet property="delegate" destination="qbn-tu-uUE" id="nnb-nQ-ebA"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="レビュー一覧" id="xUm-9v-iIF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUK-Fy-xlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -848,6 +831,7 @@
         <image name="WishIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KuK-pc-gCd"/>
+        <segue reference="TMe-SM-QE5"/>
+        <segue reference="jse-4t-87D"/>
     </inferredMetricsTieBreakers>
 </document>

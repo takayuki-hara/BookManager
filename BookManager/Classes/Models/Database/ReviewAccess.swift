@@ -25,12 +25,10 @@ class ReviewAccess {
 	static func addReview(data: BookDataModel, rate: Double, detail: String, update: Bool = false) -> Bool {
 		let realm = try! Realm()
 		
-		// 存在確認（ある場合はエラー）:同じ人が同じ本について登録しない
-		if !update {
-			let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, getLoginUserFromUserDefaults()))
-			if results.count != 0 {
-				return false
-			}
+		// 存在確認（更新でなく既存の場合はエラー）:同じ人が同じ本について登録しない
+		let exist = existReview(data, user: getLoginUserFromUserDefaults())
+		if !update && exist != nil {
+			return false
 		}
 		
 		// BookObjectの追加（今のところ蔵書しかレビューしないので不要）
@@ -39,6 +37,9 @@ class ReviewAccess {
 		// 追加
 		let review = ReviewObject()
 		review.id = nextId()
+		if let exist = exist {
+			review.id = exist
+		}
 		review.isbn = data.isbn!
 		review.reviewer = getLoginUserFromUserDefaults()
 		review.addDate = nowDateString()
@@ -51,11 +52,23 @@ class ReviewAccess {
 		return true
 	}
 
-	static func deleteReview(data: BookDataModel) -> Bool {
+	static func existReview(data: BookDataModel, user: String) -> Int? {
+		let realm = try! Realm()
+		
+		// 存在確認
+		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
+		if results.count == 0 {
+			return nil
+		}
+		
+		return results.first!.id
+	}
+	
+	static func deleteReview(id: Int) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（無い場合はエラー）
-		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, getLoginUserFromUserDefaults()))
+		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"id == %d", id))
 		if results.count == 0 {
 			return false
 		}
@@ -66,6 +79,18 @@ class ReviewAccess {
 		}
 		
 		return true
+	}
+	
+	static func getReview(data: BookDataModel, user: String) -> ReviewDataModel? {
+		let realm = try! Realm()
+		
+		// 存在確認（ない場合はエラー）
+		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
+		if results.count == 0 {
+			return nil
+		}
+		
+		return ReviewDataModel(review: results.first!)
 	}
 	
 	static func allObjects() -> [ReviewDataModel]? {
@@ -101,4 +126,5 @@ class ReviewAccess {
 			log.info("Review: \(result.id), \(result.isbn), \(result.reviewer), \(result.addDate), \(result.rate)")
 		}
 	}
+	
 }

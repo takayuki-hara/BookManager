@@ -21,11 +21,11 @@ class ReviewViewController: UIViewController {
 
 	// MARK: - @IBOutlet
 	@IBAction func didPushReviewButton(sender: AnyObject) {
-		if ReviewAccess.addReview(library.book, rate: cosmosView.rating, detail: textView.text) == false {
+		if ReviewAccess.addReview(book, rate: cosmosView.rating, detail: textView.text) == false {
 			let alertView = SCLAlertView()
 			alertView.addButton("更新") {
 				log.debug("pushed OK!")
-				ReviewAccess.addReview(self.library.book, rate: self.cosmosView.rating, detail: self.textView.text, update: true)
+				ReviewAccess.addReview(self.book, rate: self.cosmosView.rating, detail: self.textView.text, update: true)
 			}
 			alertView.addButton("CANCEL") {
 				log.debug("Pushed CANCEL!")
@@ -39,7 +39,7 @@ class ReviewViewController: UIViewController {
 	}
 
 	// MARK: - Property
-	var library: BookLibraryDataModel!
+	var book: BookDataModel!
 
 	// MARK: - Lifecycle
     override func viewDidLoad() {
@@ -61,13 +61,19 @@ class ReviewViewController: UIViewController {
 
     // MARK: - Private Methods
 	private func displayBookInfo() {
-		let url = NSURL(string: library.book.imageUrl!)
+		let url = NSURL(string: book.imageUrl!)
 		bookImageView.hnk_setImageFromURL(url!)
 
-		titleLabel.text = library.book.title
-		authorLabel.text = library.book.author
+		titleLabel.text = book.title
+		authorLabel.text = book.author
 		textView.layer.borderWidth = 1
 		textView.layer.borderColor = UIColor.blackColor().CGColor
+
+		// DBにあればそのデータを入れる
+		if let review = ReviewAccess.getReview(book, user: getLoginUserFromUserDefaults()) {
+			cosmosView.rating = review.rate
+			textView.text = review.detail
+		}
 	}
 
 	func closeSoftKeyboard() {

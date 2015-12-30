@@ -24,26 +24,35 @@ class ReviewTableViewController: UITableViewController {
 		// 初期設定
 		tableView.delegate = self
 		tableView.estimatedRowHeight = 108
-		
+
+		// 右上にEditボタンを表示させる
+		navigationItem.rightBarButtonItem = editButtonItem()
+
 		//
 		reviews = ReviewAccess.allObjects()
 		tableView.reloadData()
     }
 
-    override func didReceiveMemoryWarning() {
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		reviews = ReviewAccess.allObjects()
+		tableView.reloadData()
+	}
+
+	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-	/*
 	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		// Get the new view controller using segue.destinationViewController.
-		// Pass the selected object to the new view controller.
+		if segue.identifier == "toReviewSegue" {
+			let next = segue.destinationViewController as! ReviewViewController
+			if let reviews = reviews {
+				next.book = reviews[(tableView.indexPathForSelectedRow?.row)!].book
+			}
+		}
 	}
-	*/
 
 }
 
@@ -61,15 +70,6 @@ extension ReviewTableViewController {
 		return count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("reviewCell") as! ReviewListTableViewCell
 		if reviews == nil {
@@ -81,4 +81,34 @@ extension ReviewTableViewController {
 		return cell
 	}
 
+	// Override to support conditional editing of the table view.
+	override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+		let review = reviews![indexPath.row]
+		if review.reviewer == getLoginUserFromUserDefaults() {
+			return true
+		} else {
+			return false
+		}
+	}
+	
+	// Override to support editing the table view.
+	override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+		if editingStyle == .Delete {
+			// DB削除
+			let review = reviews![indexPath.row]
+			ReviewAccess.deleteReview(review.id)
+			ReviewAccess.consoleOutReviews()
+			// テーブルのリストも更新
+			reviews?.removeAtIndex(indexPath.row)
+			// テーブルのビューを更新
+			tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+		}
+	}
+}
+
+extension ReviewTableViewController {
+	// MARK: - UITableViewDelegate
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		performSegueWithIdentifier("toReviewSegue", sender: nil)
+	}
 }
