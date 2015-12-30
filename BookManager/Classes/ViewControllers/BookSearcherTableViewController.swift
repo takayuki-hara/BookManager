@@ -15,6 +15,7 @@ class BookSearcherTableViewController: UITableViewController {
 	@IBOutlet weak var searchBar: UISearchBar!
 
 	// MARK: - Property
+	var searchWord = ""
 	var searchResult: BookSearchResultModel?
 	var books: [BookDataParentModel]?
 	var nowLoading = false
@@ -54,6 +55,11 @@ class BookSearcherTableViewController: UITableViewController {
 			return
 		}
 
+		// 検索ワードが変わっていたら前回の結果はクリアする
+		if word != searchWord {
+			searchResult = nil
+		}
+
 		var page = 1
 
 		// 前回の結果がある場合の処理
@@ -64,8 +70,9 @@ class BookSearcherTableViewController: UITableViewController {
 			page = lastResult.page! + 1
 		}
 
+		searchWord = word
 		let logic = BookSearcherTableViewLogic()
-		logic.loadBookDataWithWord(word, page: page) { result in
+		logic.loadBookDataWithWord(searchWord, page: page) { result in
 			self.nowLoading = false
 			if let result = result {
 				self.searchResult = result
