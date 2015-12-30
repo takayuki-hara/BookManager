@@ -109,12 +109,19 @@ extension WishListTableViewController {
 		return true
 	}
 	*/
-	
+
 }
 
 extension WishListTableViewController {
 	// MARK: - UITableViewDelegate
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		performSegueWithIdentifier("toWishListSegue", sender: nil)
+//		performSegueWithIdentifier("toWishListSegue", sender: nil)
+
+		if let wishes = wishes {
+			let wish = wishes[indexPath.row]
+			let controller = ModalBookDetailViewController()
+			controller.setupContentView(wish.book)
+			controller.presentPopver(target: self, sourceView: tableView.cellForRowAtIndexPath(indexPath))
+		}
 	}
 }

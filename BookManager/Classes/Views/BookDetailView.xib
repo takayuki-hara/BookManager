@@ -96,7 +96,7 @@
                     </subviews>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Irg-fv-SSf">
-                    <rect key="frame" x="10" y="187" width="580" height="150"/>
+                    <rect key="frame" x="10" y="220" width="580" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="5Rx-OI-Q6f"/>
                     </constraints>
@@ -119,10 +119,11 @@
                 <constraint firstItem="PDA-tw-FYn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="PeI-7I-Tyb"/>
                 <constraint firstItem="jII-vl-rw9" firstAttribute="leading" secondItem="PDA-tw-FYn" secondAttribute="trailing" constant="10" id="Vni-hu-vB0"/>
                 <constraint firstItem="X31-8S-jP6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Y0R-SY-yfp"/>
+                <constraint firstItem="Irg-fv-SSf" firstAttribute="top" secondItem="PDA-tw-FYn" secondAttribute="bottom" constant="10" id="cLh-k3-wjw"/>
                 <constraint firstAttribute="trailing" secondItem="CaC-aG-Aix" secondAttribute="trailing" constant="10" id="d7O-Dx-bZM"/>
                 <constraint firstItem="PDA-tw-FYn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="dGJ-tz-JRU"/>
                 <constraint firstAttribute="trailing" secondItem="X31-8S-jP6" secondAttribute="trailing" constant="10" id="fd9-hd-XCP"/>
-                <constraint firstItem="Irg-fv-SSf" firstAttribute="top" secondItem="szh-ke-A8I" secondAttribute="bottom" constant="10" id="gov-oy-zaM"/>
+                <constraint firstItem="Irg-fv-SSf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="szh-ke-A8I" secondAttribute="bottom" constant="10" id="gov-oy-zaM"/>
                 <constraint firstAttribute="trailing" secondItem="jII-vl-rw9" secondAttribute="trailing" constant="10" id="hDi-2x-8ij"/>
                 <constraint firstItem="CaC-aG-Aix" firstAttribute="leading" secondItem="PDA-tw-FYn" secondAttribute="trailing" constant="10" id="hVG-1d-bHO"/>
                 <constraint firstAttribute="trailing" secondItem="Irg-fv-SSf" secondAttribute="trailing" constant="10" id="hhc-lA-xHu"/>
@@ -132,6 +133,7 @@
                 <constraint firstAttribute="trailing" secondItem="szh-ke-A8I" secondAttribute="trailing" constant="10" id="vnk-Le-YUT"/>
                 <constraint firstItem="YuP-l5-xBm" firstAttribute="leading" secondItem="PDA-tw-FYn" secondAttribute="trailing" constant="10" id="xnm-DK-XZm"/>
                 <constraint firstItem="Irg-fv-SSf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ySm-v9-xUU"/>
+                <constraint firstItem="Irg-fv-SSf" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" constant="-20" id="zPJ-zI-iUu"/>
             </constraints>
             <point key="canvasLocation" x="267" y="414"/>
         </view>

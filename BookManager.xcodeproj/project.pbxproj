@@ -48,6 +48,7 @@
 		A161141A1C146F0100739B59 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114191C146F0100739B59 /* ReviewTableViewController.swift */; };
 		A1985BB11C2AC49A00D1F561 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */; };
 		A1985C1F1C3381F800D1F561 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985C1E1C3381F800D1F561 /* SweetAlert.swift */; };
+		A1985C221C34008A00D1F561 /* ModalBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985C211C34008A00D1F561 /* ModalBookDetailViewController.swift */; };
 		A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */; };
 		A1BC06FF1C04A4E000CED9AE /* BookSearcherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */; };
 		A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */; };
@@ -133,6 +134,7 @@
 		A16114191C146F0100739B59 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		A1985C1E1C3381F800D1F561 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		A1985C211C34008A00D1F561 /* ModalBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalBookDetailViewController.swift; sourceTree = "<group>"; };
 		A1BC06FC1C04A4E000CED9AE /* BookSearcherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewCell.swift; sourceTree = "<group>"; };
 		A1BC06FD1C04A4E000CED9AE /* BookSearcherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearcherTableViewCell.xib; sourceTree = "<group>"; };
 		A1BC07001C04B4A900CED9AE /* BookSearcherTableViewLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearcherTableViewLogic.swift; sourceTree = "<group>"; };
@@ -253,7 +255,6 @@
 		A12CF66F1C02C08C009260A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A1985BAE1C2AC49A00D1F561 /* Libraries */,
 				A12CF6701C02C08C009260A7 /* AppDelegate.swift */,
 				A12CF6711C02C08C009260A7 /* Entities */,
 				A12CF6761C02C08C009260A7 /* Models */,
@@ -263,6 +264,7 @@
 				A12CF6751C02C08C009260A7 /* Functions */,
 				A12CF6741C02C08C009260A7 /* Extensions */,
 				A12CF6781C02C08C009260A7 /* Modules */,
+				A1985BAE1C2AC49A00D1F561 /* Libraries */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -332,6 +334,7 @@
 		A12CF67B1C02C08D009260A7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A1985C201C34005600D1F561 /* Modal */,
 				A12CF6A71C02E829009260A7 /* LoginViewController.swift */,
 				A140784B1C0ACF1A0079D030 /* UserRegistViewController.swift */,
 				A12CF6A91C02ED48009260A7 /* HomeStoryboard.storyboard */,
@@ -408,6 +411,14 @@
 				A1985C1E1C3381F800D1F561 /* SweetAlert.swift */,
 			);
 			path = SweetAlert;
+			sourceTree = "<group>";
+		};
+		A1985C201C34005600D1F561 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				A1985C211C34008A00D1F561 /* ModalBookDetailViewController.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		BDCF6D1FC2DB86FA43E20AAD /* Pods */ = {
@@ -625,6 +636,7 @@
 				A1985C1F1C3381F800D1F561 /* SweetAlert.swift in Sources */,
 				A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
+				A1985C221C34008A00D1F561 /* ModalBookDetailViewController.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
 				A12CF67F1C02C08D009260A7 /* AppDelegate.swift in Sources */,
 				A16114061C1333FD00739B59 /* BookDetailView.swift in Sources */,
