@@ -82,7 +82,6 @@ class LibraryAccess {
 		let results = realm.objects(LibraryObject)
 		var array: [LibraryObject]? = []
 		for result in results {
-			//let lib = BookLibraryDataModel(library: result)
 			if result.owner == "admin" || result.owner == getLoginUserFromUserDefaults() {
 				array?.append(result)
 			}
@@ -95,36 +94,11 @@ class LibraryAccess {
 		let results = realm.objects(LibraryObject)
 		var array: [LibraryObject]? = []
 		for result in results {
-			//let lib = BookLibraryDataModel(library: result)
 			array?.append(result)
 		}
 		return array
 	}
 
-//	static func validObjects() -> [BookLibraryDataModel]? {
-//		let realm = try! Realm()
-//		let results = realm.objects(LibraryObject)
-//		var array: [BookLibraryDataModel]? = []
-//		for result in results {
-//			let lib = BookLibraryDataModel(library: result)
-//			if lib.owner == "admin" || lib.owner == getLoginUserFromUserDefaults() {
-//				array?.append(lib)
-//			}
-//		}
-//		return array
-//	}
-//	
-//	static func allObjects() -> [BookLibraryDataModel]? {
-//		let realm = try! Realm()
-//		let results = realm.objects(LibraryObject)
-//		var array: [BookLibraryDataModel]? = []
-//		for result in results {
-//			let lib = BookLibraryDataModel(library: result)
-//			array?.append(lib)
-//		}
-//		return array
-//	}
-	
 	static func allDeleteLibraries() {
 		let realm = try! Realm()
 		

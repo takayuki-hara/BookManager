@@ -88,7 +88,7 @@ class ReviewAccess {
 			return nil
 		}
 		
-		return results.first	//ReviewDataModel(review: results.first!)
+		return results.first
 	}
 	
 	static func allObjects() -> [ReviewObject]? {
@@ -96,35 +96,11 @@ class ReviewAccess {
 		let results = realm.objects(ReviewObject)
 		var array: [ReviewObject]? = []
 		for result in results {
-			//let review = ReviewDataModel(review: result)
 			array?.append(result)
 		}
 		return array
 	}
 	
-//	static func getReview(data: BookDataModel, user: String) -> ReviewDataModel? {
-//		let realm = try! Realm()
-//		
-//		// 存在確認（ない場合はエラー）
-//		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
-//		if results.count == 0 {
-//			return nil
-//		}
-//		
-//		return ReviewDataModel(review: results.first!)
-//	}
-//	
-//	static func allObjects() -> [ReviewDataModel]? {
-//		let realm = try! Realm()
-//		let results = realm.objects(ReviewObject)
-//		var array: [ReviewDataModel]? = []
-//		for result in results {
-//			let review = ReviewDataModel(review: result)
-//			array?.append(review)
-//		}
-//		return array
-//	}
-
 	static func allDeleteReview() {
 		let realm = try! Realm()
 		

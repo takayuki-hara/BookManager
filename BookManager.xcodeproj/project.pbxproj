@@ -31,16 +31,13 @@
 		A14078541C0B09050079D030 /* LibraryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14078531C0B09050079D030 /* LibraryObject.swift */; };
 		A14078591C0C9C6B0079D030 /* BookLibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14078571C0C9C6B0079D030 /* BookLibraryTableViewCell.swift */; };
 		A140785A1C0C9C6B0079D030 /* BookLibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14078581C0C9C6B0079D030 /* BookLibraryTableViewCell.xib */; };
-		A16114021C1320EF00739B59 /* BookLibraryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114011C1320EF00739B59 /* BookLibraryDataModel.swift */; };
 		A16114041C1333C900739B59 /* BookDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16114031C1333C900739B59 /* BookDetailView.xib */; };
 		A16114061C1333FD00739B59 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114051C1333FD00739B59 /* BookDetailView.swift */; };
 		A16114081C13C28F00739B59 /* BookLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114071C13C28F00739B59 /* BookLibraryViewController.swift */; };
-		A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114091C13F61E00739B59 /* WishListDataModel.swift */; };
 		A161140E1C1436D000739B59 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161140D1C1436D000739B59 /* ReviewViewController.swift */; };
 		A16114121C144A0100739B59 /* ReviewAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114111C144A0100739B59 /* ReviewAccess.swift */; };
 		A16114151C14689F00739B59 /* ReviewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114131C14689F00739B59 /* ReviewListTableViewCell.swift */; };
 		A16114161C14689F00739B59 /* ReviewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */; };
-		A16114181C146D1400739B59 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114171C146D1400739B59 /* ReviewDataModel.swift */; };
 		A161141A1C146F0100739B59 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16114191C146F0100739B59 /* ReviewTableViewController.swift */; };
 		A1985BB11C2AC49A00D1F561 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */; };
 		A1985C1F1C3381F800D1F561 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1985C1E1C3381F800D1F561 /* SweetAlert.swift */; };
@@ -114,16 +111,13 @@
 		A14078551C0B3FBF0079D030 /* Todo.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Todo.md; sourceTree = "<group>"; };
 		A14078571C0C9C6B0079D030 /* BookLibraryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLibraryTableViewCell.swift; sourceTree = "<group>"; };
 		A14078581C0C9C6B0079D030 /* BookLibraryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookLibraryTableViewCell.xib; sourceTree = "<group>"; };
-		A16114011C1320EF00739B59 /* BookLibraryDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLibraryDataModel.swift; sourceTree = "<group>"; };
 		A16114031C1333C900739B59 /* BookDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailView.xib; sourceTree = "<group>"; };
 		A16114051C1333FD00739B59 /* BookDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		A16114071C13C28F00739B59 /* BookLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookLibraryViewController.swift; sourceTree = "<group>"; };
-		A16114091C13F61E00739B59 /* WishListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListDataModel.swift; sourceTree = "<group>"; };
 		A161140D1C1436D000739B59 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		A16114111C144A0100739B59 /* ReviewAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewAccess.swift; sourceTree = "<group>"; };
 		A16114131C14689F00739B59 /* ReviewListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableViewCell.swift; sourceTree = "<group>"; };
 		A16114141C14689F00739B59 /* ReviewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableViewCell.xib; sourceTree = "<group>"; };
-		A16114171C146D1400739B59 /* ReviewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDataModel.swift; sourceTree = "<group>"; };
 		A16114191C146F0100739B59 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		A1985BB01C2AC49A00D1F561 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		A1985C1E1C3381F800D1F561 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
@@ -298,9 +292,6 @@
 				A12CF69D1C02C4C3009260A7 /* BookApiModel.swift */,
 				A12CF69E1C02C4C3009260A7 /* BookDataModel.swift */,
 				A12CF69F1C02C4C3009260A7 /* BookSearchResultModel.swift */,
-				A16114011C1320EF00739B59 /* BookLibraryDataModel.swift */,
-				A16114091C13F61E00739B59 /* WishListDataModel.swift */,
-				A16114171C146D1400739B59 /* ReviewDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -621,7 +612,6 @@
 				A16114121C144A0100739B59 /* ReviewAccess.swift in Sources */,
 				A14078501C0AFD400079D030 /* UserDefaultFunctions.swift in Sources */,
 				A1985C1F1C3381F800D1F561 /* SweetAlert.swift in Sources */,
-				A161140A1C13F61E00739B59 /* WishListDataModel.swift in Sources */,
 				A1BC070E1C09A31700CED9AE /* RentalObject.swift in Sources */,
 				A1985C221C34008A00D1F561 /* ModalBookDetailViewController.swift in Sources */,
 				A1BC06FE1C04A4E000CED9AE /* BookSearcherTableViewCell.swift in Sources */,
@@ -634,7 +624,6 @@
 				A1BC07111C09A31700CED9AE /* WishListObject.swift in Sources */,
 				A1BC07051C0954C600CED9AE /* BookDetailViewController.swift in Sources */,
 				A1BC070F1C09A31700CED9AE /* ReviewObject.swift in Sources */,
-				A16114181C146D1400739B59 /* ReviewDataModel.swift in Sources */,
 				A12CF6A81C02E829009260A7 /* LoginViewController.swift in Sources */,
 				A14078521C0B05FB0079D030 /* LibraryAccess.swift in Sources */,
 				A12CF6AE1C032A76009260A7 /* BookSearcherTableViewController.swift in Sources */,
@@ -648,7 +637,6 @@
 				A16114151C14689F00739B59 /* ReviewListTableViewCell.swift in Sources */,
 				A12CF6A21C02C4C3009260A7 /* BookSearchResultModel.swift in Sources */,
 				A1BC07011C04B4A900CED9AE /* BookSearcherTableViewLogic.swift in Sources */,
-				A16114021C1320EF00739B59 /* BookLibraryDataModel.swift in Sources */,
 				A12CF6A41C02C4D2009260A7 /* IsbnReaderView.swift in Sources */,
 				A1BC071A1C09F74500CED9AE /* WishListTableViewCell.swift in Sources */,
 				A12CF6B41C033CCD009260A7 /* BookInfoLoaderViewLogic.swift in Sources */,
