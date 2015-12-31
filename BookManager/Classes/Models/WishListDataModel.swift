@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 欲しいものリストデータのクラス
 class WishListDataModel {
 	var id: Int
 	var isbn: String

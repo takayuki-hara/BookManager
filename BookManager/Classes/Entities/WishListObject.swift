@@ -10,6 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
+/// 欲しいものリストのRealmオブジェクト
 class WishListObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""

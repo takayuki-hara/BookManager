@@ -10,6 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
+/// 蔵書情報のRealmオブジェクト
 class LibraryObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""

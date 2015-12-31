@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 蔵書データのクラス
 class BookLibraryDataModel {
 	var id: Int
 	var isbn: String

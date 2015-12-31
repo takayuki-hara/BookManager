@@ -269,8 +269,8 @@
 				A1BC070C1C09A31700CED9AE /* UserObject.swift */,
 				A1BC070D1C09A31700CED9AE /* WishListObject.swift */,
 				A14078531C0B09050079D030 /* LibraryObject.swift */,
-				A1BC070A1C09A31700CED9AE /* RentalObject.swift */,
 				A1BC070B1C09A31700CED9AE /* ReviewObject.swift */,
+				A1BC070A1C09A31700CED9AE /* RentalObject.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";

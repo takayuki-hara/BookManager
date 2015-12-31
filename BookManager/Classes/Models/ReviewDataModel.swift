@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// レビューデータのクラス
 class ReviewDataModel {
 	var id: Int
 	var isbn: String

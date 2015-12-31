@@ -10,6 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
+/// ユーザー情報のRealmオブジェクト
 class UserObject: Object {
 	dynamic var id = 0
 	dynamic var name = ""

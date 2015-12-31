@@ -10,6 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
+/// レンタル情報のRealmオブジェクト（※非使用）
 class RentalObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""

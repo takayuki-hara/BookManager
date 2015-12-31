@@ -10,6 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
+/// レビュー情報のRealmオブジェクト
 class ReviewObject: Object {
 	dynamic var id = 0
 	dynamic var isbn = ""
