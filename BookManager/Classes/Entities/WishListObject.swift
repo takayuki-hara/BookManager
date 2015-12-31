@@ -17,6 +17,8 @@ class WishListObject: Object {
 	dynamic var wisher = ""
 	dynamic var addDate = ""
 
+	dynamic var book: BookObject?
+
 	override class func primaryKey() -> String {
 		return "id"
 	}

@@ -35,7 +35,7 @@ class BookSearcherTableViewCell: UITableViewCell {
     }
 
 	// MARK: - Public Method
-	func setBookInfo(book: BookDataModel) {
+	func updateCell(book: BookDataModel) {
 		let url = NSURL(string: book.imageUrl!)
 		bookImageView.hnk_setImageFromURL(url!)
 		

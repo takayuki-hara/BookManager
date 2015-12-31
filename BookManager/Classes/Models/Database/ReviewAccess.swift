@@ -22,7 +22,7 @@ class ReviewAccess {
 		return (results.first?.id)! + 1
 	}
 	
-	static func addReview(data: BookDataModel, rate: Double, detail: String, update: Bool = false) -> Bool {
+	static func addReview(data: BookObject, rate: Double, detail: String, update: Bool = false) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認（更新でなく既存の場合はエラー）:同じ人が同じ本について登録しない
@@ -31,20 +31,18 @@ class ReviewAccess {
 			return false
 		}
 		
-		// BookObjectの追加（今のところ蔵書しかレビューしないので不要）
-		BookAccess.addBook(data)
-		
 		// 追加
 		let review = ReviewObject()
 		review.id = nextId()
 		if let exist = exist {
 			review.id = exist
 		}
-		review.isbn = data.isbn!
+		review.isbn = data.isbn
 		review.reviewer = getLoginUserFromUserDefaults()
 		review.addDate = nowDateString()
 		review.rate = rate
 		review.detail = detail
+		review.book = data
 		try! realm.write {
 			realm.add(review, update: true)
 		}
@@ -52,11 +50,11 @@ class ReviewAccess {
 		return true
 	}
 
-	static func existReview(data: BookDataModel, user: String) -> Int? {
+	static func existReview(data: BookObject, user: String) -> Int? {
 		let realm = try! Realm()
 		
 		// 存在確認
-		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
+		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn, user))
 		if results.count == 0 {
 			return nil
 		}
@@ -81,28 +79,51 @@ class ReviewAccess {
 		return true
 	}
 	
-	static func getReview(data: BookDataModel, user: String) -> ReviewDataModel? {
+	static func getReview(data: BookObject, user: String) -> ReviewObject? {
 		let realm = try! Realm()
 		
 		// 存在確認（ない場合はエラー）
-		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
+		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn, user))
 		if results.count == 0 {
 			return nil
 		}
 		
-		return ReviewDataModel(review: results.first!)
+		return results.first	//ReviewDataModel(review: results.first!)
 	}
 	
-	static func allObjects() -> [ReviewDataModel]? {
+	static func allObjects() -> [ReviewObject]? {
 		let realm = try! Realm()
 		let results = realm.objects(ReviewObject)
-		var array: [ReviewDataModel]? = []
+		var array: [ReviewObject]? = []
 		for result in results {
-			let review = ReviewDataModel(review: result)
-			array?.append(review)
+			//let review = ReviewDataModel(review: result)
+			array?.append(result)
 		}
 		return array
 	}
+	
+//	static func getReview(data: BookDataModel, user: String) -> ReviewDataModel? {
+//		let realm = try! Realm()
+//		
+//		// 存在確認（ない場合はエラー）
+//		let results = realm.objects(ReviewObject).filter(NSPredicate(format:"isbn == %@ AND reviewer == %@", data.isbn!, user))
+//		if results.count == 0 {
+//			return nil
+//		}
+//		
+//		return ReviewDataModel(review: results.first!)
+//	}
+//	
+//	static func allObjects() -> [ReviewDataModel]? {
+//		let realm = try! Realm()
+//		let results = realm.objects(ReviewObject)
+//		var array: [ReviewDataModel]? = []
+//		for result in results {
+//			let review = ReviewDataModel(review: result)
+//			array?.append(review)
+//		}
+//		return array
+//	}
 
 	static func allDeleteReview() {
 		let realm = try! Realm()

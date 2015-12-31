@@ -9,23 +9,23 @@
 import Foundation
 
 /// 蔵書データのクラス
-class BookLibraryDataModel {
-	var id: Int
-	var isbn: String
-	var owner: String
-	var addDate: String
-	var rentalable: Bool
-	var isRented: Bool
-
-	var book: BookDataModel
-	
-	init(library: LibraryObject) {
-		id = library.id
-		isbn = library.isbn
-		owner = library.owner
-		addDate = library.addDate
-		rentalable = library.rentalable
-		isRented = library.isRented
-		book = BookAccess.getBook(library.isbn)!
-	}
-}
+//class BookLibraryDataModel {
+//	var id: Int
+//	var isbn: String
+//	var owner: String
+//	var addDate: String
+//	var rentalable: Bool
+//	var isRented: Bool
+//
+//	//var book: BookDataModel
+//	
+//	init(library: LibraryObject) {
+//		id = library.id
+//		isbn = library.isbn
+//		owner = library.owner
+//		addDate = library.addDate
+//		rentalable = library.rentalable
+//		isRented = library.isRented
+//		//book = BookAccess.getBook(library.isbn)!
+//	}
+//}

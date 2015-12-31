@@ -44,14 +44,14 @@ class BookDetailViewController: UIViewController {
 	}
 
 	// MARK: - Property
-	var book: BookDataModel!
+	var book: BookObject!
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		bookDetailView.setBookInfo(book)
+		bookDetailView.updateView(book)
     }
 
     override func didReceiveMemoryWarning() {

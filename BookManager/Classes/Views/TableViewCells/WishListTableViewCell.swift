@@ -33,15 +33,18 @@ class WishListTableViewCell: UITableViewCell {
     }
     
 	// MARK: - Public Method
-	func setBookInfo(wish: WishListDataModel) {
-		let url = NSURL(string: wish.book.imageUrl!)
+	func updateCell(wish: WishListObject) {
+		guard let book = wish.book else {
+			return
+		}
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 		
-		titleLabel.text = wish.book.title
-		authorLabel.text = wish.book.author
+		titleLabel.text = book.title
+		authorLabel.text = book.author
 		addDateLabel.text = "追加日：" + wish.addDate
-		dateLabel.text = "発売日：" + wish.book.salesDate!
+		dateLabel.text = "発売日：" + book.salesDate
 		wisherLabel.text = "登録者：" + wish.wisher
-		priceLabel.text = "¥ " + String(wish.book.price!)
+		priceLabel.text = "¥ " + String(book.price)
 	}
 }

@@ -35,12 +35,15 @@ class BookLibraryTableViewCell: UITableViewCell {
     }
     
 	// MARK: - Public Method
-	func setBookInfo(library: BookLibraryDataModel) {
-		let url = NSURL(string: library.book.imageUrl!)
+	func updateCell(library: LibraryObject) {
+		guard let book = library.book else {
+			return
+		}
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 		
-		titleLabel.text = library.book.title
-		authorLabel.text = library.book.author
+		titleLabel.text = book.title
+		authorLabel.text = book.author
 		dateLabel.text = "登録日：" + library.addDate
 		ownerLabel.text = "所有者：" + library.owner
 		if library.rentalable {

@@ -11,7 +11,7 @@ import UIKit
 class BookLibraryTableViewController: UITableViewController {
 
 	// MARK: - Property
-	var libraries: [BookLibraryDataModel]?
+	var libraries: [LibraryObject]?
 	
 	// MARK: - Lifecycle
     override func viewDidLoad() {
@@ -75,7 +75,7 @@ extension BookLibraryTableViewController {
 			return cell
 		}
 		let library = libraries![indexPath.row]
-		cell.setBookInfo(library)
+		cell.updateCell(library)
 		
 		return cell
     }

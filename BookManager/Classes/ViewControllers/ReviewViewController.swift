@@ -39,7 +39,7 @@ class ReviewViewController: UIViewController {
 	}
 
 	// MARK: - Property
-	var book: BookDataModel!
+	var book: BookObject!
 
 	// MARK: - Lifecycle
     override func viewDidLoad() {
@@ -61,7 +61,7 @@ class ReviewViewController: UIViewController {
 
     // MARK: - Private Methods
 	private func displayBookInfo() {
-		let url = NSURL(string: book.imageUrl!)
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 
 		titleLabel.text = book.title

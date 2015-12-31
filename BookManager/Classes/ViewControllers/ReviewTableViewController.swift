@@ -11,7 +11,7 @@ import UIKit
 class ReviewTableViewController: UITableViewController {
 
 	// MARK: - Property
-	var reviews: [ReviewDataModel]?
+	var reviews: [ReviewObject]?
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
@@ -76,7 +76,7 @@ extension ReviewTableViewController {
 			return cell
 		}
 		let review = reviews![indexPath.row]
-		cell.setBookInfo(review)
+		cell.updateCell(review)
 		
 		return cell
 	}

@@ -18,6 +18,8 @@ class RentalObject: Object {
 	dynamic var rentDate = ""
 	dynamic var isReturned = false
 
+	dynamic var book: BookObject?
+	
 	override class func primaryKey() -> String {
 		return "id"
 	}

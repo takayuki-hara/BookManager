@@ -22,26 +22,24 @@ class WishListAccess {
 		return (results.first?.id)! + 1
 	}
 	
-	static func addWishList(data: BookDataModel) -> Bool {
+	static func addWishList(data: BookObject) -> Bool {
 		let realm = try! Realm()
 
 		// 存在確認（ある場合はエラー）:同じ人が同じ本について登録しない
-		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@ AND wisher == %@", data.isbn!, getLoginUserFromUserDefaults()))
+		let results = realm.objects(WishListObject).filter(NSPredicate(format:"isbn == %@ AND wisher == %@", data.isbn, getLoginUserFromUserDefaults()))
 		if results.count != 0 {
 			return false
 		}
 
-		// BookObjectの追加
-		BookAccess.addBook(data)
-
 		// 追加
 		let wishList = WishListObject()
 		wishList.id = nextId()
-		wishList.isbn = data.isbn!
+		wishList.isbn = data.isbn
 		wishList.wisher = getLoginUserFromUserDefaults()
 		wishList.addDate = nowDateString()
+		wishList.book = data
 		try! realm.write {
-			realm.add(wishList)
+			realm.add(wishList, update: true)
 		}
 
 		return true
@@ -64,29 +62,53 @@ class WishListAccess {
 		return true
 	}
 
-	static func validObjects() -> [WishListDataModel]? {
+	static func validObjects() -> [WishListObject]? {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
-		var array: [WishListDataModel]? = []
+		var array: [WishListObject]? = []
 		for result in results {
-			let wish = WishListDataModel(wishList: result)
-			if wish.wisher == "admin" || wish.wisher == getLoginUserFromUserDefaults() {
-				array?.append(wish)
+			//let wish = WishListDataModel(wishList: result)
+			if result.wisher == "admin" || result.wisher == getLoginUserFromUserDefaults() {
+				array?.append(result)
 			}
 		}
 		return array
 	}
-	
-	static func allObjects() -> [WishListDataModel]? {
+
+	static func allObjects() -> [WishListObject]? {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)
-		var array: [WishListDataModel]? = []
+		var array: [WishListObject]? = []
 		for result in results {
-			let wish = WishListDataModel(wishList: result)
-			array?.append(wish)
+			//let wish = WishListDataModel(wishList: result)
+			array?.append(result)
 		}
 		return array
 	}
+
+//	static func validObjects() -> [WishListDataModel]? {
+//		let realm = try! Realm()
+//		let results = realm.objects(WishListObject)
+//		var array: [WishListDataModel]? = []
+//		for result in results {
+//			let wish = WishListDataModel(wishList: result)
+//			if wish.wisher == "admin" || wish.wisher == getLoginUserFromUserDefaults() {
+//				array?.append(wish)
+//			}
+//		}
+//		return array
+//	}
+	
+//	static func allObjects() -> [WishListDataModel]? {
+//		let realm = try! Realm()
+//		let results = realm.objects(WishListObject)
+//		var array: [WishListDataModel]? = []
+//		for result in results {
+//			let wish = WishListDataModel(wishList: result)
+//			array?.append(wish)
+//		}
+//		return array
+//	}
 
 	static func allDeleteWishLists() {
 		let realm = try! Realm()

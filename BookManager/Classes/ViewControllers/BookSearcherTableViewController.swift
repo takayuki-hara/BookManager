@@ -44,7 +44,7 @@ class BookSearcherTableViewController: UITableViewController {
 		if segue.identifier == "toBookSearchDetailSegue" {
 			let next = segue.destinationViewController as! BookDetailViewController
 			if let book = books![(tableView.indexPathForSelectedRow?.row)!].item {
-				next.book = book
+				next.book = BookAccess.createBookObjectFromBookData(book)
 			}
 		}
 	}
@@ -108,7 +108,7 @@ extension BookSearcherTableViewController {
 		guard let book = books![indexPath.row].item else {
 			return cell
 		}
-		cell.setBookInfo(book)
+		cell.updateCell(book)
 
 		return cell
 	}

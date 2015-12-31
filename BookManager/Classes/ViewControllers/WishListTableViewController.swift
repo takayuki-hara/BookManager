@@ -12,7 +12,7 @@ import Cosmos
 class WishListTableViewController: UITableViewController {
 
 	// MARK: - Property
-	var wishes: [WishListDataModel]?
+	var wishes: [WishListObject]?
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
@@ -62,7 +62,7 @@ extension WishListTableViewController {
 			return cell
 		}
 		let book = wishes![indexPath.row]
-		cell.setBookInfo(book)
+		cell.updateCell(book)
 		
 		return cell
 	}
@@ -94,7 +94,7 @@ extension WishListTableViewController {
 		if let wishes = wishes {
 			let wish = wishes[indexPath.row]
 			let controller = ModalBookDetailViewController()
-			controller.setupContentView(wish.book)
+			controller.setupContentView(wish.book!)
 			controller.presentPopver(target: self, sourceView: tableView.cellForRowAtIndexPath(indexPath))
 		}
 	}

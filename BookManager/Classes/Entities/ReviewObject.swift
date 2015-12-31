@@ -19,6 +19,8 @@ class ReviewObject: Object {
 	dynamic var detail = ""
 	dynamic var rate = 0.0
 
+	dynamic var book: BookObject?
+	
 	override class func primaryKey() -> String {
 		return "id"
 	}

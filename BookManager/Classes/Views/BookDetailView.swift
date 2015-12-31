@@ -31,14 +31,14 @@ class BookDetailView: UIView {
 	}
 	
 	// MARK: - Public Method
-	func setBookInfo(book: BookDataModel) {
-		let url = NSURL(string: book.imageUrl!)
+	func updateView(book: BookObject) {
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 		setBookInfoCommon(book)
 	}
 
-	func setBookInfoCustomColor(book: BookDataModel, closure: () -> ()) {
-		let url = NSURL(string: book.imageUrl!)
+	func setBookInfoCustomColor(book: BookObject, closure: () -> ()) {
+		let url = NSURL(string: book.imageUrl)
 		// 画像の色に合わせて背景やテキストを調整する
 		bookImageView.hnk_setImageFromURL(url!, placeholder: nil, format: nil, failure: nil) { image in
 			self.bookImageView.image = image
@@ -57,20 +57,18 @@ class BookDetailView: UIView {
 		setBookInfoCommon(book)
 	}
 
-	private func setBookInfoCommon(book: BookDataModel) {
+	private func setBookInfoCommon(book: BookObject) {
 		
 		titleLabel.text = book.title
 		authorLabel.text = book.author
 		publisherLabel.text = book.publisher
 		isbnLabel.text = book.isbn
 		dateLabel.text = book.salesDate
-		priceLabel.text = "¥ " + String(book.price!)
+		priceLabel.text = "¥ " + String(book.price)
 		
-		if let rating = book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
-		}
-		reviewLabel.text = "(" + String(book.reviewCount!) + ")"
+		cosmosView.rating = Double(book.reviewAverage)!
+		cosmosView.settings.updateOnTouch = false
+		reviewLabel.text = "(" + String(book.reviewCount) + ")"
 		
 		textView.text = book.itemCaption
 	}

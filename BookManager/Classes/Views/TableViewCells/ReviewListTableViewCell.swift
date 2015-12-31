@@ -32,11 +32,14 @@ class ReviewListTableViewCell: UITableViewCell {
     }
     
 	// MARK: - Public Method
-	func setBookInfo(review: ReviewDataModel) {
-		let url = NSURL(string: review.book.imageUrl!)
+	func updateCell(review: ReviewObject) {
+		guard let book = review.book else {
+			return
+		}
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 		
-		titleLabel.text = review.book.title
+		titleLabel.text = book.title
 		reviewerLabel.text = "レビュー者：" + review.reviewer
 
 		cosmosView.rating = review.rate

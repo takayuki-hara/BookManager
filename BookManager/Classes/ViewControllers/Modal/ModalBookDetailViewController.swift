@@ -46,7 +46,7 @@ class ModalBookDetailViewController: UIViewController {
 	}
 
 	/// コンテンツの初期化
-	func setupContentView(book: BookDataModel) {
+	func setupContentView(book: BookObject) {
 		contentView.awakeFromNib()
 		contentView.hidden = true
 		self.view.addSubview(self.contentView)

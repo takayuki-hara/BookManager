@@ -22,19 +22,16 @@ class LibraryAccess {
 		return (results.first?.id)! + 1
 	}
 	
-	static func addLibrary(data: BookDataModel, user: String) -> Bool {
+	static func addLibrary(data: BookObject, user: String) -> Bool {
 		let realm = try! Realm()
 		
 		// 存在確認はここでは行わない：同じ所有者が何冊も持っている場合があり得る
 		// →チェックはUI上で行う（追加確認など）
 		
-		// BookObjectの追加
-		BookAccess.addBook(data)
-		
 		// 追加
 		let library = LibraryObject()
 		library.id = nextId()
-		library.isbn = data.isbn!
+		library.isbn = data.isbn
 		library.owner = user
 		library.addDate = nowDateString()
 		library.rentalable = false
@@ -43,18 +40,19 @@ class LibraryAccess {
 			library.rentalable = true
 		}
 		library.isRented = false
+		library.book = data
 		try! realm.write {
-			realm.add(library)
+			realm.add(library, update: true)
 		}
 		
 		return true
 	}
 	
-	static func existLibrary(data: BookDataModel, user: String) -> Bool {
+	static func existLibrary(data: BookObject, user: String) -> Bool {
 		let realm = try! Realm()
 
 		// 存在確認
-		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"isbn == %@ AND owner == %@", data.isbn!, user))
+		let results = realm.objects(LibraryObject).filter(NSPredicate(format:"isbn == %@ AND owner == %@", data.isbn, user))
 		if results.count == 0 {
 			return false
 		}
@@ -79,29 +77,53 @@ class LibraryAccess {
 		return true
 	}
 	
-	static func validObjects() -> [BookLibraryDataModel]? {
+	static func validObjects() -> [LibraryObject]? {
 		let realm = try! Realm()
 		let results = realm.objects(LibraryObject)
-		var array: [BookLibraryDataModel]? = []
+		var array: [LibraryObject]? = []
 		for result in results {
-			let lib = BookLibraryDataModel(library: result)
-			if lib.owner == "admin" || lib.owner == getLoginUserFromUserDefaults() {
-				array?.append(lib)
+			//let lib = BookLibraryDataModel(library: result)
+			if result.owner == "admin" || result.owner == getLoginUserFromUserDefaults() {
+				array?.append(result)
 			}
 		}
 		return array
 	}
 	
-	static func allObjects() -> [BookLibraryDataModel]? {
+	static func allObjects() -> [LibraryObject]? {
 		let realm = try! Realm()
 		let results = realm.objects(LibraryObject)
-		var array: [BookLibraryDataModel]? = []
+		var array: [LibraryObject]? = []
 		for result in results {
-			let lib = BookLibraryDataModel(library: result)
-			array?.append(lib)
+			//let lib = BookLibraryDataModel(library: result)
+			array?.append(result)
 		}
 		return array
 	}
+
+//	static func validObjects() -> [BookLibraryDataModel]? {
+//		let realm = try! Realm()
+//		let results = realm.objects(LibraryObject)
+//		var array: [BookLibraryDataModel]? = []
+//		for result in results {
+//			let lib = BookLibraryDataModel(library: result)
+//			if lib.owner == "admin" || lib.owner == getLoginUserFromUserDefaults() {
+//				array?.append(lib)
+//			}
+//		}
+//		return array
+//	}
+//	
+//	static func allObjects() -> [BookLibraryDataModel]? {
+//		let realm = try! Realm()
+//		let results = realm.objects(LibraryObject)
+//		var array: [BookLibraryDataModel]? = []
+//		for result in results {
+//			let lib = BookLibraryDataModel(library: result)
+//			array?.append(lib)
+//		}
+//		return array
+//	}
 	
 	static func allDeleteLibraries() {
 		let realm = try! Realm()

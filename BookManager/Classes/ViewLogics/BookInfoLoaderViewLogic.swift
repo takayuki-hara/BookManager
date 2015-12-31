@@ -12,15 +12,17 @@ import AlamofireObjectMapper
 class BookInfoLoaderViewLogic {
 
 	// MARK: - Public Functions
-	func loadBookDataWithIsbn(isbn: String, loaded: (BookDataModel?) -> ()) {
+	func loadBookDataWithIsbn(isbn: String, loaded: (BookObject?) -> ()) {
 		Alamofire.request(.GET, BookApiModel.searchApiWithIsbn(isbn))
 			.responseObject { (response: Response<BookSearchResultModel, NSError>) in
 				log.debug(response.request.debugDescription)  // original URL request
 				log.debug(response.response.debugDescription) // URL response
 				log.debug(response.result.debugDescription)   // result of response serialization
 				
+				// TODO:要リファクタ
 				let data = response.result.value
-				loaded(data?.items?.first?.item)
+				let book = BookAccess.createBookObjectFromBookData((data?.items?.first?.item)!)
+				loaded(book)
 		}
 	}
 

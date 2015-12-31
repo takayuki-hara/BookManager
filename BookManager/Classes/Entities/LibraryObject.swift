@@ -19,6 +19,8 @@ class LibraryObject: Object {
 	dynamic var rentalable = false
 	dynamic var isRented = false
 
+	dynamic var book: BookObject?
+	
 	override class func primaryKey() -> String {
 		return "id"
 	}

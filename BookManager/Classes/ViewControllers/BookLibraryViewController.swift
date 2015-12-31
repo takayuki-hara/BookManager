@@ -28,13 +28,13 @@ class BookLibraryViewController: UIViewController {
 	}
 
 	// MARK: - Property
-	var library: BookLibraryDataModel!
+	var library: LibraryObject!
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-		bookDetailView.setBookInfo(library.book)
+		bookDetailView.updateView(library.book!)
     }
 
     override func didReceiveMemoryWarning() {

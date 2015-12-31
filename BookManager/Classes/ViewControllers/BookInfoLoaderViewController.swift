@@ -36,7 +36,7 @@ class BookInfoLoaderViewController: UIViewController {
 	}
 
 	// MARK: - Property
-	var book: BookDataModel?
+	var book: BookObject?
 	var reader: IsbnReaderView?
 
 	// MARK: - Lifecycle
