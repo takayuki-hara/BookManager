@@ -35,20 +35,18 @@ class BookSearcherTableViewCell: UITableViewCell {
     }
 
 	// MARK: - Public Method
-	func updateCell(book: BookDataModel) {
-		let url = NSURL(string: book.imageUrl!)
+	func updateCell(book: BookObject) {
+		let url = NSURL(string: book.imageUrl)
 		bookImageView.hnk_setImageFromURL(url!)
 		
 		titleLabel.text = book.title
 		authorLabel.text = book.author
 		publisherLabel.text = book.publisher
 		dateLabel.text = book.salesDate
-		priceLabel.text = "¥ " + String(book.price!)
+		priceLabel.text = "¥ " + String(book.price)
 		
-		if let rating = book.reviewAverage {
-			cosmosView.rating = Double(rating)!
-			cosmosView.settings.updateOnTouch = false
-		}
-		reviewLabel.text = " (" + String(book.reviewCount!) + ")"
+		cosmosView.rating = Double(book.reviewAverage)!
+		cosmosView.settings.updateOnTouch = false
+		reviewLabel.text = " (" + String(book.reviewCount) + ")"
 	}
 }

@@ -9,8 +9,9 @@
 import Foundation
 import Realm
 import RealmSwift
+import ObjectMapper
 
-/// 書籍情報のRealmオブジェクト
+/// 書籍情報のRealmオブジェクト（ObjectMapperにも対応）
 class BookObject: Object {
 	dynamic var isbn = ""
 	dynamic var title = ""
@@ -28,4 +29,26 @@ class BookObject: Object {
 	override class func primaryKey() -> String {
 		return "isbn"
 	}
+
+	required convenience init?(_ map: Map) {
+		self.init()
+	}
+
+}
+
+extension BookObject: Mappable{
+	func mapping(map: Map) {
+		isbn <- map["isbn"]
+		title <- map["title"]
+		author <- map["author"]
+		publisher <- map["publisherName"]
+		price <- map["itemPrice"]
+		salesDate <- map["salesDate"]
+		itemCaption <- map["itemCaption"]
+		itemUrl <- map["itemUrl"]
+		imageUrl <- map["largeImageUrl"]
+		reviewCount <- map["reviewCount"]
+		reviewAverage <- map["reviewAverage"]
+		genreId <- map["booksGenreId"]
+	}	
 }

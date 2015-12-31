@@ -36,3 +36,18 @@ extension BookSearchResultModel: Mappable {
 		items <- map["Items"]
 	}
 }
+
+
+
+/// API結果のマッピングのためだけの階層
+class BookDataParentModel {
+	var item: BookObject?
+	
+	required init?(_ map: Map) {}
+}
+
+extension BookDataParentModel: Mappable {
+	func mapping(map: Map) {
+		item <- map["Item"]
+	}
+}

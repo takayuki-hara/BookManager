@@ -19,10 +19,11 @@ class BookInfoLoaderViewLogic {
 				log.debug(response.response.debugDescription) // URL response
 				log.debug(response.result.debugDescription)   // result of response serialization
 				
-				// TODO:要リファクタ
-				let data = response.result.value
-				let book = BookAccess.createBookObjectFromBookData((data?.items?.first?.item)!)
-				loaded(book)
+				if let data = response.result.value {
+					if let book = data.items?.first?.item {
+						loaded(book)
+					}
+				}
 		}
 	}
 
