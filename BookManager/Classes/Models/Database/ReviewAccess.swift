@@ -32,7 +32,7 @@ class ReviewAccess {
 		}
 		
 		// BookObjectの追加（今のところ蔵書しかレビューしないので不要）
-		// BookAccess.addBook(data)
+		BookAccess.addBook(data)
 		
 		// 追加
 		let review = ReviewObject()

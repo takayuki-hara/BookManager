@@ -19,16 +19,10 @@ class BookAccess {
 	static func addBook(book: BookDataModel) -> Bool {
 		let realm = try! Realm()
 		
-		// 存在確認（ある場合はエラー）：同じISBNの書籍は登録できない
-		let results = realm.objects(BookObject).filter(NSPredicate(format:"isbn == %@", book.isbn!))
-		if results.count != 0 {
-			return false
-		}
-		
-		// 追加
+		// 追加（isbnが同じ場合は更新される）
 		let data = createBookObjectFromBookData(book)
 		try! realm.write {
-			realm.add(data)
+			realm.add(data, update: true)
 		}
 		
 		return true
