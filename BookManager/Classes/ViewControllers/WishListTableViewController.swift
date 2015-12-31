@@ -29,8 +29,8 @@ class WishListTableViewController: UITableViewController {
 		// 右上にEditボタンを表示させる
 		navigationItem.rightBarButtonItem = editButtonItem()
 
-		//
-		wishes = WishListAccess.allObjects()
+		// adminとログインユーザーのみ表示させる
+		wishes = WishListAccess.validObjects()
 		tableView.reloadData()
 	}
 

@@ -25,14 +25,14 @@ class BookLibraryTableViewController: UITableViewController {
 		tableView.delegate = self
 		tableView.estimatedRowHeight = 108
 		
-		//
-		libraries = LibraryAccess.allObjects()
+		// adminとログインユーザーのみ表示させる
+		libraries = LibraryAccess.validObjects()
 		tableView.reloadData()
     }
 
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
-		libraries = LibraryAccess.allObjects()
+		libraries = LibraryAccess.validObjects()
 		tableView.reloadData()
 	}
 

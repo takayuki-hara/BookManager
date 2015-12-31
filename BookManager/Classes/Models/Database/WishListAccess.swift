@@ -64,6 +64,19 @@ class WishListAccess {
 		return true
 	}
 
+	static func validObjects() -> [WishListDataModel]? {
+		let realm = try! Realm()
+		let results = realm.objects(WishListObject)
+		var array: [WishListDataModel]? = []
+		for result in results {
+			let wish = WishListDataModel(wishList: result)
+			if wish.wisher == "admin" || wish.wisher == getLoginUserFromUserDefaults() {
+				array?.append(wish)
+			}
+		}
+		return array
+	}
+	
 	static func allObjects() -> [WishListDataModel]? {
 		let realm = try! Realm()
 		let results = realm.objects(WishListObject)

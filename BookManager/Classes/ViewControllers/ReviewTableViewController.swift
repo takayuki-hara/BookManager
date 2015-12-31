@@ -28,7 +28,7 @@ class ReviewTableViewController: UITableViewController {
 		// 右上にEditボタンを表示させる
 		navigationItem.rightBarButtonItem = editButtonItem()
 
-		//
+		// レビューは全ユーザーを表示させる
 		reviews = ReviewAccess.allObjects()
 		tableView.reloadData()
     }

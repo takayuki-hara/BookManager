@@ -79,6 +79,19 @@ class LibraryAccess {
 		return true
 	}
 	
+	static func validObjects() -> [BookLibraryDataModel]? {
+		let realm = try! Realm()
+		let results = realm.objects(LibraryObject)
+		var array: [BookLibraryDataModel]? = []
+		for result in results {
+			let lib = BookLibraryDataModel(library: result)
+			if lib.owner == "admin" || lib.owner == getLoginUserFromUserDefaults() {
+				array?.append(lib)
+			}
+		}
+		return array
+	}
+	
 	static func allObjects() -> [BookLibraryDataModel]? {
 		let realm = try! Realm()
 		let results = realm.objects(LibraryObject)
